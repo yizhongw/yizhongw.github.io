@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Yizhong&#39;s Blog</title>
+  <subtitle>Does God Play Dice ?</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://eastonwang.github.io/"/>
+  <updated>2016-11-13T08:10:12.985Z</updated>
+  <id>https://eastonwang.github.io/</id>
+  
+  <author>
+    <name>Yizhong Wang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>New Workstatiion for Deep Learning</title>
+    <link href="https://eastonwang.github.io/2016/11/13/New-Workstatiion-for-Deep-Learning/"/>
+    <id>https://eastonwang.github.io/2016/11/13/New-Workstatiion-for-Deep-Learning/</id>
+    <published>2016-11-13T07:45:50.000Z</published>
+    <updated>2016-11-13T08:10:12.985Z</updated>
+    
+    <content type="html"><![CDATA[<p>Our lab is equiped with a new workstation recently. I spent some time studying how to assembly such a computer for deep learning and configure the deep learning environment. Finally I made it and here is a picture of the inner architecure.</p>
+<p><img src="/images/workstation.jpg" alt="New workstation"></p>
+<p>Quite cool, aha?</p>
+<a id="more"></a>
+<p>We have one Intel 6850K CPU and two GTX 1080 gpu cards in it, which I think is enough for our small lab to do some deep learning experiments in NLP. Of course, we don’t want to compete with other big group in the Neural Machine Learning field.</p>
+<p><img src="/images/gpu-card.png" alt="GPU screenshot"></p>
+<p>And now my work space is like this:</p>
+<p><img src="/images/workspace.jpg" alt="Work space"><br>I have to say it’s quite comfortable and I even want to sleep here when the cold winter comes!</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Our lab is equiped with a new workstation recently. I spent some time studying how to assembly such a computer for deep learning and configure the deep learning environment. Finally I made it and here is a picture of the inner architecure.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/workstation.jpg&quot; alt=&quot;New workstation&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Quite cool, aha?&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="engadget" scheme="https://eastonwang.github.io/tags/engadget/"/>
+    
+      <category term="tech" scheme="https://eastonwang.github.io/tags/tech/"/>
+    
+      <category term="happy" scheme="https://eastonwang.github.io/tags/happy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>New start</title>
+    <link href="https://eastonwang.github.io/2016/11/12/New-start/"/>
+    <id>https://eastonwang.github.io/2016/11/12/New-start/</id>
+    <published>2016-11-12T12:33:49.000Z</published>
+    <updated>2016-11-13T07:14:32.762Z</updated>
+    
+    <content type="html"><![CDATA[<p>After the first two headache months of my graduate study, I’m ready to re-launch this blog today. </p>
+<p>I’m going to write some of my technical practices, research strucggles and interesting daily stories here. Hopefully I can continue this good habit to write blogs sometimes.</p>
+<p>And thanks for your visiting and hope you can enjoy something here.</p>
+<p>Now let’s start!</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;After the first two headache months of my graduate study, I’m ready to re-launch this blog today. &lt;/p&gt;
+&lt;p&gt;I’m going to write some of my t
+    
+    </summary>
+    
+    
+      <category term="blog-self" scheme="https://eastonwang.github.io/tags/blog-self/"/>
+    
+  </entry>
+  
+</feed>

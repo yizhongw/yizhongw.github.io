@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    
+    <entry>
+      <title><![CDATA[New Workstatiion for Deep Learning]]></title>
+      <url>%2F2016%2F11%2F13%2FNew-Workstatiion-for-Deep-Learning%2F</url>
+      <content type="text"><![CDATA[Our lab is equiped with a new workstation recently. I spent some time studying how to assembly such a computer for deep learning and configure the deep learning environment. Finally I made it and here is a picture of the inner architecure. Quite cool, aha? We have one Intel 6850K CPU and two GTX 1080 gpu cards in it, which I think is enough for our small lab to do some deep learning experiments in NLP. Of course, we don’t want to compete with other big group in the Neural Machine Learning field. And now my work space is like this: I have to say it’s quite comfortable and I even want to sleep here when the cold winter comes!]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[New start]]></title>
+      <url>%2F2016%2F11%2F12%2FNew-start%2F</url>
+      <content type="text"><![CDATA[After the first two headache months of my graduate study, I’m ready to re-launch this blog today. I’m going to write some of my technical practices, research strucggles and interesting daily stories here. Hopefully I can continue this good habit to write blogs sometimes. And thanks for your visiting and hope you can enjoy something here. Now let’s start!]]></content>
+    </entry>
+
+    
+  
+  
+</search>
