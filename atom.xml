@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eastonwang.github.io/"/>
-  <updated>2016-11-17T03:10:46.105Z</updated>
+  <updated>2016-11-17T03:13:19.429Z</updated>
   <id>https://eastonwang.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://eastonwang.github.io/2016/11/17/Several-Methods-to-Go-Over-GFW/"/>
     <id>https://eastonwang.github.io/2016/11/17/Several-Methods-to-Go-Over-GFW/</id>
     <published>2016-11-17T01:02:10.000Z</published>
-    <updated>2016-11-17T03:10:46.105Z</updated>
+    <updated>2016-11-17T03:13:19.429Z</updated>
     
     <content type="html"><![CDATA[<p>Years ago, I started to climb over GFW and embrace a brand new Internet world. It’s fantac. Even though there are many unreal rumors about China, I still find large amounts of useful information and Google definitely improved my efficiency.</p>
 <p>There are various of ways to fuck GFW. I used to use shadowsocks but now I turn to hosts and IPV6. So I’d like to make a summary of these methods and I would continally add more methods if I find them really useful.</p>
@@ -30,6 +30,7 @@
 <li><a href="https://www.ytpub.com/" target="_blank" rel="external">云梯</a></li>
 <li><a href="https://bestvpnchina.net/%E5%85%8D%E8%B4%B9vpn%E6%8E%A8%E8%8D%90/" target="_blank" rel="external">Recommendations from other website.</a></li>
 </ol>
+<a id="more"></a>
 <h3 id="Lantern"><a href="#Lantern" class="headerlink" title="Lantern"></a>Lantern</h3><p>Some people recommend this months ago. I didn’t try it but they said it’s fascinating. You can explore it at its <a href="https://getlantern.org/" target="_blank" rel="external">official website</a>.</p>
 <p>And this is a <a href="https://program-think.blogspot.com/2015/08/gfw-lantern.html" target="_blank" rel="external">blog</a> for reference. </p>
 <h3 id="Shadowsocks"><a href="#Shadowsocks" class="headerlink" title="Shadowsocks"></a>Shadowsocks</h3><p>Shadowsocks is now very popular in China because of its security and all-platform support. I used it for nearly two years on my Android phone and some of my servers. It’s easy for a programmer or handyman to set up a shadowsocks server on his own vps. You can follow the steps from this <a href="http://shadowsocks.blogspot.com/" target="_blank" rel="external">blog</a>. It’s a complete tutorial.</p>
@@ -52,7 +53,14 @@
     
     <summary type="html">
     
-      &lt;p&gt;Years ago, I started to climb over GFW and embrace a brand new Internet world. It’s fantac. Even though there are many unreal rumors abou
+      &lt;p&gt;Years ago, I started to climb over GFW and embrace a brand new Internet world. It’s fantac. Even though there are many unreal rumors about China, I still find large amounts of useful information and Google definitely improved my efficiency.&lt;/p&gt;
+&lt;p&gt;There are various of ways to fuck GFW. I used to use shadowsocks but now I turn to hosts and IPV6. So I’d like to make a summary of these methods and I would continally add more methods if I find them really useful.&lt;/p&gt;
+&lt;h3 id=&quot;Github-Education-Package&quot;&gt;&lt;a href=&quot;#Github-Education-Package&quot; class=&quot;headerlink&quot; title=&quot;Github Education Package&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://education.github.com/&quot;&gt;Github Education Package&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Github education package contains dozens of software to help students work and study. Most of all, it supplies a $50 credits for &lt;a href=&quot;https://www.digitalocean.com/&quot;&gt;digital ocean&lt;/a&gt;, which can be used to set up your vps. According to my test, the Sanfrancisco hosts and Singapore hosts are faster than others in China. &lt;/p&gt;
+&lt;h3 id=&quot;VPN&quot;&gt;&lt;a href=&quot;#VPN&quot; class=&quot;headerlink&quot; title=&quot;VPN&quot;&gt;&lt;/a&gt;VPN&lt;/h3&gt;&lt;p&gt;This is a classic way to go over GFW. You can set up PPTP, L2TP or IPSec VPN servers on your own vps. Or you can buy one account. Here are some famous websites for this:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ytpub.com/&quot;&gt;云梯&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://bestvpnchina.net/%E5%85%8D%E8%B4%B9vpn%E6%8E%A8%E8%8D%90/&quot;&gt;Recommendations from other website.&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
