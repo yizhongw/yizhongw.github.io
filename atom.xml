@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eastonwang.github.io/"/>
-  <updated>2016-11-29T13:33:03.489Z</updated>
+  <updated>2016-11-29T13:35:57.747Z</updated>
   <id>https://eastonwang.github.io/</id>
   
   <author>
@@ -20,12 +20,12 @@
     <link href="https://eastonwang.github.io/2016/11/29/%E4%BD%BF%E7%94%A8Makefile%E6%9D%A5%E7%BC%96%E8%AF%91Tex%E6%96%87%E4%BB%B6/"/>
     <id>https://eastonwang.github.io/2016/11/29/使用Makefile来编译Tex文件/</id>
     <published>2016-11-29T13:03:24.000Z</published>
-    <updated>2016-11-29T13:33:03.489Z</updated>
+    <updated>2016-11-29T13:35:57.747Z</updated>
     
     <content type="html"><![CDATA[<p>最近在新配置的Linux机器上面写论文，因为只是小的改动，不想用Texmaker之类的IDE。而且因为IDE会产生很多的依赖和log文件，用dropbox同步的时候比较烦人。所以，转向了命令行来编译tex文件。当然，每次都敲latex，biblatex，pdflatex还是很烦人的，于是自己写了一个Makefile，这样，通过make命令就可以编译和查看文章了。</p>
 <p>首先，需要安装texlive，也就是整个tex包：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install texlive</div></pre></td></tr></table></figure>
-<p>然后，在新建好的tex目录下，新建Makefile文件，文件内容如下：</p>
+<p>然后，在新建好的tex目录下，新建Makefile文件，文件内容如下：<br><a id="more"></a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">filename=主tex文件名，比如paper</div><div class="line"></div><div class="line">all: pdf clean read</div><div class="line"></div><div class="line">pdf: ps</div><div class="line">	ps2pdf $&#123;filename&#125;.ps</div><div class="line"></div><div class="line">pdf-print: ps</div><div class="line">	ps2pdf -dColorConversionStrategy=/LeaveColorUnchanged -dPDFSETTINGS=/printer $&#123;filename&#125;.ps</div><div class="line"></div><div class="line">text: html</div><div class="line">	html2text -width 100 -style pretty $&#123;filename&#125;/$&#123;filename&#125;.html | sed -n &apos;/./,$$p&apos; | head -n-2 &gt;$&#123;filename&#125;.txt</div><div class="line"></div><div class="line">html:</div><div class="line">	@#latex2html -split +0 -info &quot;&quot; -no_navigation $&#123;filename&#125;</div><div class="line">	htlatex $&#123;filename&#125;</div><div class="line"></div><div class="line">ps:	dvi</div><div class="line">	dvips -t letter $&#123;filename&#125;.dvi</div><div class="line"></div><div class="line">dvi:</div><div class="line">	latex $&#123;filename&#125;</div><div class="line">	bibtex $&#123;filename&#125;</div><div class="line">	latex $&#123;filename&#125;</div><div class="line">	latex $&#123;filename&#125;</div><div class="line"></div><div class="line">read:</div><div class="line">	evince $&#123;filename&#125;.pdf &amp;</div><div class="line"></div><div class="line">aread:</div><div class="line">	acroread $&#123;filename&#125;.pdf</div><div class="line"></div><div class="line">clean:</div><div class="line">	rm -f *.toc *.aux *.log *.out *.blg *.bbl *.dvi *.ps *.gz</div><div class="line"></div><div class="line">cleanall:</div><div class="line">	rm -f $&#123;filename&#125;.pdf *.toc *.aux *.log *.out *.blg *.bbl *.dvi *.ps *.gz</div></pre></td></tr></table></figure>
 <p>其中, <code>all: pdf clean read</code> 表示当执行make命令时，程序将会先后执行<code>pdf</code>、<code>clean</code>、<code>read</code>这三个命令对应的内容。如果不需要<code>clean</code>和<code>read</code>则可以删掉。</p>
 <p>之后，编译tex和查看pdf只需要执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">make</div></pre></td></tr></table></figure></p>
@@ -35,7 +35,10 @@
     
     <summary type="html">
     
-      &lt;p&gt;最近在新配置的Linux机器上面写论文，因为只是小的改动，不想用Texmaker之类的IDE。而且因为IDE会产生很多的依赖和log文件，用dropbox同步的时候比较烦人。所以，转向了命令行来编译tex文件。当然，每次都敲latex，biblatex，pdflatex还是
+      &lt;p&gt;最近在新配置的Linux机器上面写论文，因为只是小的改动，不想用Texmaker之类的IDE。而且因为IDE会产生很多的依赖和log文件，用dropbox同步的时候比较烦人。所以，转向了命令行来编译tex文件。当然，每次都敲latex，biblatex，pdflatex还是很烦人的，于是自己写了一个Makefile，这样，通过make命令就可以编译和查看文章了。&lt;/p&gt;
+&lt;p&gt;首先，需要安装texlive，也就是整个tex包：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo apt-get install texlive&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后，在新建好的tex目录下，新建Makefile文件，文件内容如下：&lt;br&gt;
     
     </summary>
     
