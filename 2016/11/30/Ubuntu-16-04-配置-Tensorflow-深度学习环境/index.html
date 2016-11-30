@@ -73,8 +73,6 @@
 
 
 
-  
-
 
   <link rel="alternate" href="/atom.xml" title="Yizhong's Blog" type="application/atom+xml" />
 
@@ -98,8 +96,7 @@ cuDNN v5
 Tensorflow 0.12
 
 
-下面开始进入安装步骤：
-1. 显卡">
+下面开始进入安装步骤：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu 16.04 配置 Tensorflow 深度学习环境">
 <meta property="og:url" content="https://eastonwang.github.io/2016/11/30/Ubuntu-16-04-配置-Tensorflow-深度学习环境/index.html">
@@ -114,9 +111,8 @@ cuDNN v5
 Tensorflow 0.12
 
 
-下面开始进入安装步骤：
-1. 显卡">
-<meta property="og:updated_time" content="2016-11-30T07:52:35.899Z">
+下面开始进入安装步骤：">
+<meta property="og:updated_time" content="2016-11-30T07:59:35.357Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu 16.04 配置 Tensorflow 深度学习环境">
 <meta name="twitter:description" content="最近，在实验室的主机上装好了深度学习的环境，因为配置步骤比较复杂，所以在这里记录一下，一是为了以后有问题的时候参考，二是可以给大家配置环境的时候提供一个借鉴。
@@ -129,8 +125,7 @@ cuDNN v5
 Tensorflow 0.12
 
 
-下面开始进入安装步骤：
-1. 显卡">
+下面开始进入安装步骤：">
 
 
 
@@ -360,7 +355,7 @@ Tensorflow 0.12
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-check-o"></i>
             </span>
-            <time title="Post modified" itemprop="dateModified" datetime="2016-11-30T15:52:35+08:00">
+            <time title="Post modified" itemprop="dateModified" datetime="2016-11-30T15:59:35+08:00">
               2016-11-30
             </time>
             
@@ -410,6 +405,7 @@ Tensorflow 0.12
 </ul>
 <hr>
 <p>下面开始进入安装步骤：</p>
+<a id="more"></a>
 <h3 id="1-显卡驱动"><a href="#1-显卡驱动" class="headerlink" title="1. 显卡驱动"></a>1. 显卡驱动</h3><p>安装过程需要在终端模式下进行(Desktop按<code>Ctrl+Alt+F1</code> 切换到终端界面)</p>
 <h4 id="1-1-驱动安装文件下载"><a href="#1-1-驱动安装文件下载" class="headerlink" title="1.1 驱动安装文件下载"></a>1.1 驱动安装文件下载</h4><p>从 Nvidia <a href="http://www.nvidia.com/Download/index.aspx?lang=cn" target="_blank" rel="external">官网</a>选择并下载显卡对应的驱动安装文件，一般为 NVIDIA-Linux-x86_64_version_num.run </p>
 <h4 id="1-2-卸载旧驱动，禁用自带驱动等"><a href="#1-2-卸载旧驱动，禁用自带驱动等" class="headerlink" title="1.2 卸载旧驱动，禁用自带驱动等"></a>1.2 卸载旧驱动，禁用自带驱动等</h4><ul>
@@ -441,6 +437,13 @@ Tensorflow 0.12
 <h3 id="4-安装tensorflow"><a href="#4-安装tensorflow" class="headerlink" title="4. 安装tensorflow"></a>4. 安装tensorflow</h3><p>目前, tensorflow 0.12已经支持<code>pip</code>安装，可以直接参考官方<a href="https://www.tensorflow.org/versions/r0.12/get_started/os_setup.html#using-pip" target="_blank" rel="external">教程</a>进行。</p>
 <hr>
 <p>到这里，整个环境就配置好了，可以运行<code>ipython</code>之后<code>import tensorflow</code>进行测试，也可以通过跑tensorflow源码中的例子进行测试，比如<code>tensorflow/tensorflow/models/image/mnist</code>中的CNN模型，在这里不再详述。</p>
+<hr>
+<p>参考：</p>
+<ol>
+<li>官方文档：<a href="https://www.tensorflow.org/versions/r0.12/get_started/" target="_blank" rel="external">https://www.tensorflow.org/versions/r0.12/get_started/</a></li>
+<li>Install tensorflow with cuda: <a href="http://city.shaform.com/blog/2016/10/31/install-tensorflow-with-cuda.html" target="_blank" rel="external">http://city.shaform.com/blog/2016/10/31/install-tensorflow-with-cuda.html</a></li>
+<li>Ubuntu16.04 英伟达显卡驱动：<a href="https://gist.github.com/dangbiao1991/7825db1d17df9231f4101f034ecd5a2b" target="_blank" rel="external">https://gist.github.com/dangbiao1991/7825db1d17df9231f4101f034ecd5a2b</a></li>
+</ol>
 
       
     </div>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eastonwang.github.io/"/>
-  <updated>2016-11-30T07:52:35.899Z</updated>
+  <updated>2016-11-30T07:59:35.357Z</updated>
   <id>https://eastonwang.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://eastonwang.github.io/2016/11/30/Ubuntu-16-04-%E9%85%8D%E7%BD%AE-Tensorflow-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83/"/>
     <id>https://eastonwang.github.io/2016/11/30/Ubuntu-16-04-配置-Tensorflow-深度学习环境/</id>
     <published>2016-11-30T07:13:50.000Z</published>
-    <updated>2016-11-30T07:52:35.899Z</updated>
+    <updated>2016-11-30T07:59:35.357Z</updated>
     
     <content type="html"><![CDATA[<p>最近，在实验室的主机上装好了深度学习的环境，因为配置步骤比较复杂，所以在这里记录一下，一是为了以后有问题的时候参考，二是可以给大家配置环境的时候提供一个借鉴。</p>
 <p>我们配置的深度学习环境如下：</p>
@@ -33,6 +33,7 @@
 </ul>
 <hr>
 <p>下面开始进入安装步骤：</p>
+<a id="more"></a>
 <h3 id="1-显卡驱动"><a href="#1-显卡驱动" class="headerlink" title="1. 显卡驱动"></a>1. 显卡驱动</h3><p>安装过程需要在终端模式下进行(Desktop按<code>Ctrl+Alt+F1</code> 切换到终端界面)</p>
 <h4 id="1-1-驱动安装文件下载"><a href="#1-1-驱动安装文件下载" class="headerlink" title="1.1 驱动安装文件下载"></a>1.1 驱动安装文件下载</h4><p>从 Nvidia <a href="http://www.nvidia.com/Download/index.aspx?lang=cn" target="_blank" rel="external">官网</a>选择并下载显卡对应的驱动安装文件，一般为 NVIDIA-Linux-x86_64_version_num.run </p>
 <h4 id="1-2-卸载旧驱动，禁用自带驱动等"><a href="#1-2-卸载旧驱动，禁用自带驱动等" class="headerlink" title="1.2 卸载旧驱动，禁用自带驱动等"></a>1.2 卸载旧驱动，禁用自带驱动等</h4><ul>
@@ -64,6 +65,13 @@
 <h3 id="4-安装tensorflow"><a href="#4-安装tensorflow" class="headerlink" title="4. 安装tensorflow"></a>4. 安装tensorflow</h3><p>目前, tensorflow 0.12已经支持<code>pip</code>安装，可以直接参考官方<a href="https://www.tensorflow.org/versions/r0.12/get_started/os_setup.html#using-pip" target="_blank" rel="external">教程</a>进行。</p>
 <hr>
 <p>到这里，整个环境就配置好了，可以运行<code>ipython</code>之后<code>import tensorflow</code>进行测试，也可以通过跑tensorflow源码中的例子进行测试，比如<code>tensorflow/tensorflow/models/image/mnist</code>中的CNN模型，在这里不再详述。</p>
+<hr>
+<p>参考：</p>
+<ol>
+<li>官方文档：<a href="https://www.tensorflow.org/versions/r0.12/get_started/" target="_blank" rel="external">https://www.tensorflow.org/versions/r0.12/get_started/</a></li>
+<li>Install tensorflow with cuda: <a href="http://city.shaform.com/blog/2016/10/31/install-tensorflow-with-cuda.html" target="_blank" rel="external">http://city.shaform.com/blog/2016/10/31/install-tensorflow-with-cuda.html</a></li>
+<li>Ubuntu16.04 英伟达显卡驱动：<a href="https://gist.github.com/dangbiao1991/7825db1d17df9231f4101f034ecd5a2b" target="_blank" rel="external">https://gist.github.com/dangbiao1991/7825db1d17df9231f4101f034ecd5a2b</a></li>
+</ol>
 ]]></content>
     
     <summary type="html">
@@ -71,7 +79,14 @@
       &lt;p&gt;最近，在实验室的主机上装好了深度学习的环境，因为配置步骤比较复杂，所以在这里记录一下，一是为了以后有问题的时候参考，二是可以给大家配置环境的时候提供一个借鉴。&lt;/p&gt;
 &lt;p&gt;我们配置的深度学习环境如下：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;显卡： GeForce GTX 1080 *
+&lt;li&gt;显卡： GeForce GTX 1080 * 2&lt;/li&gt;
+&lt;li&gt;Nvidia 显卡驱动 367.57&lt;/li&gt;
+&lt;li&gt;Cuda Tookit 8.0&lt;/li&gt;
+&lt;li&gt;cuDNN v5&lt;/li&gt;
+&lt;li&gt;Tensorflow 0.12&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;下面开始进入安装步骤：&lt;/p&gt;
     
     </summary>
     
@@ -168,9 +183,9 @@
     </summary>
     
     
-      <category term="GFW" scheme="https://eastonwang.github.io/tags/GFW/"/>
-    
       <category term="tech" scheme="https://eastonwang.github.io/tags/tech/"/>
+    
+      <category term="GFW" scheme="https://eastonwang.github.io/tags/GFW/"/>
     
   </entry>
   
@@ -200,9 +215,9 @@
     </summary>
     
     
-      <category term="tech" scheme="https://eastonwang.github.io/tags/tech/"/>
-    
       <category term="engadget" scheme="https://eastonwang.github.io/tags/engadget/"/>
+    
+      <category term="tech" scheme="https://eastonwang.github.io/tags/tech/"/>
     
       <category term="happy" scheme="https://eastonwang.github.io/tags/happy/"/>
     
