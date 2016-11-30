@@ -68,10 +68,12 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="GFW,tech," />
+  <meta name="keywords" content="Deep Learning,Tensorflow,Ubuntu," />
 
 
 
+
+  
 
 
   <link rel="alternate" href="/atom.xml" title="Yizhong's Blog" type="application/atom+xml" />
@@ -86,16 +88,49 @@
 
 
 
-<meta name="description" content="Years ago, I started to climb over GFW and embrace a brand new Internet world. It’s fantac. Even though there are many unreal rumors about China, I still find large amounts of useful information and G">
+<meta name="description" content="最近，在实验室的主机上装好了深度学习的环境，因为配置步骤比较复杂，所以在这里记录一下，一是为了以后有问题的时候参考，二是可以给大家配置环境的时候提供一个借鉴。
+我们配置的深度学习环境如下：
+
+显卡： GeForce GTX 1080 * 2
+Nvidia 显卡驱动 367.57
+Cuda Tookit 8.0
+cuDNN v5
+Tensorflow 0.12
+
+
+下面开始进入安装步骤：
+1. 显卡">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Several Methods to Go Over GFW">
-<meta property="og:url" content="https://eastonwang.github.io/2016/11/17/Several-Methods-to-Go-Over-GFW/index.html">
+<meta property="og:title" content="Ubuntu 16.04 配置 Tensorflow 深度学习环境">
+<meta property="og:url" content="https://eastonwang.github.io/2016/11/30/Ubuntu-16-04-配置-Tensorflow-深度学习环境/index.html">
 <meta property="og:site_name" content="Yizhong's Blog">
-<meta property="og:description" content="Years ago, I started to climb over GFW and embrace a brand new Internet world. It’s fantac. Even though there are many unreal rumors about China, I still find large amounts of useful information and G">
-<meta property="og:updated_time" content="2016-11-30T07:53:53.211Z">
+<meta property="og:description" content="最近，在实验室的主机上装好了深度学习的环境，因为配置步骤比较复杂，所以在这里记录一下，一是为了以后有问题的时候参考，二是可以给大家配置环境的时候提供一个借鉴。
+我们配置的深度学习环境如下：
+
+显卡： GeForce GTX 1080 * 2
+Nvidia 显卡驱动 367.57
+Cuda Tookit 8.0
+cuDNN v5
+Tensorflow 0.12
+
+
+下面开始进入安装步骤：
+1. 显卡">
+<meta property="og:updated_time" content="2016-11-30T07:52:35.899Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Several Methods to Go Over GFW">
-<meta name="twitter:description" content="Years ago, I started to climb over GFW and embrace a brand new Internet world. It’s fantac. Even though there are many unreal rumors about China, I still find large amounts of useful information and G">
+<meta name="twitter:title" content="Ubuntu 16.04 配置 Tensorflow 深度学习环境">
+<meta name="twitter:description" content="最近，在实验室的主机上装好了深度学习的环境，因为配置步骤比较复杂，所以在这里记录一下，一是为了以后有问题的时候参考，二是可以给大家配置环境的时候提供一个借鉴。
+我们配置的深度学习环境如下：
+
+显卡： GeForce GTX 1080 * 2
+Nvidia 显卡驱动 367.57
+Cuda Tookit 8.0
+cuDNN v5
+Tensorflow 0.12
+
+
+下面开始进入安装步骤：
+1. 显卡">
 
 
 
@@ -127,7 +162,7 @@
 
 
 
-  <title> Several Methods to Go Over GFW | Yizhong's Blog </title>
+  <title> Ubuntu 16.04 配置 Tensorflow 深度学习环境 | Yizhong's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -280,7 +315,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://eastonwang.github.io/2016/11/17/Several-Methods-to-Go-Over-GFW/">
+  <link itemprop="mainEntityOfPage" href="https://eastonwang.github.io/2016/11/30/Ubuntu-16-04-配置-Tensorflow-深度学习环境/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Yizhong Wang">
@@ -304,7 +339,7 @@
             
             
               
-                Several Methods to Go Over GFW
+                Ubuntu 16.04 配置 Tensorflow 深度学习环境
               
             
           </h1>
@@ -316,8 +351,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-17T09:02:10+08:00">
-              2016-11-17
+            <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-30T15:13:50+08:00">
+              2016-11-30
             </time>
 
             &nbsp;|&nbsp;
@@ -325,7 +360,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-check-o"></i>
             </span>
-            <time title="Post modified" itemprop="dateModified" datetime="2016-11-30T15:53:53+08:00">
+            <time title="Post modified" itemprop="dateModified" datetime="2016-11-30T15:52:35+08:00">
               2016-11-30
             </time>
             
@@ -337,8 +372,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/11/17/Several-Methods-to-Go-Over-GFW/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/17/Several-Methods-to-Go-Over-GFW/" itemprop="commentCount"></span>
+                <a href="/2016/11/30/Ubuntu-16-04-配置-Tensorflow-深度学习环境/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/30/Ubuntu-16-04-配置-Tensorflow-深度学习环境/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -364,33 +399,48 @@
       
 
       
-        <p>Years ago, I started to climb over GFW and embrace a brand new Internet world. It’s fantac. Even though there are many unreal rumors about China, I still find large amounts of useful information and Google definitely improved my efficiency.</p>
-<p>There are various of ways to fuck GFW. I used to use shadowsocks but now I turn to hosts and IPV6. So I’d like to make a summary of these methods and I would continally add more methods if I find them really useful.</p>
-<h3 id="Github-Education-Package"><a href="#Github-Education-Package" class="headerlink" title="Github Education Package"></a><a href="https://education.github.com/" target="_blank" rel="external">Github Education Package</a></h3><p>Github education package contains dozens of software to help students work and study. Most of all, it supplies a $50 credits for <a href="https://www.digitalocean.com/" target="_blank" rel="external">digital ocean</a>, which can be used to set up your vps. According to my test, the Sanfrancisco hosts and Singapore hosts are faster than others in China. </p>
-<h3 id="VPN"><a href="#VPN" class="headerlink" title="VPN"></a>VPN</h3><p>This is a classic way to go over GFW. You can set up PPTP, L2TP or IPSec VPN servers on your own vps. Or you can buy one account. Here are some famous websites for this:</p>
-<ol>
-<li><a href="https://www.ytpub.com/" target="_blank" rel="external">云梯</a></li>
-<li><a href="https://bestvpnchina.net/%E5%85%8D%E8%B4%B9vpn%E6%8E%A8%E8%8D%90/" target="_blank" rel="external">Recommendations from other website.</a></li>
-</ol>
-<a id="more"></a>
-<h3 id="Lantern"><a href="#Lantern" class="headerlink" title="Lantern"></a>Lantern</h3><p>Some people recommend this months ago. I didn’t try it but they said it’s fascinating. You can explore it at its <a href="https://getlantern.org/" target="_blank" rel="external">official website</a>.</p>
-<p>And this is a <a href="https://program-think.blogspot.com/2015/08/gfw-lantern.html" target="_blank" rel="external">blog</a> for reference. </p>
-<h3 id="Shadowsocks"><a href="#Shadowsocks" class="headerlink" title="Shadowsocks"></a>Shadowsocks</h3><p>Shadowsocks is now very popular in China because of its security and all-platform support. I used it for nearly two years on my Android phone and some of my servers. It’s easy for a programmer or handyman to set up a shadowsocks server on his own vps. You can follow the steps from this <a href="http://shadowsocks.blogspot.com/" target="_blank" rel="external">blog</a>. It’s a complete tutorial.</p>
-<h3 id="Hosts"><a href="#Hosts" class="headerlink" title="Hosts"></a>Hosts</h3><p>These days I found this approach quite fascinating in its speed and fast configuration. Here I recommend two well-maintained repositories for use:</p>
-<ol>
-<li><a href="https://github.com/racaljk/hosts" target="_blank" rel="external">IPV4 hosts</a></li>
-<li><a href="https://github.com/lennylxx/ipv6-hosts" target="_blank" rel="external">IPV6 hosts</a></li>
-</ol>
-<p>For education net user, I greatly recommend you to use the IPV6 version or combine them together. For ordinary users, the first one also works well.</p>
-<h3 id="DNS-server"><a href="#DNS-server" class="headerlink" title="DNS server"></a>DNS server</h3><p>This is a alternative method to Hosts. But I should emphasize here it’s not stable. Since some dns requests will be detected by GFW and GFW will return you with a dummy ip address. Also, sometimes the dns servers may get polluted.</p>
-<p>However, despite its unstability, this method works in my iPhone/iPad device, since you cannot change the hosts file without rooting the device.</p>
-<p>Good dns servers are listed here:</p>
-<ol>
-<li>Google IPV4 DNS: 8.8.8.8 nad 8.8.4.4</li>
-<li>Google IPV6 DNS: 2001:4860:4860::8888 and 2001:4860:4860::8844</li>
-<li>OpenDNS IPV4 and IPV6 mixed DNS (IPV6 first): 2620:0:ccc::2 and 2620:0:ccd::2</li>
-</ol>
-<p>To summarize, if you are in education net, like myself, I greatly suggest the Hosts method, because you can take advantage of IPV6 and the access is much faster. And for Iphone/Ipad device with out root, you can use the IPV6 dns server. Even though it’s not very stable, I find most of useful websites are always available. </p>
+        <p>最近，在实验室的主机上装好了深度学习的环境，因为配置步骤比较复杂，所以在这里记录一下，一是为了以后有问题的时候参考，二是可以给大家配置环境的时候提供一个借鉴。</p>
+<p>我们配置的深度学习环境如下：</p>
+<ul>
+<li>显卡： GeForce GTX 1080 * 2</li>
+<li>Nvidia 显卡驱动 367.57</li>
+<li>Cuda Tookit 8.0</li>
+<li>cuDNN v5</li>
+<li>Tensorflow 0.12</li>
+</ul>
+<hr>
+<p>下面开始进入安装步骤：</p>
+<h3 id="1-显卡驱动"><a href="#1-显卡驱动" class="headerlink" title="1. 显卡驱动"></a>1. 显卡驱动</h3><p>安装过程需要在终端模式下进行(Desktop按<code>Ctrl+Alt+F1</code> 切换到终端界面)</p>
+<h4 id="1-1-驱动安装文件下载"><a href="#1-1-驱动安装文件下载" class="headerlink" title="1.1 驱动安装文件下载"></a>1.1 驱动安装文件下载</h4><p>从 Nvidia <a href="http://www.nvidia.com/Download/index.aspx?lang=cn" target="_blank" rel="external">官网</a>选择并下载显卡对应的驱动安装文件，一般为 NVIDIA-Linux-x86_64_version_num.run </p>
+<h4 id="1-2-卸载旧驱动，禁用自带驱动等"><a href="#1-2-卸载旧驱动，禁用自带驱动等" class="headerlink" title="1.2 卸载旧驱动，禁用自带驱动等"></a>1.2 卸载旧驱动，禁用自带驱动等</h4><ul>
+<li><p>卸载可能存在的旧版本 nvidia 驱动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sudo apt-get remove --purge nvidia*</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装驱动可能需要的依赖(可选)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$sudo apt-get update</div><div class="line">$sudo apt-get install dkms build-essential linux-headers-generic</div></pre></td></tr></table></figure>
+</li>
+<li><p>把 nouveau 驱动加入黑名单</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sudo nano /etc/modprobe.d/blacklist-nouveau.conf</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>加入如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">blacklist nouveau</div><div class="line">blacklist lbm-nouveau</div><div class="line">options nouveau modeset=0</div><div class="line">alias nouveau off</div><div class="line">alias lbm-nouveau off</div></pre></td></tr></table></figure></p>
+<ul>
+<li><p>禁用 nouveau 内核模块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$echo options nouveau modeset=0 | sudo tee -a /etc/modprobe.d/nouveau-kms.conf</div><div class="line">$sudo update-initramfs -u</div></pre></td></tr></table></figure>
+</li>
+<li><p>重启计算机</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo reboot</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="1-3-运行驱动安装文件并重启"><a href="#1-3-运行驱动安装文件并重启" class="headerlink" title="1.3. 运行驱动安装文件并重启"></a>1.3. 运行驱动安装文件并重启</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo sh  NVIDIA-Linux-x86_64_version_num.run</div></pre></td></tr></table></figure>
+<h3 id="2-安装Cuda-Toolkit"><a href="#2-安装Cuda-Toolkit" class="headerlink" title="2. 安装Cuda Toolkit"></a>2. 安装Cuda Toolkit</h3><h4 id="2-1将桌面管理关闭，参考"><a href="#2-1将桌面管理关闭，参考" class="headerlink" title="2.1将桌面管理关闭，参考:"></a>2.1将桌面管理关闭，<a href="https://gist.github.com/bearpaw/c38ef18ec45ba6548ec0" target="_blank" rel="external">参考</a>:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo service lightdm stop</div></pre></td></tr></table></figure>
+<h4 id="2-2从官网下载相应的安装包，并按照提示安装即可。"><a href="#2-2从官网下载相应的安装包，并按照提示安装即可。" class="headerlink" title="2.2从官网下载相应的安装包，并按照提示安装即可。"></a>2.2从<a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="external">官网</a>下载相应的安装包，并按照提示安装即可。</h4><p>我们选择了安转deb包，通过以下命令进行安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo dpkg -i cuda-repo-&lt;distro&gt;_&lt;version&gt;_&lt;architecture&gt;.deb</div><div class="line">sudo apt update</div><div class="line">sudo apt install cuda</div><div class="line">sudo reboot</div></pre></td></tr></table></figure>
+<h3 id="3-安装cuDNN"><a href="#3-安装cuDNN" class="headerlink" title="3. 安装cuDNN"></a>3. 安装cuDNN</h3><h4 id="3-1-从官网下载最新的安装包，解压后将文件复制到对应的位置："><a href="#3-1-从官网下载最新的安装包，解压后将文件复制到对应的位置：" class="headerlink" title="3.1 从官网下载最新的安装包，解压后将文件复制到对应的位置："></a>3.1 从<a href="https://developer.nvidia.com/cudnn" target="_blank" rel="external">官网</a>下载最新的安装包，解压后将文件复制到对应的位置：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">tar xvzf cudnn-8.0-linux-x64-v5.1-ga.tgz</div><div class="line">sudo cp cuda/include/cudnn.h /usr/local/cuda/include</div><div class="line">sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64</div><div class="line">sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*</div></pre></td></tr></table></figure>
+<h4 id="3-2-配置环境变量："><a href="#3-2-配置环境变量：" class="headerlink" title="3.2 配置环境变量："></a>3.2 配置环境变量：</h4><p>打开<code>~/.bashrc</code>文件，在末尾添加以下内容，注意nvidia-367版本号可能会有不同：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64:/usr/lib/nvidia-367</div><div class="line">export CUDA_HOME=/usr/local/cuda</div><div class="line">export PATH=$PATH:/usr/local/cuda/bin</div></pre></td></tr></table></figure></p>
+<h3 id="4-安装tensorflow"><a href="#4-安装tensorflow" class="headerlink" title="4. 安装tensorflow"></a>4. 安装tensorflow</h3><p>目前, tensorflow 0.12已经支持<code>pip</code>安装，可以直接参考官方<a href="https://www.tensorflow.org/versions/r0.12/get_started/os_setup.html#using-pip" target="_blank" rel="external">教程</a>进行。</p>
+<hr>
+<p>到这里，整个环境就配置好了，可以运行<code>ipython</code>之后<code>import tensorflow</code>进行测试，也可以通过跑tensorflow源码中的例子进行测试，比如<code>tensorflow/tensorflow/models/image/mnist</code>中的CNN模型，在这里不再详述。</p>
 
       
     </div>
@@ -414,9 +464,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/GFW/" rel="tag"># GFW</a>
+            <a href="/tags/Deep-Learning/" rel="tag"># Deep Learning</a>
           
-            <a href="/tags/tech/" rel="tag"># tech</a>
+            <a href="/tags/Tensorflow/" rel="tag"># Tensorflow</a>
+          
+            <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
           
         </div>
       
@@ -425,8 +477,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/13/New-Workstation-for-Deep-Learning/" rel="next" title="New Workstation for Deep Learning">
-                <i class="fa fa-chevron-left"></i> New Workstation for Deep Learning
+              <a href="/2016/11/29/使用Makefile来编译Tex文件/" rel="next" title="使用Makefile来编译Tex文件">
+                <i class="fa fa-chevron-left"></i> 使用Makefile来编译Tex文件
               </a>
             
           </div>
@@ -434,10 +486,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/29/使用Makefile来编译Tex文件/" rel="prev" title="使用Makefile来编译Tex文件">
-                使用Makefile来编译Tex文件 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -463,8 +511,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/11/17/Several-Methods-to-Go-Over-GFW/"
-           data-title="Several Methods to Go Over GFW" data-url="https://eastonwang.github.io/2016/11/17/Several-Methods-to-Go-Over-GFW/">
+      <div class="ds-thread" data-thread-key="2016/11/30/Ubuntu-16-04-配置-Tensorflow-深度学习环境/"
+           data-title="Ubuntu 16.04 配置 Tensorflow 深度学习环境" data-url="https://eastonwang.github.io/2016/11/30/Ubuntu-16-04-配置-Tensorflow-深度学习环境/">
       </div>
     
   </div>
@@ -616,7 +664,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Github-Education-Package"><span class="nav-number">1.</span> <span class="nav-text">Github Education Package</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VPN"><span class="nav-number">2.</span> <span class="nav-text">VPN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lantern"><span class="nav-number">3.</span> <span class="nav-text">Lantern</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shadowsocks"><span class="nav-number">4.</span> <span class="nav-text">Shadowsocks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hosts"><span class="nav-number">5.</span> <span class="nav-text">Hosts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS-server"><span class="nav-number">6.</span> <span class="nav-text">DNS server</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-显卡驱动"><span class="nav-number">1.</span> <span class="nav-text">1. 显卡驱动</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-驱动安装文件下载"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 驱动安装文件下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-卸载旧驱动，禁用自带驱动等"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 卸载旧驱动，禁用自带驱动等</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-运行驱动安装文件并重启"><span class="nav-number">1.3.</span> <span class="nav-text">1.3. 运行驱动安装文件并重启</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装Cuda-Toolkit"><span class="nav-number">2.</span> <span class="nav-text">2. 安装Cuda Toolkit</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1将桌面管理关闭，参考"><span class="nav-number">2.1.</span> <span class="nav-text">2.1将桌面管理关闭，参考:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2从官网下载相应的安装包，并按照提示安装即可。"><span class="nav-number">2.2.</span> <span class="nav-text">2.2从官网下载相应的安装包，并按照提示安装即可。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-安装cuDNN"><span class="nav-number">3.</span> <span class="nav-text">3. 安装cuDNN</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-从官网下载最新的安装包，解压后将文件复制到对应的位置："><span class="nav-number">3.1.</span> <span class="nav-text">3.1 从官网下载最新的安装包，解压后将文件复制到对应的位置：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-配置环境变量："><span class="nav-number">3.2.</span> <span class="nav-text">3.2 配置环境变量：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-安装tensorflow"><span class="nav-number">4.</span> <span class="nav-text">4. 安装tensorflow</span></a></li></ol></div>
             
 
           </div>
