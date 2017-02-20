@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Latex,tools," />
+  <meta name="keywords" content="tools,python,nlp," />
 
 
 
@@ -86,19 +86,20 @@
 
 
 
-<meta name="description" content="最近在新配置的Linux机器上面写论文，因为只是小的改动，不想用Texmaker之类的IDE。而且因为IDE会产生很多的依赖和log文件，用dropbox同步的时候比较烦人。所以，转向了命令行来编译tex文件。当然，每次都敲latex，biblatex，pdflatex还是很烦人的，于是自己写了一个Makefile，这样，通过make命令就可以编译和查看文章了。
-首先，需要安装texlive，也就">
+<meta name="description" content="Stanford CoreNLP工具包Stanford CoreNLP是自然语言处理领域非常重要并且好用的工具包, 它集成了tokenization, lemmatization, pos tagging, parsing等基础工具，也包括情感分析、命名实体识别等高级功能。而且，在某些任务上，该工具包包含对于中文在内的多种语言，因此在很多文章中都可以看到使用该工具来进行文本的预处理。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用Makefile来编译Tex文件">
-<meta property="og:url" content="https://eastonwang.github.io/2016/11/29/使用Makefile来编译Tex文件/index.html">
+<meta property="og:title" content="在Python中使用Stanford CoreNLP进行数据预处理">
+<meta property="og:url" content="https://eastonwang.github.io/2017/02/20/在Python中使用Stanford-CoreNLP进行数据预处理/index.html">
 <meta property="og:site_name" content="Yizhong's Blog">
-<meta property="og:description" content="最近在新配置的Linux机器上面写论文，因为只是小的改动，不想用Texmaker之类的IDE。而且因为IDE会产生很多的依赖和log文件，用dropbox同步的时候比较烦人。所以，转向了命令行来编译tex文件。当然，每次都敲latex，biblatex，pdflatex还是很烦人的，于是自己写了一个Makefile，这样，通过make命令就可以编译和查看文章了。
-首先，需要安装texlive，也就">
-<meta property="og:updated_time" content="2016-11-29T13:35:57.747Z">
+<meta property="og:description" content="Stanford CoreNLP工具包Stanford CoreNLP是自然语言处理领域非常重要并且好用的工具包, 它集成了tokenization, lemmatization, pos tagging, parsing等基础工具，也包括情感分析、命名实体识别等高级功能。而且，在某些任务上，该工具包包含对于中文在内的多种语言，因此在很多文章中都可以看到使用该工具来进行文本的预处理。">
+<meta property="og:image" content="https://eastonwang.github.io/images/stanford_corenlp.png">
+<meta property="og:image" content="https://eastonwang.github.io/images/stanford_corenlp_1.png">
+<meta property="og:image" content="https://eastonwang.github.io/images/stanford_corenlp_2.png">
+<meta property="og:updated_time" content="2017-02-20T12:07:55.610Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用Makefile来编译Tex文件">
-<meta name="twitter:description" content="最近在新配置的Linux机器上面写论文，因为只是小的改动，不想用Texmaker之类的IDE。而且因为IDE会产生很多的依赖和log文件，用dropbox同步的时候比较烦人。所以，转向了命令行来编译tex文件。当然，每次都敲latex，biblatex，pdflatex还是很烦人的，于是自己写了一个Makefile，这样，通过make命令就可以编译和查看文章了。
-首先，需要安装texlive，也就">
+<meta name="twitter:title" content="在Python中使用Stanford CoreNLP进行数据预处理">
+<meta name="twitter:description" content="Stanford CoreNLP工具包Stanford CoreNLP是自然语言处理领域非常重要并且好用的工具包, 它集成了tokenization, lemmatization, pos tagging, parsing等基础工具，也包括情感分析、命名实体识别等高级功能。而且，在某些任务上，该工具包包含对于中文在内的多种语言，因此在很多文章中都可以看到使用该工具来进行文本的预处理。">
+<meta name="twitter:image" content="https://eastonwang.github.io/images/stanford_corenlp.png">
 
 
 
@@ -130,7 +131,7 @@
 
 
 
-  <title> 使用Makefile来编译Tex文件 | Yizhong's Blog </title>
+  <title> 在Python中使用Stanford CoreNLP进行数据预处理 | Yizhong's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -283,7 +284,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://eastonwang.github.io/2016/11/29/使用Makefile来编译Tex文件/">
+  <link itemprop="mainEntityOfPage" href="https://eastonwang.github.io/2017/02/20/在Python中使用Stanford-CoreNLP进行数据预处理/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Yizhong Wang">
@@ -307,7 +308,7 @@
             
             
               
-                使用Makefile来编译Tex文件
+                在Python中使用Stanford CoreNLP进行数据预处理
               
             
           </h1>
@@ -319,8 +320,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-29T21:03:24+08:00">
-              2016-11-29
+            <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-20T17:29:44+08:00">
+              2017-02-20
             </time>
 
             &nbsp;|&nbsp;
@@ -328,8 +329,8 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-check-o"></i>
             </span>
-            <time title="Post modified" itemprop="dateModified" datetime="2016-11-29T21:35:57+08:00">
-              2016-11-29
+            <time title="Post modified" itemprop="dateModified" datetime="2017-02-20T20:07:55+08:00">
+              2017-02-20
             </time>
             
           </span>
@@ -340,8 +341,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/11/29/使用Makefile来编译Tex文件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/29/使用Makefile来编译Tex文件/" itemprop="commentCount"></span>
+                <a href="/2017/02/20/在Python中使用Stanford-CoreNLP进行数据预处理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/20/在Python中使用Stanford-CoreNLP进行数据预处理/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -367,15 +368,24 @@
       
 
       
-        <p>最近在新配置的Linux机器上面写论文，因为只是小的改动，不想用Texmaker之类的IDE。而且因为IDE会产生很多的依赖和log文件，用dropbox同步的时候比较烦人。所以，转向了命令行来编译tex文件。当然，每次都敲latex，biblatex，pdflatex还是很烦人的，于是自己写了一个Makefile，这样，通过make命令就可以编译和查看文章了。</p>
-<p>首先，需要安装texlive，也就是整个tex包：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install texlive</div></pre></td></tr></table></figure>
-<p>然后，在新建好的tex目录下，新建Makefile文件，文件内容如下：<br><a id="more"></a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">filename=主tex文件名，比如paper</div><div class="line"></div><div class="line">all: pdf clean read</div><div class="line"></div><div class="line">pdf: ps</div><div class="line">	ps2pdf $&#123;filename&#125;.ps</div><div class="line"></div><div class="line">pdf-print: ps</div><div class="line">	ps2pdf -dColorConversionStrategy=/LeaveColorUnchanged -dPDFSETTINGS=/printer $&#123;filename&#125;.ps</div><div class="line"></div><div class="line">text: html</div><div class="line">	html2text -width 100 -style pretty $&#123;filename&#125;/$&#123;filename&#125;.html | sed -n &apos;/./,$$p&apos; | head -n-2 &gt;$&#123;filename&#125;.txt</div><div class="line"></div><div class="line">html:</div><div class="line">	@#latex2html -split +0 -info &quot;&quot; -no_navigation $&#123;filename&#125;</div><div class="line">	htlatex $&#123;filename&#125;</div><div class="line"></div><div class="line">ps:	dvi</div><div class="line">	dvips -t letter $&#123;filename&#125;.dvi</div><div class="line"></div><div class="line">dvi:</div><div class="line">	latex $&#123;filename&#125;</div><div class="line">	bibtex $&#123;filename&#125;</div><div class="line">	latex $&#123;filename&#125;</div><div class="line">	latex $&#123;filename&#125;</div><div class="line"></div><div class="line">read:</div><div class="line">	evince $&#123;filename&#125;.pdf &amp;</div><div class="line"></div><div class="line">aread:</div><div class="line">	acroread $&#123;filename&#125;.pdf</div><div class="line"></div><div class="line">clean:</div><div class="line">	rm -f *.toc *.aux *.log *.out *.blg *.bbl *.dvi *.ps *.gz</div><div class="line"></div><div class="line">cleanall:</div><div class="line">	rm -f $&#123;filename&#125;.pdf *.toc *.aux *.log *.out *.blg *.bbl *.dvi *.ps *.gz</div></pre></td></tr></table></figure>
-<p>其中, <code>all: pdf clean read</code> 表示当执行make命令时，程序将会先后执行<code>pdf</code>、<code>clean</code>、<code>read</code>这三个命令对应的内容。如果不需要<code>clean</code>和<code>read</code>则可以删掉。</p>
-<p>之后，编译tex和查看pdf只需要执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">make</div></pre></td></tr></table></figure></p>
-<p>如果想删除所有的log文件，可执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">make clean</div></pre></td></tr></table></figure></p>
-<p>如果想连pdf文件也一起删除，可执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">make cleanall</div></pre></td></tr></table></figure></p>
+        <h3 id="Stanford-CoreNLP工具包"><a href="#Stanford-CoreNLP工具包" class="headerlink" title="Stanford CoreNLP工具包"></a>Stanford CoreNLP工具包</h3><p><a href="http://stanfordnlp.github.io/CoreNLP/index.html" target="_blank" rel="external">Stanford CoreNLP</a>是自然语言处理领域非常重要并且好用的工具包, 它集成了tokenization, lemmatization, pos tagging, parsing等基础工具，也包括情感分析、命名实体识别等高级功能。而且，在某些任务上，该工具包包含对于中文在内的多种语言，因此在很多文章中都可以看到使用该工具来进行文本的预处理。</p>
+<a id="more"></a>
+<p>Stanford NLP group为该工具编写了很完善的<a href="http://stanfordnlp.github.io/CoreNLP/download.html" target="_blank" rel="external">使用文档</a>，因此本文将不着重于介绍它的功能，而重点说明如何在Python中调用该工具包。实际上，Stanford Corenlp提供了jar包，在下载之后可以直接通过命令行的方式运行，但这一方式很慢，在处理多个文件时，对于每一个文件程序都会花费大量的时间来重新加载模型，所以，我们希望模型只需要加载一次，这里我们要用到的就是它的<a href="http://stanfordnlp.github.io/CoreNLP/corenlp-server.html" target="_blank" rel="external">Server模式</a>。</p>
+<h3 id="使用Server模式"><a href="#使用Server模式" class="headerlink" title="使用Server模式"></a>使用Server模式</h3><p>首先，在官网下载该<a href="http://stanfordnlp.github.io/CoreNLP/download.html" target="_blank" rel="external">工具包</a>。解压后，<code>cd</code>进入目录。通过如下命令，运行该工具包的Server模式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -mx4g -cp &quot;*&quot; edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000</div></pre></td></tr></table></figure>
+<p>之后，程序会监听指定端口（9000），对于我们post到该端口的请求进行处理。运行截图如下：</p>
+<p><img src="/images/stanford_corenlp.png" alt="Stanford CoreNLP Running"></p>
+<h3 id="在Python中发送请求"><a href="#在Python中发送请求" class="headerlink" title="在Python中发送请求"></a>在Python中发送请求</h3><p>在Python中可以直接使用requests对相应端口进行post请求，请求的方式如下图所示：</p>
+<p><img src="/images/stanford_corenlp_1.png" alt="Post Request"></p>
+<p>需要注意的是，需要的annotator和返回的格式需要在url中指定，post的数据只包含原始文本。CoreNLP所支持的所有annotator可见官方的<a href="http://stanfordnlp.github.io/CoreNLP/annotators.html" target="_blank" rel="external">介绍</a>。</p>
+<p>除了直接请求外，<a href="http://stanfordnlp.github.io/CoreNLP/other-languages.html#python" target="_blank" rel="external">多个Python工具包</a>封装了对Stanford CoreNLP的请求，我采用的是<a href="https://github.com/smilli/py-corenlp" target="_blank" rel="external">pycorenlp</a>,它的使用方式非常简单，可以直接通过pip安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install pycorenlp</div></pre></td></tr></table></figure>
+<p>使用时，先import该python包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; from pycorenlp import StanfordCoreNLP</div><div class="line">&gt;&gt;&gt; nlp = StanfordCoreNLP(&apos;http://localhost:9000&apos;)</div></pre></td></tr></table></figure>
+<p>之后，对文本进行处理：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; text = (</div><div class="line">  &apos;Pusheen and Smitha walked along the beach. &apos;</div><div class="line">  &apos;Pusheen wanted to surf, but fell off the surfboard.&apos;)</div><div class="line">&gt;&gt;&gt; output = nlp.annotate(text, properties=&#123;</div><div class="line">  &apos;annotators&apos;: &apos;tokenize,ssplit,pos,depparse,parse&apos;,</div><div class="line">  &apos;outputFormat&apos;: &apos;json&apos;</div><div class="line">  &#125;)</div><div class="line">&gt;&gt;&gt; print(output[&apos;sentences&apos;][0][&apos;parse&apos;])</div><div class="line">(ROOT</div><div class="line">  (S</div><div class="line">    (NP (NNP Pusheen)</div><div class="line">      (CC and)</div><div class="line">      (NNP Smitha))</div><div class="line">    (VP (VBD walked)</div><div class="line">      (PP (IN along)</div><div class="line">        (NP (DT the) (NN beach))))</div><div class="line">    (. .)))</div></pre></td></tr></table></figure>
+<p>当然，也可以指定更复杂的annotator，这里不一一说明。对于多语言，Stanford CoreNLP支持的annotator如下表所示：</p>
+<p><img src="/images/stanford_corenlp_2.png" alt="multilingual support"></p>
 
       
     </div>
@@ -399,9 +409,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Latex/" rel="tag"># Latex</a>
-          
             <a href="/tags/tools/" rel="tag"># tools</a>
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/nlp/" rel="tag"># nlp</a>
           
         </div>
       
@@ -410,8 +422,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/17/Several-Methods-to-Go-Over-GFW/" rel="next" title="Several Methods to Go Over GFW">
-                <i class="fa fa-chevron-left"></i> Several Methods to Go Over GFW
+              <a href="/2016/11/30/Ubuntu-16-04-配置-Tensorflow-深度学习环境/" rel="next" title="Ubuntu 16.04 配置 Tensorflow 深度学习环境">
+                <i class="fa fa-chevron-left"></i> Ubuntu 16.04 配置 Tensorflow 深度学习环境
               </a>
             
           </div>
@@ -419,10 +431,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/30/Ubuntu-16-04-配置-Tensorflow-深度学习环境/" rel="prev" title="Ubuntu 16.04 配置 Tensorflow 深度学习环境">
-                Ubuntu 16.04 配置 Tensorflow 深度学习环境 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -448,8 +456,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/11/29/使用Makefile来编译Tex文件/"
-           data-title="使用Makefile来编译Tex文件" data-url="https://eastonwang.github.io/2016/11/29/使用Makefile来编译Tex文件/">
+      <div class="ds-thread" data-thread-key="2017/02/20/在Python中使用Stanford-CoreNLP进行数据预处理/"
+           data-title="在Python中使用Stanford CoreNLP进行数据预处理" data-url="https://eastonwang.github.io/2017/02/20/在Python中使用Stanford-CoreNLP进行数据预处理/">
       </div>
     
   </div>
@@ -473,8 +481,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -591,6 +608,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Stanford-CoreNLP工具包"><span class="nav-number">1.</span> <span class="nav-text">Stanford CoreNLP工具包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Server模式"><span class="nav-number">2.</span> <span class="nav-text">使用Server模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在Python中发送请求"><span class="nav-number">3.</span> <span class="nav-text">在Python中发送请求</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>

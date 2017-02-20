@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eastonwang.github.io/"/>
-  <updated>2016-11-30T08:37:33.690Z</updated>
+  <updated>2017-02-20T12:07:55.610Z</updated>
   <id>https://eastonwang.github.io/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在Python中使用Stanford CoreNLP进行数据预处理</title>
+    <link href="https://eastonwang.github.io/2017/02/20/%E5%9C%A8Python%E4%B8%AD%E4%BD%BF%E7%94%A8Stanford-CoreNLP%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/"/>
+    <id>https://eastonwang.github.io/2017/02/20/在Python中使用Stanford-CoreNLP进行数据预处理/</id>
+    <published>2017-02-20T09:29:44.000Z</published>
+    <updated>2017-02-20T12:07:55.610Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Stanford-CoreNLP工具包"><a href="#Stanford-CoreNLP工具包" class="headerlink" title="Stanford CoreNLP工具包"></a>Stanford CoreNLP工具包</h3><p><a href="http://stanfordnlp.github.io/CoreNLP/index.html" target="_blank" rel="external">Stanford CoreNLP</a>是自然语言处理领域非常重要并且好用的工具包, 它集成了tokenization, lemmatization, pos tagging, parsing等基础工具，也包括情感分析、命名实体识别等高级功能。而且，在某些任务上，该工具包包含对于中文在内的多种语言，因此在很多文章中都可以看到使用该工具来进行文本的预处理。</p>
+<a id="more"></a>
+<p>Stanford NLP group为该工具编写了很完善的<a href="http://stanfordnlp.github.io/CoreNLP/download.html" target="_blank" rel="external">使用文档</a>，因此本文将不着重于介绍它的功能，而重点说明如何在Python中调用该工具包。实际上，Stanford Corenlp提供了jar包，在下载之后可以直接通过命令行的方式运行，但这一方式很慢，在处理多个文件时，对于每一个文件程序都会花费大量的时间来重新加载模型，所以，我们希望模型只需要加载一次，这里我们要用到的就是它的<a href="http://stanfordnlp.github.io/CoreNLP/corenlp-server.html" target="_blank" rel="external">Server模式</a>。</p>
+<h3 id="使用Server模式"><a href="#使用Server模式" class="headerlink" title="使用Server模式"></a>使用Server模式</h3><p>首先，在官网下载该<a href="http://stanfordnlp.github.io/CoreNLP/download.html" target="_blank" rel="external">工具包</a>。解压后，<code>cd</code>进入目录。通过如下命令，运行该工具包的Server模式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -mx4g -cp &quot;*&quot; edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000</div></pre></td></tr></table></figure>
+<p>之后，程序会监听指定端口（9000），对于我们post到该端口的请求进行处理。运行截图如下：</p>
+<p><img src="/images/stanford_corenlp.png" alt="Stanford CoreNLP Running"></p>
+<h3 id="在Python中发送请求"><a href="#在Python中发送请求" class="headerlink" title="在Python中发送请求"></a>在Python中发送请求</h3><p>在Python中可以直接使用requests对相应端口进行post请求，请求的方式如下图所示：</p>
+<p><img src="/images/stanford_corenlp_1.png" alt="Post Request"></p>
+<p>需要注意的是，需要的annotator和返回的格式需要在url中指定，post的数据只包含原始文本。CoreNLP所支持的所有annotator可见官方的<a href="http://stanfordnlp.github.io/CoreNLP/annotators.html" target="_blank" rel="external">介绍</a>。</p>
+<p>除了直接请求外，<a href="http://stanfordnlp.github.io/CoreNLP/other-languages.html#python" target="_blank" rel="external">多个Python工具包</a>封装了对Stanford CoreNLP的请求，我采用的是<a href="https://github.com/smilli/py-corenlp" target="_blank" rel="external">pycorenlp</a>,它的使用方式非常简单，可以直接通过pip安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install pycorenlp</div></pre></td></tr></table></figure>
+<p>使用时，先import该python包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; from pycorenlp import StanfordCoreNLP</div><div class="line">&gt;&gt;&gt; nlp = StanfordCoreNLP(&apos;http://localhost:9000&apos;)</div></pre></td></tr></table></figure>
+<p>之后，对文本进行处理：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; text = (</div><div class="line">  &apos;Pusheen and Smitha walked along the beach. &apos;</div><div class="line">  &apos;Pusheen wanted to surf, but fell off the surfboard.&apos;)</div><div class="line">&gt;&gt;&gt; output = nlp.annotate(text, properties=&#123;</div><div class="line">  &apos;annotators&apos;: &apos;tokenize,ssplit,pos,depparse,parse&apos;,</div><div class="line">  &apos;outputFormat&apos;: &apos;json&apos;</div><div class="line">  &#125;)</div><div class="line">&gt;&gt;&gt; print(output[&apos;sentences&apos;][0][&apos;parse&apos;])</div><div class="line">(ROOT</div><div class="line">  (S</div><div class="line">    (NP (NNP Pusheen)</div><div class="line">      (CC and)</div><div class="line">      (NNP Smitha))</div><div class="line">    (VP (VBD walked)</div><div class="line">      (PP (IN along)</div><div class="line">        (NP (DT the) (NN beach))))</div><div class="line">    (. .)))</div></pre></td></tr></table></figure>
+<p>当然，也可以指定更复杂的annotator，这里不一一说明。对于多语言，Stanford CoreNLP支持的annotator如下表所示：</p>
+<p><img src="/images/stanford_corenlp_2.png" alt="multilingual support"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Stanford-CoreNLP工具包&quot;&gt;&lt;a href=&quot;#Stanford-CoreNLP工具包&quot; class=&quot;headerlink&quot; title=&quot;Stanford CoreNLP工具包&quot;&gt;&lt;/a&gt;Stanford CoreNLP工具包&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://stanfordnlp.github.io/CoreNLP/index.html&quot;&gt;Stanford CoreNLP&lt;/a&gt;是自然语言处理领域非常重要并且好用的工具包, 它集成了tokenization, lemmatization, pos tagging, parsing等基础工具，也包括情感分析、命名实体识别等高级功能。而且，在某些任务上，该工具包包含对于中文在内的多种语言，因此在很多文章中都可以看到使用该工具来进行文本的预处理。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="tools" scheme="https://eastonwang.github.io/tags/tools/"/>
+    
+      <category term="python" scheme="https://eastonwang.github.io/tags/python/"/>
+    
+      <category term="nlp" scheme="https://eastonwang.github.io/tags/nlp/"/>
+    
+  </entry>
   
   <entry>
     <title>Ubuntu 16.04 配置 Tensorflow 深度学习环境</title>
