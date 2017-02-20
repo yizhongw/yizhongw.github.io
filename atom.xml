@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Yizhong&#39;s Blog</title>
-  <subtitle>Does God Play Dice ?</subtitle>
+  <subtitle>荃者所以在魚，得魚而忘荃； 蹄者所以在兔，得兔而忘蹄； 言者所以在意，得意而忘言。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eastonwang.github.io/"/>
@@ -186,9 +186,9 @@
     </summary>
     
     
-      <category term="tech" scheme="https://eastonwang.github.io/tags/tech/"/>
-    
       <category term="GFW" scheme="https://eastonwang.github.io/tags/GFW/"/>
+    
+      <category term="tech" scheme="https://eastonwang.github.io/tags/tech/"/>
     
   </entry>
   
@@ -218,9 +218,9 @@
     </summary>
     
     
-      <category term="engadget" scheme="https://eastonwang.github.io/tags/engadget/"/>
-    
       <category term="tech" scheme="https://eastonwang.github.io/tags/tech/"/>
+    
+      <category term="engadget" scheme="https://eastonwang.github.io/tags/engadget/"/>
     
       <category term="happy" scheme="https://eastonwang.github.io/tags/happy/"/>
     
