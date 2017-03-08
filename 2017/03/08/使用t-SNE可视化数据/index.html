@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Yizhong, Blog, Computer, Technology, Intelligence" />
+  <meta name="keywords" content="tools,machine learning,python,nlp," />
 
 
 
@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="A fresh beginner in the field of NLP and ML. Here I write my technical practices, research struggles and daily balderdash.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yizhong Wang's Blog">
-<meta property="og:url" content="https://eastonwang.github.io/tags/index.html">
+<meta name="description" content="在机器学习的问题中，高维变量是非常常见的，他们对于机器来讲很容易计算，但是对于人来说，看起来就非常痛苦了。所以，有很多给数据降维的手段，比如PCA，LDA等。t-SNE也是其中的一种，但它属于非线性降维，所以t-SNE降维的主要作用貌似只能用来数据可视化和分析数据，并不能进一步作为feature来使用。但瑕不掩瑜，它的可视化效果是非常好的，学习起来也并不难。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用t-SNE可视化数据">
+<meta property="og:url" content="https://eastonwang.github.io/2017/03/08/使用t-SNE可视化数据/index.html">
 <meta property="og:site_name" content="Yizhong Wang's Blog">
-<meta property="og:description" content="A fresh beginner in the field of NLP and ML. Here I write my technical practices, research struggles and daily balderdash.">
-<meta property="og:updated_time" content="2016-11-13T10:28:17.029Z">
+<meta property="og:description" content="在机器学习的问题中，高维变量是非常常见的，他们对于机器来讲很容易计算，但是对于人来说，看起来就非常痛苦了。所以，有很多给数据降维的手段，比如PCA，LDA等。t-SNE也是其中的一种，但它属于非线性降维，所以t-SNE降维的主要作用貌似只能用来数据可视化和分析数据，并不能进一步作为feature来使用。但瑕不掩瑜，它的可视化效果是非常好的，学习起来也并不难。">
+<meta property="og:updated_time" content="2017-03-08T15:16:13.356Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yizhong Wang's Blog">
-<meta name="twitter:description" content="A fresh beginner in the field of NLP and ML. Here I write my technical practices, research struggles and daily balderdash.">
+<meta name="twitter:title" content="使用t-SNE可视化数据">
+<meta name="twitter:description" content="在机器学习的问题中，高维变量是非常常见的，他们对于机器来讲很容易计算，但是对于人来说，看起来就非常痛苦了。所以，有很多给数据降维的手段，比如PCA，LDA等。t-SNE也是其中的一种，但它属于非线性降维，所以t-SNE降维的主要作用貌似只能用来数据可视化和分析数据，并不能进一步作为feature来使用。但瑕不掩瑜，它的可视化效果是非常好的，学习起来也并不难。">
 
 
 
@@ -127,13 +127,7 @@
 
 
 
-  <title>
-  
-
-  
-    Tag | Yizhong Wang's Blog
-  
-</title>
+  <title> 使用t-SNE可视化数据 | Yizhong Wang's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -165,7 +159,7 @@ var _hmt = _hmt || [];
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -279,24 +273,166 @@ var _hmt = _hmt || [];
             
 
   <div id="posts" class="posts-expand">
-  <header class="post-header">
+    
 
+  
 
+  
+  
+  
 
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://eastonwang.github.io/2017/03/08/使用t-SNE可视化数据/">
 
-</header>
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Yizhong Wang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Yizhong Wang's Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Yizhong Wang's Blog" src="">
+    </span>
+  </span>
 
     
-    
-      <div class="tag-cloud">
-        <div class="tag-cloud-title">
-            13 tags in total
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                使用t-SNE可视化数据
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-08T22:45:56+08:00">
+              2017-03-08
+            </time>
+
+            &nbsp;|&nbsp;
+
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-check-o"></i>
+            </span>
+            <time title="Post modified" itemprop="dateModified" datetime="2017-03-08T23:16:13+08:00">
+              2017-03-08
+            </time>
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/03/08/使用t-SNE可视化数据/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/08/使用t-SNE可视化数据/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+          
+          
+
         </div>
-        <div class="tag-cloud-tags">
-          <a href="/tags/Deep-Learning/" style="font-size: 12px; color: #ccc">Deep Learning</a> <a href="/tags/GFW/" style="font-size: 12px; color: #ccc">GFW</a> <a href="/tags/Latex/" style="font-size: 12px; color: #ccc">Latex</a> <a href="/tags/Tensorflow/" style="font-size: 12px; color: #ccc">Tensorflow</a> <a href="/tags/Ubuntu/" style="font-size: 12px; color: #ccc">Ubuntu</a> <a href="/tags/blog-self/" style="font-size: 12px; color: #ccc">blog-self</a> <a href="/tags/engadget/" style="font-size: 12px; color: #ccc">engadget</a> <a href="/tags/happy/" style="font-size: 12px; color: #ccc">happy</a> <a href="/tags/machine-learning/" style="font-size: 12px; color: #ccc">machine learning</a> <a href="/tags/nlp/" style="font-size: 21px; color: #6f6f6f">nlp</a> <a href="/tags/python/" style="font-size: 21px; color: #6f6f6f">python</a> <a href="/tags/tech/" style="font-size: 21px; color: #6f6f6f">tech</a> <a href="/tags/tools/" style="font-size: 30px; color: #111">tools</a>
-        </div>
-      </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在机器学习的问题中，高维变量是非常常见的，他们对于机器来讲很容易计算，但是对于人来说，看起来就非常痛苦了。所以，有很多给数据降维的<a href="https://en.wikipedia.org/wiki/Dimensionality_reduction#Linear_discriminant_analysis_.28LDA.29" target="_blank" rel="external">手段</a>，比如PCA，LDA等。t-SNE也是其中的一种，但它属于非线性降维，所以t-SNE降维的主要作用貌似只能用来数据可视化和分析数据，并不能进一步作为feature来使用。但瑕不掩瑜，它的可视化效果是非常好的，学习起来也并不难。</p>
+<a id="more"></a>
+<p>t-SNE是从SNE演化来的，他们都采用了将空间中的距离转换为概率的方式来表示点与点之间的相似度。SNE中对于高维和低维空间都使用高斯分布来建模，但是会造成“拥挤问题”，也就是最后低维空间中的数据点会聚集在一起。所以t-SNE使用了t分布来定义低维空间中点的相似性。具体的原理在<a href="https://lvdmaaten.github.io/tsne/" target="_blank" rel="external">Laurens van der Maaten</a>的<a href="https://www.youtube.com/watch?v=RJVL80Gg3lA&amp;list=UUtXKDgv1AVoG88PLl8nGXmw" target="_blank" rel="external">视频</a>讲解里讲的特别清楚，可以花半个多小时的时间看一下。另外，这篇<a href="http://www.datakit.cn/blog/2017/02/05/t_sne_full.html" target="_blank" rel="external">中文博文</a>讲的也不错, 还给出了手工实现的代码，可以学习一个。</p>
+<p>在Python的scikit-learn包里包含已经实现好的<a href="http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html" target="_blank" rel="external">t-SNE工具</a>，很方便调用，下面我们用这个工具对我们训练好的word embedding进行一个可视化的实验，来看看它究竟效果如何。</p>
+<p>= =，出去了一下，过几天再来填坑吧。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/tools/" rel="tag"># tools</a>
+          
+            <a href="/tags/machine-learning/" rel="tag"># machine learning</a>
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/nlp/" rel="tag"># nlp</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/20/在Python中使用Stanford-CoreNLP进行数据预处理/" rel="next" title="在Python中使用Stanford CoreNLP进行数据预处理">
+                <i class="fa fa-chevron-left"></i> 在Python中使用Stanford CoreNLP进行数据预处理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -305,6 +441,14 @@ var _hmt = _hmt || [];
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/08/使用t-SNE可视化数据/"
+           data-title="使用t-SNE可视化数据" data-url="https://eastonwang.github.io/2017/03/08/使用t-SNE可视化数据/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -536,6 +680,10 @@ var _hmt = _hmt || [];
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

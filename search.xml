@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[使用t-SNE可视化数据]]></title>
+      <url>%2F2017%2F03%2F08%2F%E4%BD%BF%E7%94%A8t-SNE%E5%8F%AF%E8%A7%86%E5%8C%96%E6%95%B0%E6%8D%AE%2F</url>
+      <content type="text"><![CDATA[在机器学习的问题中，高维变量是非常常见的，他们对于机器来讲很容易计算，但是对于人来说，看起来就非常痛苦了。所以，有很多给数据降维的手段，比如PCA，LDA等。t-SNE也是其中的一种，但它属于非线性降维，所以t-SNE降维的主要作用貌似只能用来数据可视化和分析数据，并不能进一步作为feature来使用。但瑕不掩瑜，它的可视化效果是非常好的，学习起来也并不难。 t-SNE是从SNE演化来的，他们都采用了将空间中的距离转换为概率的方式来表示点与点之间的相似度。SNE中对于高维和低维空间都使用高斯分布来建模，但是会造成“拥挤问题”，也就是最后低维空间中的数据点会聚集在一起。所以t-SNE使用了t分布来定义低维空间中点的相似性。具体的原理在Laurens van der Maaten的视频讲解里讲的特别清楚，可以花半个多小时的时间看一下。另外，这篇中文博文讲的也不错, 还给出了手工实现的代码，可以学习一个。 在Python的scikit-learn包里包含已经实现好的t-SNE工具，很方便调用，下面我们用这个工具对我们训练好的word embedding进行一个可视化的实验，来看看它究竟效果如何。 = =，出去了一下，过几天再来填坑吧。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[在Python中使用Stanford CoreNLP进行数据预处理]]></title>
       <url>%2F2017%2F02%2F20%2F%E5%9C%A8Python%E4%B8%AD%E4%BD%BF%E7%94%A8Stanford-CoreNLP%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86%2F</url>
       <content type="text"><![CDATA[Stanford CoreNLP工具包Stanford CoreNLP是自然语言处理领域非常重要并且好用的工具包, 它集成了tokenization, lemmatization, pos tagging, parsing等基础工具，也包括情感分析、命名实体识别等高级功能。而且，在某些任务上，该工具包包含对于中文在内的多种语言，因此在很多文章中都可以看到使用该工具来进行文本的预处理。 Stanford NLP group为该工具编写了很完善的使用文档，因此本文将不着重于介绍它的功能，而重点说明如何在Python中调用该工具包。实际上，Stanford Corenlp提供了jar包，在下载之后可以直接通过命令行的方式运行，但这一方式很慢，在处理多个文件时，对于每一个文件程序都会花费大量的时间来重新加载模型，所以，我们希望模型只需要加载一次，这里我们要用到的就是它的Server模式。 使用Server模式首先，在官网下载该工具包。解压后，cd进入目录。通过如下命令，运行该工具包的Server模式： 1java -mx4g -cp &quot;*&quot; edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000 之后，程序会监听指定端口（9000），对于我们post到该端口的请求进行处理。运行截图如下： 在Python中发送请求在Python中可以直接使用requests对相应端口进行post请求，请求的方式如下图所示： 需要注意的是，需要的annotator和返回的格式需要在url中指定，post的数据只包含原始文本。CoreNLP所支持的所有annotator可见官方的介绍。 除了直接请求外，多个Python工具包封装了对Stanford CoreNLP的请求，我采用的是pycorenlp,它的使用方式非常简单，可以直接通过pip安装： 1pip install pycorenlp 使用时，先import该python包： 12&gt;&gt;&gt; from pycorenlp import StanfordCoreNLP&gt;&gt;&gt; nlp = StanfordCoreNLP(&apos;http://localhost:9000&apos;) 之后，对文本进行处理： 1234567891011121314151617&gt;&gt;&gt; text = ( &apos;Pusheen and Smitha walked along the beach. &apos; &apos;Pusheen wanted to surf, but fell off the surfboard.&apos;)&gt;&gt;&gt; output = nlp.annotate(text, properties=&#123; &apos;annotators&apos;: &apos;tokenize,ssplit,pos,depparse,parse&apos;, &apos;outputFormat&apos;: &apos;json&apos; &#125;)&gt;&gt;&gt; print(output[&apos;sentences&apos;][0][&apos;parse&apos;])(ROOT (S (NP (NNP Pusheen) (CC and) (NNP Smitha)) (VP (VBD walked) (PP (IN along) (NP (DT the) (NN beach)))) (. .))) 当然，也可以指定更复杂的annotator，这里不一一说明。对于多语言，Stanford CoreNLP支持的annotator如下表所示：]]></content>
