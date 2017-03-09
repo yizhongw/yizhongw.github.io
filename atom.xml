@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eastonwang.github.io/"/>
-  <updated>2017-03-08T15:16:13.356Z</updated>
+  <updated>2017-03-09T01:36:27.646Z</updated>
   <id>https://eastonwang.github.io/</id>
   
   <author>
@@ -20,13 +20,12 @@
     <link href="https://eastonwang.github.io/2017/03/08/%E4%BD%BF%E7%94%A8t-SNE%E5%8F%AF%E8%A7%86%E5%8C%96%E6%95%B0%E6%8D%AE/"/>
     <id>https://eastonwang.github.io/2017/03/08/使用t-SNE可视化数据/</id>
     <published>2017-03-08T14:45:56.000Z</published>
-    <updated>2017-03-08T15:16:13.356Z</updated>
+    <updated>2017-03-09T01:36:27.646Z</updated>
     
     <content type="html"><![CDATA[<p>在机器学习的问题中，高维变量是非常常见的，他们对于机器来讲很容易计算，但是对于人来说，看起来就非常痛苦了。所以，有很多给数据降维的<a href="https://en.wikipedia.org/wiki/Dimensionality_reduction#Linear_discriminant_analysis_.28LDA.29" target="_blank" rel="external">手段</a>，比如PCA，LDA等。t-SNE也是其中的一种，但它属于非线性降维，所以t-SNE降维的主要作用貌似只能用来数据可视化和分析数据，并不能进一步作为feature来使用。但瑕不掩瑜，它的可视化效果是非常好的，学习起来也并不难。</p>
 <a id="more"></a>
-<p>t-SNE是从SNE演化来的，他们都采用了将空间中的距离转换为概率的方式来表示点与点之间的相似度。SNE中对于高维和低维空间都使用高斯分布来建模，但是会造成“拥挤问题”，也就是最后低维空间中的数据点会聚集在一起。所以t-SNE使用了t分布来定义低维空间中点的相似性。具体的原理在<a href="https://lvdmaaten.github.io/tsne/" target="_blank" rel="external">Laurens van der Maaten</a>的<a href="https://www.youtube.com/watch?v=RJVL80Gg3lA&amp;list=UUtXKDgv1AVoG88PLl8nGXmw" target="_blank" rel="external">视频</a>讲解里讲的特别清楚，可以花半个多小时的时间看一下。另外，这篇<a href="http://www.datakit.cn/blog/2017/02/05/t_sne_full.html" target="_blank" rel="external">中文博文</a>讲的也不错, 还给出了手工实现的代码，可以学习一个。</p>
-<p>在Python的scikit-learn包里包含已经实现好的<a href="http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html" target="_blank" rel="external">t-SNE工具</a>，很方便调用，下面我们用这个工具对我们训练好的word embedding进行一个可视化的实验，来看看它究竟效果如何。</p>
-<p>= =，出去了一下，过几天再来填坑吧。</p>
+<p>t-SNE是从SNE演化来的，他们都采用了将空间中的距离转换为概率的方式来表示点与点之间的相似度，然后求高维空间和低维空间的概率分布的KL Divergence作为两个分布的距离，希望最小化这个距离函数。SNE中对于高维和低维空间都使用高斯分布来建模，但是会造成“拥挤问题”，也就是最后低维空间中的数据点会聚集在一起。所以t-SNE使用了t分布来定义低维空间中点的相似性。具体的原理在<a href="https://lvdmaaten.github.io/tsne/" target="_blank" rel="external">Laurens van der Maaten</a>的<a href="https://www.youtube.com/watch?v=RJVL80Gg3lA&amp;list=UUtXKDgv1AVoG88PLl8nGXmw" target="_blank" rel="external">视频</a>讲解里讲的特别清楚，可以花半个多小时的时间看一下。另外，这篇<a href="http://www.datakit.cn/blog/2017/02/05/t_sne_full.html" target="_blank" rel="external">中文博文</a>讲的也不错, 还给出了手工实现的代码，可以学习一个。</p>
+<p>但是这里我们并不打算自己造轮子，Python的scikit-learn包已经支持了<a href="http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html" target="_blank" rel="external">t-SNE工具</a>，很方便调用，下面我们用这个工具对我们训练好的word embedding进行一个可视化的实验，来看看它究竟效果如何。</p>
 ]]></content>
     
     <summary type="html">
@@ -203,9 +202,9 @@
     </summary>
     
     
-      <category term="Latex" scheme="https://eastonwang.github.io/tags/Latex/"/>
-    
       <category term="tools" scheme="https://eastonwang.github.io/tags/tools/"/>
+    
+      <category term="Latex" scheme="https://eastonwang.github.io/tags/Latex/"/>
     
   </entry>
   
