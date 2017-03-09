@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="tools,machine learning,python,nlp," />
+  <meta name="keywords" content="tools,python,nlp,machine learning," />
 
 
 
@@ -88,13 +88,13 @@
 
 <meta name="description" content="在机器学习的问题中，高维变量是非常常见的，他们对于机器来讲很容易计算，但是对于人来说，看起来就非常痛苦了。所以，有很多给数据降维的手段，比如PCA，LDA等。t-SNE也是其中的一种，但它属于非线性降维，所以t-SNE降维的主要作用貌似只能用来数据可视化和分析数据，并不能进一步作为feature来使用。但瑕不掩瑜，它的可视化效果是非常好的，学习起来也并不难。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用t-SNE可视化数据">
+<meta property="og:title" content="使用t-SNE可视化高维数据">
 <meta property="og:url" content="https://eastonwang.github.io/2017/03/08/使用t-SNE可视化数据/index.html">
 <meta property="og:site_name" content="Yizhong Wang's Blog">
 <meta property="og:description" content="在机器学习的问题中，高维变量是非常常见的，他们对于机器来讲很容易计算，但是对于人来说，看起来就非常痛苦了。所以，有很多给数据降维的手段，比如PCA，LDA等。t-SNE也是其中的一种，但它属于非线性降维，所以t-SNE降维的主要作用貌似只能用来数据可视化和分析数据，并不能进一步作为feature来使用。但瑕不掩瑜，它的可视化效果是非常好的，学习起来也并不难。">
-<meta property="og:updated_time" content="2017-03-09T01:36:27.646Z">
+<meta property="og:updated_time" content="2017-03-09T02:21:15.727Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用t-SNE可视化数据">
+<meta name="twitter:title" content="使用t-SNE可视化高维数据">
 <meta name="twitter:description" content="在机器学习的问题中，高维变量是非常常见的，他们对于机器来讲很容易计算，但是对于人来说，看起来就非常痛苦了。所以，有很多给数据降维的手段，比如PCA，LDA等。t-SNE也是其中的一种，但它属于非线性降维，所以t-SNE降维的主要作用貌似只能用来数据可视化和分析数据，并不能进一步作为feature来使用。但瑕不掩瑜，它的可视化效果是非常好的，学习起来也并不难。">
 
 
@@ -127,7 +127,7 @@
 
 
 
-  <title> 使用t-SNE可视化数据 | Yizhong Wang's Blog </title>
+  <title> 使用t-SNE可视化高维数据 | Yizhong Wang's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -306,7 +306,7 @@ var _hmt = _hmt || [];
             
             
               
-                使用t-SNE可视化数据
+                使用t-SNE可视化高维数据
               
             
           </h1>
@@ -327,7 +327,7 @@ var _hmt = _hmt || [];
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-check-o"></i>
             </span>
-            <time title="Post modified" itemprop="dateModified" datetime="2017-03-09T09:36:27+08:00">
+            <time title="Post modified" itemprop="dateModified" datetime="2017-03-09T10:21:15+08:00">
               2017-03-09
             </time>
             
@@ -369,7 +369,42 @@ var _hmt = _hmt || [];
         <p>在机器学习的问题中，高维变量是非常常见的，他们对于机器来讲很容易计算，但是对于人来说，看起来就非常痛苦了。所以，有很多给数据降维的<a href="https://en.wikipedia.org/wiki/Dimensionality_reduction#Linear_discriminant_analysis_.28LDA.29" target="_blank" rel="external">手段</a>，比如PCA，LDA等。t-SNE也是其中的一种，但它属于非线性降维，所以t-SNE降维的主要作用貌似只能用来数据可视化和分析数据，并不能进一步作为feature来使用。但瑕不掩瑜，它的可视化效果是非常好的，学习起来也并不难。</p>
 <a id="more"></a>
 <p>t-SNE是从SNE演化来的，他们都采用了将空间中的距离转换为概率的方式来表示点与点之间的相似度，然后求高维空间和低维空间的概率分布的KL Divergence作为两个分布的距离，希望最小化这个距离函数。SNE中对于高维和低维空间都使用高斯分布来建模，但是会造成“拥挤问题”，也就是最后低维空间中的数据点会聚集在一起。所以t-SNE使用了t分布来定义低维空间中点的相似性。具体的原理在<a href="https://lvdmaaten.github.io/tsne/" target="_blank" rel="external">Laurens van der Maaten</a>的<a href="https://www.youtube.com/watch?v=RJVL80Gg3lA&amp;list=UUtXKDgv1AVoG88PLl8nGXmw" target="_blank" rel="external">视频</a>讲解里讲的特别清楚，可以花半个多小时的时间看一下。另外，这篇<a href="http://www.datakit.cn/blog/2017/02/05/t_sne_full.html" target="_blank" rel="external">中文博文</a>讲的也不错, 还给出了手工实现的代码，可以学习一个。</p>
-<p>但是这里我们并不打算自己造轮子，Python的scikit-learn包已经支持了<a href="http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html" target="_blank" rel="external">t-SNE工具</a>，很方便调用，下面我们用这个工具对我们训练好的word embedding进行一个可视化的实验，来看看它究竟效果如何。</p>
+<p>但是这里我们并不打算自己造轮子，Python的scikit-learn包已经支持了<a href="http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html" target="_blank" rel="external">t-SNE工具</a>，很方便调用，使用近似算法可以将复杂度降低到O(nlogn)，下面我们用这个工具对MNIST数据集进行一个可视化的实验，来看看它究竟效果如何。</p>
+<p>首先，import相关的包，并且加载MNIST数据集：</p>
+<pre><code>import numpy as np
+import matplotlib.pyplot as plt
+from time import time
+from sklearn import datasets, manifold
+</code></pre><p>然后，我们先定义好画图的函数，使之能将二维的embedding显示出来：</p>
+<pre><code># Scale and visualize the embedding vectors                            
+def plot_embedding(X, title=None):     
+    x_min, x_max = np.min(X, 0), np.max(X, 0)
+    X = (X - x_min) / (x_max - x_min)                           
+
+    plt.figure()              
+    ax = plt.subplot(111)      
+    for i in range(X.shape[0]):                          
+        plt.text(X[i, 0], X[i, 1], str(digits.target[i]),    
+                 color=plt.cm.Set1(y[i] / 10.),         
+                 fontdict={&apos;weight&apos;: &apos;bold&apos;, &apos;size&apos;: 9})
+    plt.xticks([]), plt.yticks([])
+    if title is not None:
+        plt.title(title)
+</code></pre><p>最后，我们调用t-SNE工具包，将数据降维后进行绘制：</p>
+<pre><code># t-SNE embedding of the digits dataset
+print(&quot;Computing t-SNE embedding&quot;)           
+tsne = manifold.TSNE(n_components=2, init=&apos;pca&apos;, random_state=0)
+t0 = time()
+X_tsne = tsne.fit_transform(X)
+
+plot_embedding(X_tsne,                                   
+            &quot;t-SNE embedding of the digits (time %.2fs)&quot; %
+            (time() - t0))                           
+
+plt.show() 
+</code></pre><p>绘制的图标如下：</p>
+<pre><code>![t-SNE image](/images/t-SNE.png)
+</code></pre><p>可以看到，对于1083个64维的数据点，共花费了6.39秒的时间进行训练，时间还是很慢的。但是，分类的效果特别好，相同的digit基本都聚集在了一起。</p>
 
       
     </div>
@@ -395,11 +430,11 @@ var _hmt = _hmt || [];
           
             <a href="/tags/tools/" rel="tag"># tools</a>
           
-            <a href="/tags/machine-learning/" rel="tag"># machine learning</a>
-          
             <a href="/tags/python/" rel="tag"># python</a>
           
             <a href="/tags/nlp/" rel="tag"># nlp</a>
+          
+            <a href="/tags/machine-learning/" rel="tag"># machine learning</a>
           
         </div>
       
@@ -443,7 +478,7 @@ var _hmt = _hmt || [];
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/03/08/使用t-SNE可视化数据/"
-           data-title="使用t-SNE可视化数据" data-url="https://eastonwang.github.io/2017/03/08/使用t-SNE可视化数据/">
+           data-title="使用t-SNE可视化高维数据" data-url="https://eastonwang.github.io/2017/03/08/使用t-SNE可视化数据/">
       </div>
     
   </div>
