@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="tools,python,nlp,machine learning," />
+  <meta name="keywords" content="tools,machine learning,python,nlp," />
 
 
 
@@ -92,10 +92,12 @@
 <meta property="og:url" content="https://eastonwang.github.io/2017/03/08/使用t-SNE可视化数据/index.html">
 <meta property="og:site_name" content="Yizhong Wang's Blog">
 <meta property="og:description" content="在机器学习的问题中，高维变量是非常常见的，他们对于机器来讲很容易计算，但是对于人来说，看起来就非常痛苦了。所以，有很多给数据降维的手段，比如PCA，LDA等。t-SNE也是其中的一种，但它属于非线性降维，所以t-SNE降维的主要作用貌似只能用来数据可视化和分析数据，并不能进一步作为feature来使用。但瑕不掩瑜，它的可视化效果是非常好的，学习起来也并不难。">
-<meta property="og:updated_time" content="2017-03-09T02:21:15.727Z">
+<meta property="og:image" content="https://eastonwang.github.io/images/t-SNE.png">
+<meta property="og:updated_time" content="2017-03-09T02:22:36.099Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用t-SNE可视化高维数据">
 <meta name="twitter:description" content="在机器学习的问题中，高维变量是非常常见的，他们对于机器来讲很容易计算，但是对于人来说，看起来就非常痛苦了。所以，有很多给数据降维的手段，比如PCA，LDA等。t-SNE也是其中的一种，但它属于非线性降维，所以t-SNE降维的主要作用貌似只能用来数据可视化和分析数据，并不能进一步作为feature来使用。但瑕不掩瑜，它的可视化效果是非常好的，学习起来也并不难。">
+<meta name="twitter:image" content="https://eastonwang.github.io/images/t-SNE.png">
 
 
 
@@ -327,7 +329,7 @@ var _hmt = _hmt || [];
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-check-o"></i>
             </span>
-            <time title="Post modified" itemprop="dateModified" datetime="2017-03-09T10:21:15+08:00">
+            <time title="Post modified" itemprop="dateModified" datetime="2017-03-09T10:22:36+08:00">
               2017-03-09
             </time>
             
@@ -402,9 +404,9 @@ plot_embedding(X_tsne,
             (time() - t0))                           
 
 plt.show() 
-</code></pre><p>绘制的图标如下：</p>
-<pre><code>![t-SNE image](/images/t-SNE.png)
-</code></pre><p>可以看到，对于1083个64维的数据点，共花费了6.39秒的时间进行训练，时间还是很慢的。但是，分类的效果特别好，相同的digit基本都聚集在了一起。</p>
+</code></pre><p>绘制的图表如下：</p>
+<p><img src="/images/t-SNE.png" alt="t-SNE image"></p>
+<p>可以看到，对于1083个64维的数据点，共花费了6.39秒的时间进行训练，时间还是很慢的。但是，分类的效果特别好，相同的digit基本都聚集在了一起。</p>
 
       
     </div>
@@ -430,11 +432,11 @@ plt.show()
           
             <a href="/tags/tools/" rel="tag"># tools</a>
           
+            <a href="/tags/machine-learning/" rel="tag"># machine learning</a>
+          
             <a href="/tags/python/" rel="tag"># python</a>
           
             <a href="/tags/nlp/" rel="tag"># nlp</a>
-          
-            <a href="/tags/machine-learning/" rel="tag"># machine learning</a>
           
         </div>
       
