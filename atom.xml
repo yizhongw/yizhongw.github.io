@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Yizhong Wang&#39;s Blog</title>
+  <title>Yizhong&#39;s Blog</title>
   <subtitle>言者所以在意，得意而忘言。&lt;br&gt; ——《庄子·杂篇·外物》</subtitle>
   <link href="/atom.xml" rel="self"/>
   
@@ -70,13 +70,13 @@ plt.show()
     </summary>
     
     
-      <category term="tools" scheme="https://eastonwang.github.io/tags/tools/"/>
-    
-      <category term="machine learning" scheme="https://eastonwang.github.io/tags/machine-learning/"/>
-    
       <category term="python" scheme="https://eastonwang.github.io/tags/python/"/>
     
+      <category term="tools" scheme="https://eastonwang.github.io/tags/tools/"/>
+    
       <category term="nlp" scheme="https://eastonwang.github.io/tags/nlp/"/>
+    
+      <category term="machine learning" scheme="https://eastonwang.github.io/tags/machine-learning/"/>
     
   </entry>
   
@@ -114,9 +114,9 @@ plt.show()
     </summary>
     
     
-      <category term="tools" scheme="https://eastonwang.github.io/tags/tools/"/>
-    
       <category term="python" scheme="https://eastonwang.github.io/tags/python/"/>
+    
+      <category term="tools" scheme="https://eastonwang.github.io/tags/tools/"/>
     
       <category term="nlp" scheme="https://eastonwang.github.io/tags/nlp/"/>
     
@@ -237,9 +237,9 @@ plt.show()
     </summary>
     
     
-      <category term="Latex" scheme="https://eastonwang.github.io/tags/Latex/"/>
-    
       <category term="tools" scheme="https://eastonwang.github.io/tags/tools/"/>
+    
+      <category term="Latex" scheme="https://eastonwang.github.io/tags/Latex/"/>
     
   </entry>
   
