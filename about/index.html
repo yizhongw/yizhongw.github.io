@@ -1,513 +1,398 @@
-<!doctype html>
 
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="en">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Yizhong, Blog, Computer, Technology, Intelligence" />
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="Yizhong's Blog" type="application/atom+xml" />
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
-
-
-
-
-
-
-<meta name="description" content="Yizhong Wang (王义中) is currently a master student in computer science at Peking University, with his expertise in programming and special research interests in NLP and ML.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yizhong Wang @ Peking Univerity">
-<meta property="og:url" content="https://eastonwang.github.io/about/index.html">
-<meta property="og:site_name" content="Yizhong's Blog">
-<meta property="og:description" content="Yizhong Wang (王义中) is currently a master student in computer science at Peking University, with his expertise in programming and special research interests in NLP and ML.">
-<meta property="og:image" content="https://eastonwang.github.io/images/me.jpg">
-<meta property="og:updated_time" content="2017-07-11T09:57:46.901Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yizhong Wang @ Peking Univerity">
-<meta name="twitter:description" content="Yizhong Wang (王义中) is currently a master student in computer science at Peking University, with his expertise in programming and special research interests in NLP and ML.">
-<meta name="twitter:image" content="https://eastonwang.github.io/images/me.jpg">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"hide"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: "",
-      labels: ""
-    }
-  };
-</script>
-
-
-
-
-
-
-
-  <style>
-    .main {padding-bottom: 0}
-    h1 {font-size: 24px}
-    h2 {font-size: 22px}
-    body {font-size: 18px}
-    table {font-size: 18px}
-    ul {list-style: disc}
-    .footer {position: initial;}
-    .footer-inner::before {width: 0;}
-    @media screen and (max-width: 600px) {
-      #myphoto {
-        display: none;
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Yizhong Wang | Peking University</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="./css/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="./css/custom.min.css">
+    <style type="text/css">
+      body {
+        font-size: 20px;
+        color: black;
+        line-height: 2;
       }
-      #basicinfo {
-        width: 100%;
+      .bs-docs-section {
+        margin-top: 2em;
       }
-    }
-  </style>
-  <title>
-     Yizhong Wang @ Peking Univerity
-  </title>
-</head>
+      a {
+        color: #476faf;
+      }
+      strong {
+        font-weight: 500;
+      }
+      h3 > strong {
+        font-weight: 700;
+      }
+      .jumbotron {
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+      .news-table > .row {
+        margin-left: 2px;
+        margin-top: 2px;
+        font-weight: 200;
+      }
+      .news-table li {
+        color: #a29c83;
+      }
+      .news-table li strong {
+        color: black;
+        font-weight: 300;
+      }
+      .list-group-item.active, .list-group-item.active:focus {
+        background: transparent;
+        border-color: gray;
+        color: inherit;
+      }
+      .list-group-item.active:hover {
+        background: #edf6fe;
+        color: black;
+        border-color: gray;
+      }
+      .list-group-item.active .list-group-item-text, .list-group-item.active:hover .list-group-item-text, .list-group-item.active:focus .list-group-item-text {
+        color: black;
+      }
+      .list-group-item > p {
+        margin-bottom: 5px;
+      }
+      .paper-button-group {
+        text-align: right;
+      }
+      footer {
+        background: #e6f2ee;
+        margin-top: 2em;
+        margin-bottom: 0;
+        padding-top: 2em;
+        font-weight: 200;
+        font-size: 16.25px;
+      }
+      .alert {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .tab-content {
+        padding: 10px;
+      }
+      .tab-content h5 {
+        margin-bottom: 0;
+      }
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+      @media (max-width: 500px) {
+        #about h3 {
+          font-size: 30px;
+        }
+        #selfie, #basic-info {
+          text-align: center;
+        }
+      }
+    </style>
+    <script type="text/javascript">
+      window.addEventListener("hashchange", function() { scrollBy(0, -50) })
+    </script>
+  </head>
 
-  
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="https://bootswatch.com/" class="navbar-brand" target="_blank" rel="external">Yizhong Wang</a>
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="https://bootswatch.com/paper/#" id="themes">Themes <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+                <li><a href="https://bootswatch.com/default/">Default</a></li>
+                <li class="divider"></li>
+                <li><a href="https://bootswatch.com/cerulean/">Cerulean</a></li>
+              </ul>
+            </li> -->
+            <li>
+              <a href="#bio">About Me</a>
+            </li>
+            <li>
+              <a href="https://eastonwang.github.io/resume.pdf">CV</a>
+            </li>
+            <li>
+              <a href="#publications">Publications</a>
+            </li>
+<!--             <li>
+              <a href="http://news.bootswatch.com/">Code & Data</a>
+            </li> -->
+            <li>
+              <a href="#resources">Resources</a>
+            </li>
+            <li>
+              <a href="https://eastonwang.github.io/">Blog</a>
+            </li>
+          </ul>
+
+          <!-- <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
+            <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
+          </ul> -->
+
+        </div>
+      </div>
+    </div>
 
 
+    <div class="container">
 
+      <!-- About -->
+      <div class="bs-docs-section" id="about">
+        <div class="row">
 
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?2af0cbd0377bb546b9c7a9031fd1ec28";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+          <div class="col-xs-12 col-sm-3" id="selfie"><img src="selfie.jpg" style="width: 90%; max-width: 300px; border-radius: 12px; margin-top: 20px" class="img-rounded"></div>
+          <div class="col-xs-12 col-sm-8" id="basic-info">
+              <h3>
+                  Yizhong Wang &nbsp <span style="font-family:STFangsong; font-size:30px; font-weight: 800;"> (王义中)</span> <br>
+                  <small>Master Student at Peking University</small>
+              </h3>
+              <p>
+                  1812S, No.2 Science Building,<br>
+                  <!-- MOE Key Lab of Computational Linguistics, <br> -->
+                  Department of Computer Science, Peking University, <br>
+                  No.5 Yiheyuan Road, Haidian District, Beijing, China
+              </p>
 
+              <p>Email: <code>yizhong [at] pku.edu.cn</code></p>
 
+          </div>
+        </div>
 
+        <div class="alert alert-dismissible alert-warning">
+          
+          <p>
+            I am looking for research internship positions starting from Spring 2018.
+            <!-- <button type="button" class="close" data-dismiss="alert">×</button> -->
+          </p>
+        </div>
+      </div>
 
+      <!-- Short Bio -->
+      <hr id="bio" size="2" color="#800000">
 
+      <div class="jumbotron" style="padding: 0; background: white;">
+        <h3><a><strong>Short Bio</strong></a></h3>
+        <div class="bio-content" style="margin-top: 20px;">
+          <p>
+            Hey, there! Thanks for stopping by.
+          </p>
+          <p>
+            I am currently a first-year master student in the <a href="http://eecs.pku.edu.cn/" target="_blank" rel="external">Computer Science Department</a> at <a href="http://www.pku.edu.cn" target="_blank" rel="external">Peking University</a>. I'm a member of the <a href="http://kicl.pku.edu.cn" target="_blank" rel="external">Institute of Computational Linguistics</a> and work under the supervision of <a href="">Prof. Li Sujian</a>. Prior to that, I received B.Eng. in Computer Science from the <a href="http://english.seiee.sjtu.edu.cn/english/info/8338.htm" target="_blank" rel="external">IEEE Pilot Class</a>, <a href="http://www.sjtu.edu.cn" target="_blank" rel="external">Shanghai Jiao Tong University</a>, where I spent the best part of my time and found my life goals.  
+          </p>
+          <p>
+            I've been steadily working on and have great interest in Natural Language Proceesing and Machine Learning, with current focus on Deep Learning. My current research areas include: discourse parsing, text representation and machine reading comprehension. I also develop some funny applications and websites during my spare time. 
+          </p>
+        </div>
+        <!-- <div class="align-right"><a class="btn btn-primary btn-lg">Learn more</a></div> -->
+      </div>
 
+      <hr id="news" size="2" color="#800000">
 
-
-    <main id="main" class="main">
-      <div id='content' style='max-width:1000px; background: white; padding: 30px; margin: 0 auto;'>
+      <!-- News -->
+      <div class="jumbotron" style="padding: 0; background: white;">
+        <h3><a><strong>What's New</strong></a></h3>
         
-<table style="width:100%; border: none; background: white">
-<tbody>
-	<tr>
-		<td id="myphoto" style="width:30%; padding: 5px; background: white; border: none"><img src="/images/me.jpg" width="160"></td>
-		<td id="basicinfo" style="width=70%; padding: 5px; background: white; border: none">
-			<h2><strong class="name">Yizhong Wang</strong>&nbsp; (王义中)</h2>
-			Master Student @ Peking University<br>
-            Advisor: <a href="http://icl.pku.edu.cn/member/lisujian/maincontent.htm" target="_blank" rel="external">Sujian Li</a><br>
-			<a href="http://eecs.pku.edu.cn/" target="_blank" rel="external">Department of Computer Science, School of EECS</a><br>
-			<a href="http://pku.edu.cn/" target="_blank" rel="external">Peking University</a><br>
-			Email：yizhong (AT) pku.edu.cn
-		</td>
-	</tr>
-</tbody>
-</table>
+        <div class="news-table" style="margin-top: 20px;">
+          <div class="row">
+            <div class="col-xs-12 col-sm-3"><li><strong>July 08, 2017</strong></li></div>
+            <div class="col-sm-9">One paper on discourse relation classification was submitted to <a href="http://ijcnlp2017.org/" target="_blank" rel="external">IJCNLP 2017</a>.</div>
+          </div>
 
-<hr>
-<h2 id="Short-Bio"><a href="#Short-Bio" class="headerlink" title="Short Bio:"></a>Short Bio:</h2><p>I’m currently a first-year master student at Peking University, affiliated to <a href="http://klcl.pku.edu.cn/" target="_blank" rel="external">KLCL</a> and advised by <a href="http://www.icl.pku.edu.cn/member/lisujian/maincontent.htm" target="_blank" rel="external">Prof. Li Sujian</a>. Prior to PKU, I got B.S. in Computer Science from  <a href="http://english.seiee.sjtu.edu.cn/english/info/8338.htm" target="_blank" rel="external">IEEE Honor Class</a>, Shanghai Jiao Tong University, where I found my life goals, best friends and beloved girlfriend. </p>
-<p>My research interests are <strong>natural language processing</strong> and <strong>machine learning</strong>, with current special focus on <strong>discourse analysis</strong> and <strong>machine reading comprehension</strong>.</p>
-<p>You can find more details in my <a href="/resume.pdf">resume</a> and <a href="/">blog</a>.</p>
-<hr>
-<h2 id="News"><a href="#News" class="headerlink" title="News:"></a>News:</h2><ul>
-<li><p>I started my internship at Baidu NLP Group. – June. 14, 2017</p>
-</li>
-<li><p>Our paper was selected as ACL 2017 outstanding paper. – June. 03, 2017</p>
-</li>
-<li><p>One short paper on RST discourse parsing was accepted by ACL 2017. – March 31, 2017</p>
-</li>
-<li><p>One demo paper on dependency parsing was accepted by COLING 2016. – Sep. 30, 2016</p>
-</li>
-<li><p>I graduate with honour from SJTU. Thanks and Bye! – July 4, 2016</p>
-</li>
-</ul>
-<hr>
-<h2 id="Publications"><a href="#Publications" class="headerlink" title="Publications:"></a>Publications:</h2><ul>
-<li><p>Tag-Enhanced Tree-Structured Neural Networks for Implicit Discourse Relation Classiﬁcation.<br><strong>Yizhong Wang</strong>, Sujian Li. Under the review of IJCNLP 2017. </p>
-</li>
-<li><p>A Two-Stage Parsing Method for Text-level Discourse Analysis.<br><strong>Yizhong Wang</strong>, Sujian Li, Houfeng Wang. In ACL 2017. <a href="/papers/Two-Stage Parsing Method for Text-level Discourse Analysis.pdf">[pdf]</a><a href="https://github.com/EastonWang/StageDP" target="_blank" rel="external">[code]</a> </p>
-</li>
-<li><p>Towards Non-projective High-Order Dependency Parser.<br>Wenjing Fang, Kenny Q. Zhu, <strong>Yizhong Wang</strong>, Jia Tan. In COLING 2016. <a href="https://www.aclweb.org/anthology/C/C16/C16-2052.pdf" target="_blank" rel="external">[pdf]</a></p>
-</li>
-</ul>
+          <div class="row">
+            <div class="col-xs-12 col-sm-3"><li><strong>June 14, 2017</strong></li></div>
+            <div class="col-sm-9">I started my internship at <a href="http://ai.baidu.com/" target="_blank" rel="external">Baidu NLP Team</a>.</div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-3"><li><strong>June 03, 2017</strong></li></div>
+            <div class="col-sm-9">Our paper on discourse parsing was selected as ACL 2017 outstanding paper! <a href="https://chairs-blog.acl2017.org/2017/06/02/wednesday-2-august-detailed-program/" target="_blank" rel="external">[Full List]</a></div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-3"><li><strong>March 31, 2017</strong></li></div>
+            <div class="col-sm-9">One short paper on RST discourse parsing was accepted by ACL 2017.</div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-3"><li><strong>Sep. 30, 2016</strong></li></div>
+            <div class="col-sm-9">One demo paper on dependency parsing was accepted by COLING 2016. </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-3"><li><strong> July 4, 2016</strong></li></div>
+            <div class="col-sm-9">I graduated (with honours) from <a href="www.sjtu.edu.cn">Shanghai Jiao Tong University </a>. Thanks and Bye! </div>
+          </div>
+        </div>
+
+        <div style="text-align: right; margin-top: 20px;"><a class="btn btn-primary btn-lg">More</a></div>
+      </div>
+
+      <hr id="publications" size="2" color="#800000">
+
+      <div class="jumbotron" style="padding: 0; background: white;">
+        <h3><a><strong>Publications</strong></a></h3>
+        <div class="list-group" style="margin-top: 20px;">
+          <div href="#" class="list-group-item active">
+            <h5 class="list-group-item-heading">Tag-Enhanced Tree-Structured Neural Networks for Implicit Discourse Relation Classiﬁcation.</h5>
+            <p class="list-group-item-text"><strong>Yizhong Wang</strong> and Sujian Li. Under the review of <strong>IJCNLP 2017</strong>.</p>
+            <div class="paper-button-group">
+              <span class="label label-default">PDF</span>
+              <span class="label label-default">Tex</span>
+              <span class="label label-default">Code</span>
+              <!-- <span class="label label-success">Slides</span> -->
+            </div>
+          </div>
+          <div href="#" class="list-group-item active">
+            <h5 class="list-group-item-heading">A Two-Stage Parsing Method for Text-level Discourse Analysis. <span style="color: #ca0707">(Outstanding Paper Award)</span> </h5>
+            <p class="list-group-item-text"><strong>Yizhong Wang</strong>, Sujian Li and Houfeng Wang. Accepted by <strong>ACL 2017</strong>.</p>
+            <div class="paper-button-group">
+              <a href="https://eastonwang.github.io/papers/acl2017-discourse.pdf"><span class="label label-info">PDF</span></a> 
+              <a href="https://eastonwang.github.io/papers/acl2017-discourse.zip"><span class="label label-warning">Tex</span></a> 
+              <a href="https://github.com/EastonWang/StageDP" target="_blank" rel="external"><span class="label label-primary">Code</span></a>
+              <!-- <a href="#"><span class="label label-success">Slides</span></a>  -->
+              <span class="label label-default">Slides</span>
+            </div>
+          </div>
+          <div href="#" class="list-group-item active">
+            <h5 class="list-group-item-heading">Towards Non-projective High-Order Dependency Parser.</h5>
+            <p class="list-group-item-text">Wenjing Fang, Kenny Q. Zhu, <strong>Yizhong Wang</strong> and Jia Tan. Accepted by <strong>COLING 2016</strong>. </p>
+            <div class="paper-button-group">
+              <a href="https://www.aclweb.org/anthology/C/C16/C16-2052.pdf" target="_blank" rel="external"><span class="label label-info">PDF</span></a> 
+              <a href="https://github.com/littlebeanfang/BeanParser" target="_blank" rel="external"><span class="label label-primary">Code</span></a> 
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <hr id="resources" size="2" color="#800000">
+
+      <div class="jumbotron" style="padding: 0; background: white;">
+        <h3><a><strong>Useful Resources</strong></a></h3>
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#reading" data-toggle="tab" aria-expanded="false">Reading</a></li>
+          <li class=""><a href="#utilities" data-toggle="tab" aria-expanded="true">Utilities</a></li>
+          <li class=""><a href="#conferences" data-toggle="tab" aria-expanded="true">Conferences</a></li>
+          <!-- <li class="disabled"><a>Disabled</a></li> -->
+          <li class="disabled">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+              Other <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="disabled"><a href="#pku" data-toggle="tab">PKU</a></li>
+              <li class="divider"></li>
+              <li class="disabled"><a href="#friends" data-toggle="tab">Friends</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+          <div class="tab-pane fade active in" id="reading">
+            <h5><a href="http://biblioteca.ucv.cl/site/colecciones/manuales_u/12192.pdf" target="_blank" rel="external">On Being a Scientist: A Guide to Responsible Conduct in Research</a></h5>
+            <p>National Academies of Sciences, Engineering, and Medicine</p>
+
+            <h5><a href="http://www.cs.sjtu.edu.cn/~kzhu/writing-a-paper-slides.pdf" target="_blank" rel="external">How to Write a Great Research Paper</a></h5>
+            <p>Simon Peyton Jones</p>
+
+            <h5><a href="http://www.cs.sjtu.edu.cn/~kzhu/giving-a-talk-slides.pdf" target="_blank" rel="external">How to Give a Good Research Talk</a></h5>
+            <p>Simon Peyton Jones</p>
+
+            <h5><a href="http://exordio.qfb.umich.mx/archivos%20PDF%20de%20trabajo%20UMSNH/Leer%20escribir%20PDF%202014/Escritura%202014/How%20to%20Write%20a%20Lot%20-%20Paul%20J%20Sylvia.pdf" target="_blank" rel="external">How to Write a Lot: A Practical Guide to Productive Academic Writing</a></h5>
+            <p>Paul J. Silvia</p>
+
+            <h5><a href="http://thuvien.ued.udn.vn:8080/dspace/bitstream/TVDHSPDN_123456789/8412/2/1.pdf" target="_blank" rel="external">Asking the Right Questions: A Guide to Critical Thinking</a></h5>
+            <p>M. Neil Browne, Stuart M. Keeley</p>
+          </div>
+          <div class="tab-pane fade" id="utilities">
+            <h5>Search Engines:</h5>
+            <p><a href="http://dblp.uni-trier.de/" target="_blank" rel="external">DPLP</a>, <a href="http://aclweb.org/anthology/" target="_blank" rel="external">ACL Anthology</a>, <a href="https://scholar.google.com/" target="_blank" rel="external">Google Scholar</a>, <a href="http://weixin.sogou.com/" target="_blank" rel="external">Wechat Search</a></p>
+
+            <h5>Cheat Sheets:</h5>
+            <p><a href="https://vim.rtorr.com/" target="_blank" rel="external">Vim</a>, <a href="http://cb.vu/unixtoolbox.xhtml" target="_blank" rel="external">Linux</a>, <a href="https://www.rstudio.com/wp-content/uploads/2016/09/RegExCheatsheet.pdf" target="_blank" rel="external">Regular Expression</a>, <a href="http://reu.dimacs.rutgers.edu/Symbols.pdf" target="_blank" rel="external">Latex Math Symbols</a>, <a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">Markdown</a></p>
+
+            <h5>Natural Language Processing:</h5>
+            <p><a href="https://stanfordnlp.github.io/CoreNLP/index.html" target="_blank" rel="external">Stanford CoreNLP</a>, <a href="https://github.com/fxsjy/jieba" target="_blank" rel="external">Jieba</a>, <a href="https://github.com/keon/awesome-nlp" target="_blank" rel="external">Awesome-NLP</a></p>
+          </div>
+          <div class="tab-pane fade" id="conferences">
+            <h5>Top-tier AI Conferences:</h5>
+            <p><a href="https://nips.cc/" target="_blank" rel="external">NIPS</a>, <a href="https://icml.cc/" target="_blank" rel="external">ICML</a>, <a href="http://www.iclr.cc/" target="_blank" rel="external">ICLR</a>, <a href="https://www.ijcai.org/" target="_blank" rel="external">IJCAI</a>, <a href="http://www.aaai.org/" target="_blank" rel="external">AAAI</a></p>
+
+            <h5>Top-tier Data Mining Conferences:</h5>
+            <p><a href="http://www.kdd.org/" target="_blank" rel="external">SIGKDD</a>, <a href="http://www.ucs.louisiana.edu/~sxk6389/index.html" target="_blank" rel="external">ICDM</a>, <a href="http://www.cikmconference.org/" target="_blank" rel="external">CIKM</a>, <a href="https://www.icde.org/" target="_blank" rel="external">ICDE</a>, <a href="www.www2017.com.au/">WWW</a> </p>
+
+            <h5>Top-tier NLP Conferences:</h5>
+            <p><a href="http://acl2017.org/" target="_blank" rel="external">ACL</a>, <a href="http://sigir.org/" target="_blank" rel="external">SIGIR</a>, <a href="http://emnlp2017.net/" target="_blank" rel="external">EMNLP</a>, <a href="http://naacl.org/" target="_blank" rel="external">NAACL</a></p>
+
+            <h5>Good NLP Conferences:</h5>
+            <p><a href="http://www.eacl.org/page.php?id=index" target="_blank" rel="external">EACL</a>, <a href="http://ijcnlp2017.org" target="_blank" rel="external">IJCNLP</a>, <a href="http://coling2016.anlp.jp/" target="_blank" rel="external">COLING</a>, <a href="http://www.signll.org/conll" target="_blank" rel="external">CONLL</a></p>
+
+            <p>Find more details in the <a href="http://cs.rochester.edu/~omidb/nlpcalendar/" target="_blank" rel="external">Calendar</a> of NLP-related Conferences.</p>
+          </div>
+          <div class="tab-pane fade" id="pku">
+            <p></p>
+          </div>
+          <div class="tab-pane fade" id="friends">
+            <p></p>
+          </div>
+        </div>
 
       </div>
-    </main>
-
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
-  </div>
-  
-  <footer id="footer" class="footer">
-    <div class="footer-inner">
-      <div class="copyright" >
-  
-  &copy;  2015 - 
-  <span itemprop="copyrightYear">2017</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Yizhong Wang</span>
-</div>
-
-
-
       
-
-      
+      <ul class="list-unstyled">
+        <li class="pull-right"><a href="#top">Back to top</a></li>
+      </ul>
+    
     </div>
-  </footer>
 
+        
+
+    <footer>
+      <div class="row">
+        <div class="container">
+          <div class="col-sm-7 col-xs-12">
+            <div class="bs-component">
+              <blockquote>
+                <p>The fish trap exists because of the fish. Once you've gotten the fish you can forget the trap. The rabbit snare exists because of the rabbit. Once you've gotten the rabbit, you can forget the snare. Words exist because of meaning. Once you've gotten the meaning, you can forget the words. Where can I find a man who has forgotten words so I can talk with him?</p>
+                <small style="text-align: right; color: #d89685">Zhuangzi(庄子)</small>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="col-sm-5" style="text-align: center; margin-top: 20px;"> 
+            <div class="copyright">
+              ©  2015 - 2017
+              <span class="author" itemprop="copyrightHolder">Yizhong Wang</span>
+            </div>
+            <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE" target="_blank" rel="external">MIT License</a>.</p>
+            <p>Last modified: July 16th, 2017</p>
+            <p>Initial setup: Nov. 12th, 2016</p>
+            <p>
+              Page views: <a href="http://www.easycounter.com/" target="_blank" rel="external">
+                <img src="http://www.easycounter.com/counter.php?easton" border="0" alt="Web Site Hit Counter"></a>
+            </p>
+          </div>
+      </div> 
+    </div></footer>
+
+
+    <script src="./js/jquery-1.10.2.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+<!--     <script src="./js/custom.js"></script> -->
+
+</body><div></div></html>
 
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
-
-
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
-
-
-
-  
-
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"yizhong"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
-
-
-
-
-
-
-
-
-  
-  
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length == 0) {
-      search_path = "search.xml";
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    function proceedsearch() {
-      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
-      $('.popup').toggle();
-    }
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-      $.ajax({
-        url: path,
-        dataType: "xml",
-        async: true,
-        success: function( xmlResponse ) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = $( "entry", xmlResponse ).map(function() {
-            return {
-              title: $( "title", this ).text(),
-              content: $("content",this).text(),
-              url: $( "url" , this).text()
-            };
-          }).get();
-          var $input = document.getElementById(search_id);
-          var $resultContent = document.getElementById(content_id);
-          $input.addEventListener('input', function(){
-            var matchcounts = 0;
-            var str='<ul class=\"search-result-list\">';
-            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-            $resultContent.innerHTML = "";
-            if (this.value.trim().length > 1) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var content_index = [];
-                var data_title = data.title.trim().toLowerCase();
-                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
-                var data_url = decodeURIComponent(data.url);
-                var index_title = -1;
-                var index_content = -1;
-                var first_occur = -1;
-                // only match artiles with not empty titles and contents
-                if(data_title != '') {
-                  keywords.forEach(function(keyword, i) {
-                    index_title = data_title.indexOf(keyword);
-                    index_content = data_content.indexOf(keyword);
-                    if( index_title >= 0 || index_content >= 0 ){
-                      isMatch = true;
-                      if (i == 0) {
-                        first_occur = index_content;
-                      }
-                    }
-
-                  });
-                }
-                // show search results
-                if (isMatch) {
-                  matchcounts += 1;
-                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
-                  var content = data.content.trim().replace(/<[^>]+>/g,"");
-                  if (first_occur >= 0) {
-                    // cut out 100 characters
-                    var start = first_occur - 20;
-                    var end = first_occur + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if(start == 0){
-                      end = 50;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    var match_content = content.substring(start, end);
-                    // highlight all keywords
-                    keywords.forEach(function(keyword){
-                      var regS = new RegExp(keyword, "gi");
-                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
-                    });
-
-                    str += "<p class=\"search-result\">" + match_content +"...</p>"
-                  }
-                  str += "</li>";
-                }
-              })};
-            str += "</ul>";
-            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
-            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
-            $resultContent.innerHTML = str;
-          });
-          proceedsearch();
-        }
-      });}
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched == false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(function(e){
-      $('.popup').hide();
-      $(".popoverlay").remove();
-      $('body').css('overflow', '');
-    });
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-  </script>
-
-
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
-
-  
-
-  
-
-  
-
-  <script type="text/javascript" src="/js/src/particle.js"></script>
-</body>
-</html>

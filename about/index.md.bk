@@ -35,6 +35,8 @@ You can find more details in my [resume](/resume.pdf) and [blog](/).
 ----
 ## News:
 
+- I started my internship at Baidu NLP Group. -- June. 14, 2017
+
 - Our paper was selected as ACL 2017 outstanding paper. -- June. 03, 2017
 
 - One short paper on RST discourse parsing was accepted by ACL 2017. -- March 31, 2017
@@ -47,10 +49,12 @@ You can find more details in my [resume](/resume.pdf) and [blog](/).
 
 ----
 ## Publications:
+- Tag-Enhanced Tree-Structured Neural Networks for Implicit Discourse Relation Classiﬁcation.
+  **Yizhong Wang**, Sujian Li. Under the review of IJCNLP 2017. 
 
-- Two-Stage Parsing Method for Text-level Discourse Analysis.  
+- A Two-Stage Parsing Method for Text-level Discourse Analysis.  
   **Yizhong Wang**, Sujian Li, Houfeng Wang. In ACL 2017. [\[pdf\]](/papers/Two-Stage Parsing Method for Text-level Discourse Analysis.pdf)[\[code\]](https://github.com/EastonWang/StageDP) 
 
 - Towards Non-projective High-Order Dependency Parser.  
-  Wenjing Fang, Kenny Q. Zhu, **Yizhong Wang**, Jia Tan. In COLING 2016. 
+  Wenjing Fang, Kenny Q. Zhu, **Yizhong Wang**, Jia Tan. In COLING 2016. [\[pdf\]](https://www.aclweb.org/anthology/C/C16/C16-2052.pdf)
 
