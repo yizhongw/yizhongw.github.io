@@ -73,7 +73,11 @@
         return;
       }
 
-      if (autoHidingNavbar.settings.showOnUpscroll || scrollTop <= _hideoffset)="" {="" show(autohidingnavbar);="" }="" else="" if="" (scrolldelta=""> 0) {
+      if (autoHidingNavbar.settings.showOnUpscroll || scrollTop <= _hideOffset) {
+        show(autoHidingNavbar);
+      }
+    }
+    else if (scrollDelta > 0) {
       if (!_visible) {
         if (autoHidingNavbar.settings.showOnBottom && scrollTop + _windowHeight === $document.height()) {
           show(autoHidingNavbar);
@@ -204,4 +208,3 @@
   };
 
 })(jQuery, window, document);
-</=>
