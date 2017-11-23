@@ -22,10 +22,10 @@
     <published>2017-03-08T14:45:56.000Z</published>
     <updated>2017-03-09T02:22:36.000Z</updated>
     
-    <content type="html"><![CDATA[<p>在机器学习的问题中，高维变量是非常常见的，他们对于机器来讲很容易计算，但是对于人来说，看起来就非常痛苦了。所以，有很多给数据降维的<a href="https://en.wikipedia.org/wiki/Dimensionality_reduction#Linear_discriminant_analysis_.28LDA.29" target="_blank" rel="external">手段</a>，比如PCA，LDA等。t-SNE也是其中的一种，但它属于非线性降维，所以t-SNE降维的主要作用貌似只能用来数据可视化和分析数据，并不能进一步作为feature来使用。但瑕不掩瑜，它的可视化效果是非常好的，学习起来也并不难。</p>
+    <content type="html"><![CDATA[<p>在机器学习的问题中，高维变量是非常常见的，他们对于机器来讲很容易计算，但是对于人来说，看起来就非常痛苦了。所以，有很多给数据降维的<a href="https://en.wikipedia.org/wiki/Dimensionality_reduction#Linear_discriminant_analysis_.28LDA.29" target="_blank" rel="noopener">手段</a>，比如PCA，LDA等。t-SNE也是其中的一种，但它属于非线性降维，所以t-SNE降维的主要作用貌似只能用来数据可视化和分析数据，并不能进一步作为feature来使用。但瑕不掩瑜，它的可视化效果是非常好的，学习起来也并不难。</p>
 <a id="more"></a>
-<p>t-SNE是从SNE演化来的，他们都采用了将空间中的距离转换为概率的方式来表示点与点之间的相似度，然后求高维空间和低维空间的概率分布的KL Divergence作为两个分布的距离，希望最小化这个距离函数。SNE中对于高维和低维空间都使用高斯分布来建模，但是会造成“拥挤问题”，也就是最后低维空间中的数据点会聚集在一起。所以t-SNE使用了t分布来定义低维空间中点的相似性。具体的原理在<a href="https://lvdmaaten.github.io/tsne/" target="_blank" rel="external">Laurens van der Maaten</a>的<a href="https://www.youtube.com/watch?v=RJVL80Gg3lA&amp;list=UUtXKDgv1AVoG88PLl8nGXmw" target="_blank" rel="external">视频</a>讲解里讲的特别清楚，可以花半个多小时的时间看一下。另外，这篇<a href="http://www.datakit.cn/blog/2017/02/05/t_sne_full.html" target="_blank" rel="external">中文博文</a>讲的也不错, 还给出了手工实现的代码，可以学习一个。</p>
-<p>但是这里我们并不打算自己造轮子，Python的scikit-learn包已经支持了<a href="http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html" target="_blank" rel="external">t-SNE工具</a>，很方便调用，使用近似算法可以将复杂度降低到O(nlogn)，下面我们用这个工具对MNIST数据集进行一个可视化的实验，来看看它究竟效果如何。</p>
+<p>t-SNE是从SNE演化来的，他们都采用了将空间中的距离转换为概率的方式来表示点与点之间的相似度，然后求高维空间和低维空间的概率分布的KL Divergence作为两个分布的距离，希望最小化这个距离函数。SNE中对于高维和低维空间都使用高斯分布来建模，但是会造成“拥挤问题”，也就是最后低维空间中的数据点会聚集在一起。所以t-SNE使用了t分布来定义低维空间中点的相似性。具体的原理在<a href="https://lvdmaaten.github.io/tsne/" target="_blank" rel="noopener">Laurens van der Maaten</a>的<a href="https://www.youtube.com/watch?v=RJVL80Gg3lA&amp;list=UUtXKDgv1AVoG88PLl8nGXmw" target="_blank" rel="noopener">视频</a>讲解里讲的特别清楚，可以花半个多小时的时间看一下。另外，这篇<a href="http://www.datakit.cn/blog/2017/02/05/t_sne_full.html" target="_blank" rel="noopener">中文博文</a>讲的也不错, 还给出了手工实现的代码，可以学习一个。</p>
+<p>但是这里我们并不打算自己造轮子，Python的scikit-learn包已经支持了<a href="http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html" target="_blank" rel="noopener">t-SNE工具</a>，很方便调用，使用近似算法可以将复杂度降低到O(nlogn)，下面我们用这个工具对MNIST数据集进行一个可视化的实验，来看看它究竟效果如何。</p>
 <p>首先，import相关的包，并且加载MNIST数据集：</p>
 <pre><code>import numpy as np
 import matplotlib.pyplot as plt
@@ -65,7 +65,7 @@ plt.show()
     
     <summary type="html">
     
-      &lt;p&gt;在机器学习的问题中，高维变量是非常常见的，他们对于机器来讲很容易计算，但是对于人来说，看起来就非常痛苦了。所以，有很多给数据降维的&lt;a href=&quot;https://en.wikipedia.org/wiki/Dimensionality_reduction#Linear_discriminant_analysis_.28LDA.29&quot;&gt;手段&lt;/a&gt;，比如PCA，LDA等。t-SNE也是其中的一种，但它属于非线性降维，所以t-SNE降维的主要作用貌似只能用来数据可视化和分析数据，并不能进一步作为feature来使用。但瑕不掩瑜，它的可视化效果是非常好的，学习起来也并不难。&lt;/p&gt;
+      &lt;p&gt;在机器学习的问题中，高维变量是非常常见的，他们对于机器来讲很容易计算，但是对于人来说，看起来就非常痛苦了。所以，有很多给数据降维的&lt;a href=&quot;https://en.wikipedia.org/wiki/Dimensionality_reduction#Linear_discriminant_analysis_.28LDA.29&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;手段&lt;/a&gt;，比如PCA，LDA等。t-SNE也是其中的一种，但它属于非线性降维，所以t-SNE降维的主要作用貌似只能用来数据可视化和分析数据，并不能进一步作为feature来使用。但瑕不掩瑜，它的可视化效果是非常好的，学习起来也并不难。&lt;/p&gt;
     
     </summary>
     
@@ -87,17 +87,17 @@ plt.show()
     <published>2017-02-20T09:29:44.000Z</published>
     <updated>2017-02-20T12:07:54.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Stanford-CoreNLP工具包"><a href="#Stanford-CoreNLP工具包" class="headerlink" title="Stanford CoreNLP工具包"></a>Stanford CoreNLP工具包</h3><p><a href="http://stanfordnlp.github.io/CoreNLP/index.html" target="_blank" rel="external">Stanford CoreNLP</a>是自然语言处理领域非常重要并且好用的工具包, 它集成了tokenization, lemmatization, pos tagging, parsing等基础工具，也包括情感分析、命名实体识别等高级功能。而且，在某些任务上，该工具包包含对于中文在内的多种语言，因此在很多文章中都可以看到使用该工具来进行文本的预处理。</p>
+    <content type="html"><![CDATA[<h3 id="Stanford-CoreNLP工具包"><a href="#Stanford-CoreNLP工具包" class="headerlink" title="Stanford CoreNLP工具包"></a>Stanford CoreNLP工具包</h3><p><a href="http://stanfordnlp.github.io/CoreNLP/index.html" target="_blank" rel="noopener">Stanford CoreNLP</a>是自然语言处理领域非常重要并且好用的工具包, 它集成了tokenization, lemmatization, pos tagging, parsing等基础工具，也包括情感分析、命名实体识别等高级功能。而且，在某些任务上，该工具包包含对于中文在内的多种语言，因此在很多文章中都可以看到使用该工具来进行文本的预处理。</p>
 <a id="more"></a>
-<p>Stanford NLP group为该工具编写了很完善的<a href="http://stanfordnlp.github.io/CoreNLP/download.html" target="_blank" rel="external">使用文档</a>，因此本文将不着重于介绍它的功能，而重点说明如何在Python中调用该工具包。实际上，Stanford Corenlp提供了jar包，在下载之后可以直接通过命令行的方式运行，但这一方式很慢，在处理多个文件时，对于每一个文件程序都会花费大量的时间来重新加载模型，所以，我们希望模型只需要加载一次，这里我们要用到的就是它的<a href="http://stanfordnlp.github.io/CoreNLP/corenlp-server.html" target="_blank" rel="external">Server模式</a>。</p>
-<h3 id="使用Server模式"><a href="#使用Server模式" class="headerlink" title="使用Server模式"></a>使用Server模式</h3><p>首先，在官网下载该<a href="http://stanfordnlp.github.io/CoreNLP/download.html" target="_blank" rel="external">工具包</a>。解压后，<code>cd</code>进入目录。通过如下命令，运行该工具包的Server模式：</p>
+<p>Stanford NLP group为该工具编写了很完善的<a href="http://stanfordnlp.github.io/CoreNLP/download.html" target="_blank" rel="noopener">使用文档</a>，因此本文将不着重于介绍它的功能，而重点说明如何在Python中调用该工具包。实际上，Stanford Corenlp提供了jar包，在下载之后可以直接通过命令行的方式运行，但这一方式很慢，在处理多个文件时，对于每一个文件程序都会花费大量的时间来重新加载模型，所以，我们希望模型只需要加载一次，这里我们要用到的就是它的<a href="http://stanfordnlp.github.io/CoreNLP/corenlp-server.html" target="_blank" rel="noopener">Server模式</a>。</p>
+<h3 id="使用Server模式"><a href="#使用Server模式" class="headerlink" title="使用Server模式"></a>使用Server模式</h3><p>首先，在官网下载该<a href="http://stanfordnlp.github.io/CoreNLP/download.html" target="_blank" rel="noopener">工具包</a>。解压后，<code>cd</code>进入目录。通过如下命令，运行该工具包的Server模式：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -mx4g -cp &quot;*&quot; edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000</div></pre></td></tr></table></figure>
 <p>之后，程序会监听指定端口（9000），对于我们post到该端口的请求进行处理。运行截图如下：</p>
 <p><img src="/images/stanford_corenlp.png" alt="Stanford CoreNLP Running"></p>
 <h3 id="在Python中发送请求"><a href="#在Python中发送请求" class="headerlink" title="在Python中发送请求"></a>在Python中发送请求</h3><p>在Python中可以直接使用requests对相应端口进行post请求，请求的方式如下图所示：</p>
 <p><img src="/images/stanford_corenlp_1.png" alt="Post Request"></p>
-<p>需要注意的是，需要的annotator和返回的格式需要在url中指定，post的数据只包含原始文本。CoreNLP所支持的所有annotator可见官方的<a href="http://stanfordnlp.github.io/CoreNLP/annotators.html" target="_blank" rel="external">介绍</a>。</p>
-<p>除了直接请求外，<a href="http://stanfordnlp.github.io/CoreNLP/other-languages.html#python" target="_blank" rel="external">多个Python工具包</a>封装了对Stanford CoreNLP的请求，我采用的是<a href="https://github.com/smilli/py-corenlp" target="_blank" rel="external">pycorenlp</a>,它的使用方式非常简单，可以直接通过pip安装：</p>
+<p>需要注意的是，需要的annotator和返回的格式需要在url中指定，post的数据只包含原始文本。CoreNLP所支持的所有annotator可见官方的<a href="http://stanfordnlp.github.io/CoreNLP/annotators.html" target="_blank" rel="noopener">介绍</a>。</p>
+<p>除了直接请求外，<a href="http://stanfordnlp.github.io/CoreNLP/other-languages.html#python" target="_blank" rel="noopener">多个Python工具包</a>封装了对Stanford CoreNLP的请求，我采用的是<a href="https://github.com/smilli/py-corenlp" target="_blank" rel="noopener">pycorenlp</a>,它的使用方式非常简单，可以直接通过pip安装：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install pycorenlp</div></pre></td></tr></table></figure>
 <p>使用时，先import该python包：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; from pycorenlp import StanfordCoreNLP</div><div class="line">&gt;&gt;&gt; nlp = StanfordCoreNLP(&apos;http://localhost:9000&apos;)</div></pre></td></tr></table></figure>
@@ -109,7 +109,7 @@ plt.show()
     
     <summary type="html">
     
-      &lt;h3 id=&quot;Stanford-CoreNLP工具包&quot;&gt;&lt;a href=&quot;#Stanford-CoreNLP工具包&quot; class=&quot;headerlink&quot; title=&quot;Stanford CoreNLP工具包&quot;&gt;&lt;/a&gt;Stanford CoreNLP工具包&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://stanfordnlp.github.io/CoreNLP/index.html&quot;&gt;Stanford CoreNLP&lt;/a&gt;是自然语言处理领域非常重要并且好用的工具包, 它集成了tokenization, lemmatization, pos tagging, parsing等基础工具，也包括情感分析、命名实体识别等高级功能。而且，在某些任务上，该工具包包含对于中文在内的多种语言，因此在很多文章中都可以看到使用该工具来进行文本的预处理。&lt;/p&gt;
+      &lt;h3 id=&quot;Stanford-CoreNLP工具包&quot;&gt;&lt;a href=&quot;#Stanford-CoreNLP工具包&quot; class=&quot;headerlink&quot; title=&quot;Stanford CoreNLP工具包&quot;&gt;&lt;/a&gt;Stanford CoreNLP工具包&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://stanfordnlp.github.io/CoreNLP/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Stanford CoreNLP&lt;/a&gt;是自然语言处理领域非常重要并且好用的工具包, 它集成了tokenization, lemmatization, pos tagging, parsing等基础工具，也包括情感分析、命名实体识别等高级功能。而且，在某些任务上，该工具包包含对于中文在内的多种语言，因此在很多文章中都可以看到使用该工具来进行文本的预处理。&lt;/p&gt;
     
     </summary>
     
@@ -142,7 +142,7 @@ plt.show()
 <p>下面开始进入安装步骤：</p>
 <a id="more"></a>
 <h3 id="显卡驱动"><a href="#显卡驱动" class="headerlink" title="显卡驱动"></a>显卡驱动</h3><p>安装过程需要在终端模式下进行(Desktop按<code>Ctrl+Alt+F1</code> 切换到终端界面)</p>
-<h4 id="驱动安装文件下载"><a href="#驱动安装文件下载" class="headerlink" title="驱动安装文件下载"></a>驱动安装文件下载</h4><p>从 Nvidia <a href="http://www.nvidia.com/Download/index.aspx?lang=cn" target="_blank" rel="external">官网</a>选择并下载显卡对应的驱动安装文件，一般为 NVIDIA-Linux-x86_64_version_num.run </p>
+<h4 id="驱动安装文件下载"><a href="#驱动安装文件下载" class="headerlink" title="驱动安装文件下载"></a>驱动安装文件下载</h4><p>从 Nvidia <a href="http://www.nvidia.com/Download/index.aspx?lang=cn" target="_blank" rel="noopener">官网</a>选择并下载显卡对应的驱动安装文件，一般为 NVIDIA-Linux-x86_64_version_num.run </p>
 <h4 id="卸载旧驱动，禁用自带驱动等"><a href="#卸载旧驱动，禁用自带驱动等" class="headerlink" title="卸载旧驱动，禁用自带驱动等"></a>卸载旧驱动，禁用自带驱动等</h4><ul>
 <li><p>卸载可能存在的旧版本 nvidia 驱动</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sudo apt-get remove --purge nvidia*</div></pre></td></tr></table></figure>
@@ -164,23 +164,23 @@ plt.show()
 </li>
 </ul>
 <h4 id="运行驱动安装文件并重启"><a href="#运行驱动安装文件并重启" class="headerlink" title="运行驱动安装文件并重启"></a>运行驱动安装文件并重启</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo sh  NVIDIA-Linux-x86_64_version_num.run</div></pre></td></tr></table></figure>
-<h3 id="安装Cuda-Toolkit"><a href="#安装Cuda-Toolkit" class="headerlink" title="安装Cuda Toolkit"></a>安装Cuda Toolkit</h3><h4 id="关闭桌面管理系统"><a href="#关闭桌面管理系统" class="headerlink" title="关闭桌面管理系统"></a>关闭桌面管理系统</h4><p>在关闭桌面管理 lightdm 的情况下安装驱动似乎可以实现Intel 核芯显卡 来显示 + NVIDIA 显卡来计算，<a href="https://gist.github.com/bearpaw/c38ef18ec45ba6548ec0" target="_blank" rel="external">参考</a>:</p>
+<h3 id="安装Cuda-Toolkit"><a href="#安装Cuda-Toolkit" class="headerlink" title="安装Cuda Toolkit"></a>安装Cuda Toolkit</h3><h4 id="关闭桌面管理系统"><a href="#关闭桌面管理系统" class="headerlink" title="关闭桌面管理系统"></a>关闭桌面管理系统</h4><p>在关闭桌面管理 lightdm 的情况下安装驱动似乎可以实现Intel 核芯显卡 来显示 + NVIDIA 显卡来计算，<a href="https://gist.github.com/bearpaw/c38ef18ec45ba6548ec0" target="_blank" rel="noopener">参考</a>:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo service lightdm stop</div></pre></td></tr></table></figure>
-<h4 id="下载安装包并安转"><a href="#下载安装包并安转" class="headerlink" title="下载安装包并安转"></a>下载安装包并安转</h4><p>从<a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="external">官网</a>下载相应的安装包，并按照提示安装即可。</p>
+<h4 id="下载安装包并安转"><a href="#下载安装包并安转" class="headerlink" title="下载安装包并安转"></a>下载安装包并安转</h4><p>从<a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">官网</a>下载相应的安装包，并按照提示安装即可。</p>
 <p>我们选择了安转deb包，通过以下命令进行安装：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo dpkg -i cuda-repo-&lt;distro&gt;_&lt;version&gt;_&lt;architecture&gt;.deb</div><div class="line">sudo apt update</div><div class="line">sudo apt install cuda</div><div class="line">sudo reboot</div></pre></td></tr></table></figure>
-<h3 id="安装cuDNN"><a href="#安装cuDNN" class="headerlink" title="安装cuDNN"></a>安装cuDNN</h3><h4 id="下载与复制"><a href="#下载与复制" class="headerlink" title="下载与复制"></a>下载与复制</h4><p>从<a href="https://developer.nvidia.com/cudnn" target="_blank" rel="external">官网</a>下载最新的安装包，解压后将文件复制到对应的位置：</p>
+<h3 id="安装cuDNN"><a href="#安装cuDNN" class="headerlink" title="安装cuDNN"></a>安装cuDNN</h3><h4 id="下载与复制"><a href="#下载与复制" class="headerlink" title="下载与复制"></a>下载与复制</h4><p>从<a href="https://developer.nvidia.com/cudnn" target="_blank" rel="noopener">官网</a>下载最新的安装包，解压后将文件复制到对应的位置：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">tar xvzf cudnn-8.0-linux-x64-v5.1-ga.tgz</div><div class="line">sudo cp cuda/include/cudnn.h /usr/local/cuda/include</div><div class="line">sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64</div><div class="line">sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*</div></pre></td></tr></table></figure>
 <h4 id="配置环境变量："><a href="#配置环境变量：" class="headerlink" title="配置环境变量："></a>配置环境变量：</h4><p>打开<code>~/.bashrc</code>文件，在末尾添加以下内容，注意nvidia-367版本号可能会有不同：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64:/usr/lib/nvidia-367</div><div class="line">export CUDA_HOME=/usr/local/cuda</div><div class="line">export PATH=$PATH:/usr/local/cuda/bin</div></pre></td></tr></table></figure></p>
-<h3 id="安装tensorflow"><a href="#安装tensorflow" class="headerlink" title="安装tensorflow"></a>安装tensorflow</h3><p>目前, tensorflow 0.12已经支持<code>pip</code>安装，可以直接参考官方<a href="https://www.tensorflow.org/versions/r0.12/get_started/os_setup.html#using-pip" target="_blank" rel="external">教程</a>进行。</p>
+<h3 id="安装tensorflow"><a href="#安装tensorflow" class="headerlink" title="安装tensorflow"></a>安装tensorflow</h3><p>目前, tensorflow 0.12已经支持<code>pip</code>安装，可以直接参考官方<a href="https://www.tensorflow.org/versions/r0.12/get_started/os_setup.html#using-pip" target="_blank" rel="noopener">教程</a>进行。</p>
 <hr>
 <p>到这里，整个环境就配置好了，可以运行<code>ipython</code>之后<code>import tensorflow</code>进行测试，也可以通过跑tensorflow源码中的例子进行测试，比如<code>tensorflow/tensorflow/models/image/mnist</code>中的CNN模型，在这里不再详述。</p>
 <hr>
 <p>参考：</p>
 <ol>
-<li>官方文档：<a href="https://www.tensorflow.org/versions/r0.12/get_started/" target="_blank" rel="external">https://www.tensorflow.org/versions/r0.12/get_started/</a></li>
-<li>Install tensorflow with cuda: <a href="http://city.shaform.com/blog/2016/10/31/install-tensorflow-with-cuda.html" target="_blank" rel="external">http://city.shaform.com/blog/2016/10/31/install-tensorflow-with-cuda.html</a></li>
-<li>Ubuntu16.04 英伟达显卡驱动：<a href="https://gist.github.com/dangbiao1991/7825db1d17df9231f4101f034ecd5a2b" target="_blank" rel="external">https://gist.github.com/dangbiao1991/7825db1d17df9231f4101f034ecd5a2b</a></li>
+<li>官方文档：<a href="https://www.tensorflow.org/versions/r0.12/get_started/" target="_blank" rel="noopener">https://www.tensorflow.org/versions/r0.12/get_started/</a></li>
+<li>Install tensorflow with cuda: <a href="http://city.shaform.com/blog/2016/10/31/install-tensorflow-with-cuda.html" target="_blank" rel="noopener">http://city.shaform.com/blog/2016/10/31/install-tensorflow-with-cuda.html</a></li>
+<li>Ubuntu16.04 英伟达显卡驱动：<a href="https://gist.github.com/dangbiao1991/7825db1d17df9231f4101f034ecd5a2b" target="_blank" rel="noopener">https://gist.github.com/dangbiao1991/7825db1d17df9231f4101f034ecd5a2b</a></li>
 </ol>
 ]]></content>
     
@@ -237,9 +237,9 @@ plt.show()
     </summary>
     
     
-      <category term="tools" scheme="https://eastonwang.github.io/tags/tools/"/>
-    
       <category term="Latex" scheme="https://eastonwang.github.io/tags/Latex/"/>
+    
+      <category term="tools" scheme="https://eastonwang.github.io/tags/tools/"/>
     
   </entry>
   
@@ -252,20 +252,20 @@ plt.show()
     
     <content type="html"><![CDATA[<p>Years ago, I started to climb over GFW and embrace a brand new Internet world. It’s fantac. Even though there are many unreal rumors about China, I still find large amounts of useful information and Google definitely improved my efficiency.</p>
 <p>There are various of ways to fuck GFW. I used to use shadowsocks but now I turn to hosts and IPV6. So I’d like to make a summary of these methods and I would continally add more methods if I find them really useful.</p>
-<h3 id="Github-Education-Package"><a href="#Github-Education-Package" class="headerlink" title="Github Education Package"></a><a href="https://education.github.com/" target="_blank" rel="external">Github Education Package</a></h3><p>Github education package contains dozens of software to help students work and study. Most of all, it supplies a $50 credits for <a href="https://www.digitalocean.com/" target="_blank" rel="external">digital ocean</a>, which can be used to set up your vps. According to my test, the Sanfrancisco hosts and Singapore hosts are faster than others in China. </p>
+<h3 id="Github-Education-Package"><a href="#Github-Education-Package" class="headerlink" title="Github Education Package"></a><a href="https://education.github.com/" target="_blank" rel="noopener">Github Education Package</a></h3><p>Github education package contains dozens of software to help students work and study. Most of all, it supplies a $50 credits for <a href="https://www.digitalocean.com/" target="_blank" rel="noopener">digital ocean</a>, which can be used to set up your vps. According to my test, the Sanfrancisco hosts and Singapore hosts are faster than others in China. </p>
 <h3 id="VPN"><a href="#VPN" class="headerlink" title="VPN"></a>VPN</h3><p>This is a classic way to go over GFW. You can set up PPTP, L2TP or IPSec VPN servers on your own vps. Or you can buy one account. Here are some famous websites for this:</p>
 <ol>
-<li><a href="https://www.ytpub.com/" target="_blank" rel="external">云梯</a></li>
-<li><a href="https://bestvpnchina.net/%E5%85%8D%E8%B4%B9vpn%E6%8E%A8%E8%8D%90/" target="_blank" rel="external">Recommendations from other website.</a></li>
+<li><a href="https://www.ytpub.com/" target="_blank" rel="noopener">云梯</a></li>
+<li><a href="https://bestvpnchina.net/%E5%85%8D%E8%B4%B9vpn%E6%8E%A8%E8%8D%90/" target="_blank" rel="noopener">Recommendations from other website.</a></li>
 </ol>
 <a id="more"></a>
-<h3 id="Lantern"><a href="#Lantern" class="headerlink" title="Lantern"></a>Lantern</h3><p>Some people recommend this months ago. I didn’t try it but they said it’s fascinating. You can explore it at its <a href="https://getlantern.org/" target="_blank" rel="external">official website</a>.</p>
-<p>And this is a <a href="https://program-think.blogspot.com/2015/08/gfw-lantern.html" target="_blank" rel="external">blog</a> for reference. </p>
-<h3 id="Shadowsocks"><a href="#Shadowsocks" class="headerlink" title="Shadowsocks"></a>Shadowsocks</h3><p>Shadowsocks is now very popular in China because of its security and all-platform support. I used it for nearly two years on my Android phone and some of my servers. It’s easy for a programmer or handyman to set up a shadowsocks server on his own vps. You can follow the steps from this <a href="http://shadowsocks.blogspot.com/" target="_blank" rel="external">blog</a>. It’s a complete tutorial.</p>
+<h3 id="Lantern"><a href="#Lantern" class="headerlink" title="Lantern"></a>Lantern</h3><p>Some people recommend this months ago. I didn’t try it but they said it’s fascinating. You can explore it at its <a href="https://getlantern.org/" target="_blank" rel="noopener">official website</a>.</p>
+<p>And this is a <a href="https://program-think.blogspot.com/2015/08/gfw-lantern.html" target="_blank" rel="noopener">blog</a> for reference. </p>
+<h3 id="Shadowsocks"><a href="#Shadowsocks" class="headerlink" title="Shadowsocks"></a>Shadowsocks</h3><p>Shadowsocks is now very popular in China because of its security and all-platform support. I used it for nearly two years on my Android phone and some of my servers. It’s easy for a programmer or handyman to set up a shadowsocks server on his own vps. You can follow the steps from this <a href="http://shadowsocks.blogspot.com/" target="_blank" rel="noopener">blog</a>. It’s a complete tutorial.</p>
 <h3 id="Hosts"><a href="#Hosts" class="headerlink" title="Hosts"></a>Hosts</h3><p>These days I found this approach quite fascinating in its speed and fast configuration. Here I recommend two well-maintained repositories for use:</p>
 <ol>
-<li><a href="https://github.com/racaljk/hosts" target="_blank" rel="external">IPV4 hosts</a></li>
-<li><a href="https://github.com/lennylxx/ipv6-hosts" target="_blank" rel="external">IPV6 hosts</a></li>
+<li><a href="https://github.com/racaljk/hosts" target="_blank" rel="noopener">IPV4 hosts</a></li>
+<li><a href="https://github.com/lennylxx/ipv6-hosts" target="_blank" rel="noopener">IPV6 hosts</a></li>
 </ol>
 <p>For education net user, I greatly recommend you to use the IPV6 version or combine them together. For ordinary users, the first one also works well.</p>
 <h3 id="DNS-server"><a href="#DNS-server" class="headerlink" title="DNS server"></a>DNS server</h3><p>This is a alternative method to Hosts. But I should emphasize here it’s not stable. Since some dns requests will be detected by GFW and GFW will return you with a dummy ip address. Also, sometimes the dns servers may get polluted.</p>
@@ -283,19 +283,19 @@ plt.show()
     
       &lt;p&gt;Years ago, I started to climb over GFW and embrace a brand new Internet world. It’s fantac. Even though there are many unreal rumors about China, I still find large amounts of useful information and Google definitely improved my efficiency.&lt;/p&gt;
 &lt;p&gt;There are various of ways to fuck GFW. I used to use shadowsocks but now I turn to hosts and IPV6. So I’d like to make a summary of these methods and I would continally add more methods if I find them really useful.&lt;/p&gt;
-&lt;h3 id=&quot;Github-Education-Package&quot;&gt;&lt;a href=&quot;#Github-Education-Package&quot; class=&quot;headerlink&quot; title=&quot;Github Education Package&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://education.github.com/&quot;&gt;Github Education Package&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Github education package contains dozens of software to help students work and study. Most of all, it supplies a $50 credits for &lt;a href=&quot;https://www.digitalocean.com/&quot;&gt;digital ocean&lt;/a&gt;, which can be used to set up your vps. According to my test, the Sanfrancisco hosts and Singapore hosts are faster than others in China. &lt;/p&gt;
+&lt;h3 id=&quot;Github-Education-Package&quot;&gt;&lt;a href=&quot;#Github-Education-Package&quot; class=&quot;headerlink&quot; title=&quot;Github Education Package&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://education.github.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Github Education Package&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Github education package contains dozens of software to help students work and study. Most of all, it supplies a $50 credits for &lt;a href=&quot;https://www.digitalocean.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;digital ocean&lt;/a&gt;, which can be used to set up your vps. According to my test, the Sanfrancisco hosts and Singapore hosts are faster than others in China. &lt;/p&gt;
 &lt;h3 id=&quot;VPN&quot;&gt;&lt;a href=&quot;#VPN&quot; class=&quot;headerlink&quot; title=&quot;VPN&quot;&gt;&lt;/a&gt;VPN&lt;/h3&gt;&lt;p&gt;This is a classic way to go over GFW. You can set up PPTP, L2TP or IPSec VPN servers on your own vps. Or you can buy one account. Here are some famous websites for this:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.ytpub.com/&quot;&gt;云梯&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://bestvpnchina.net/%E5%85%8D%E8%B4%B9vpn%E6%8E%A8%E8%8D%90/&quot;&gt;Recommendations from other website.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ytpub.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;云梯&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://bestvpnchina.net/%E5%85%8D%E8%B4%B9vpn%E6%8E%A8%E8%8D%90/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Recommendations from other website.&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
     
     </summary>
     
     
-      <category term="GFW" scheme="https://eastonwang.github.io/tags/GFW/"/>
-    
       <category term="tech" scheme="https://eastonwang.github.io/tags/tech/"/>
+    
+      <category term="GFW" scheme="https://eastonwang.github.io/tags/GFW/"/>
     
   </entry>
   
@@ -325,9 +325,9 @@ plt.show()
     </summary>
     
     
-      <category term="tech" scheme="https://eastonwang.github.io/tags/tech/"/>
-    
       <category term="engadget" scheme="https://eastonwang.github.io/tags/engadget/"/>
+    
+      <category term="tech" scheme="https://eastonwang.github.io/tags/tech/"/>
     
       <category term="happy" scheme="https://eastonwang.github.io/tags/happy/"/>
     

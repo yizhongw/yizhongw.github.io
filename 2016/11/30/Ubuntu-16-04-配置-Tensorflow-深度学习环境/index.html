@@ -373,7 +373,7 @@ var _hmt = _hmt || [];
 <p>下面开始进入安装步骤：</p>
 <a id="more"></a>
 <h3 id="显卡驱动"><a href="#显卡驱动" class="headerlink" title="显卡驱动"></a>显卡驱动</h3><p>安装过程需要在终端模式下进行(Desktop按<code>Ctrl+Alt+F1</code> 切换到终端界面)</p>
-<h4 id="驱动安装文件下载"><a href="#驱动安装文件下载" class="headerlink" title="驱动安装文件下载"></a>驱动安装文件下载</h4><p>从 Nvidia <a href="http://www.nvidia.com/Download/index.aspx?lang=cn" target="_blank" rel="external">官网</a>选择并下载显卡对应的驱动安装文件，一般为 NVIDIA-Linux-x86_64_version_num.run </p>
+<h4 id="驱动安装文件下载"><a href="#驱动安装文件下载" class="headerlink" title="驱动安装文件下载"></a>驱动安装文件下载</h4><p>从 Nvidia <a href="http://www.nvidia.com/Download/index.aspx?lang=cn" target="_blank" rel="noopener">官网</a>选择并下载显卡对应的驱动安装文件，一般为 NVIDIA-Linux-x86_64_version_num.run </p>
 <h4 id="卸载旧驱动，禁用自带驱动等"><a href="#卸载旧驱动，禁用自带驱动等" class="headerlink" title="卸载旧驱动，禁用自带驱动等"></a>卸载旧驱动，禁用自带驱动等</h4><ul>
 <li><p>卸载可能存在的旧版本 nvidia 驱动</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sudo apt-get remove --purge nvidia*</div></pre></td></tr></table></figure>
@@ -395,23 +395,23 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <h4 id="运行驱动安装文件并重启"><a href="#运行驱动安装文件并重启" class="headerlink" title="运行驱动安装文件并重启"></a>运行驱动安装文件并重启</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo sh  NVIDIA-Linux-x86_64_version_num.run</div></pre></td></tr></table></figure>
-<h3 id="安装Cuda-Toolkit"><a href="#安装Cuda-Toolkit" class="headerlink" title="安装Cuda Toolkit"></a>安装Cuda Toolkit</h3><h4 id="关闭桌面管理系统"><a href="#关闭桌面管理系统" class="headerlink" title="关闭桌面管理系统"></a>关闭桌面管理系统</h4><p>在关闭桌面管理 lightdm 的情况下安装驱动似乎可以实现Intel 核芯显卡 来显示 + NVIDIA 显卡来计算，<a href="https://gist.github.com/bearpaw/c38ef18ec45ba6548ec0" target="_blank" rel="external">参考</a>:</p>
+<h3 id="安装Cuda-Toolkit"><a href="#安装Cuda-Toolkit" class="headerlink" title="安装Cuda Toolkit"></a>安装Cuda Toolkit</h3><h4 id="关闭桌面管理系统"><a href="#关闭桌面管理系统" class="headerlink" title="关闭桌面管理系统"></a>关闭桌面管理系统</h4><p>在关闭桌面管理 lightdm 的情况下安装驱动似乎可以实现Intel 核芯显卡 来显示 + NVIDIA 显卡来计算，<a href="https://gist.github.com/bearpaw/c38ef18ec45ba6548ec0" target="_blank" rel="noopener">参考</a>:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo service lightdm stop</div></pre></td></tr></table></figure>
-<h4 id="下载安装包并安转"><a href="#下载安装包并安转" class="headerlink" title="下载安装包并安转"></a>下载安装包并安转</h4><p>从<a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="external">官网</a>下载相应的安装包，并按照提示安装即可。</p>
+<h4 id="下载安装包并安转"><a href="#下载安装包并安转" class="headerlink" title="下载安装包并安转"></a>下载安装包并安转</h4><p>从<a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">官网</a>下载相应的安装包，并按照提示安装即可。</p>
 <p>我们选择了安转deb包，通过以下命令进行安装：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo dpkg -i cuda-repo-&lt;distro&gt;_&lt;version&gt;_&lt;architecture&gt;.deb</div><div class="line">sudo apt update</div><div class="line">sudo apt install cuda</div><div class="line">sudo reboot</div></pre></td></tr></table></figure>
-<h3 id="安装cuDNN"><a href="#安装cuDNN" class="headerlink" title="安装cuDNN"></a>安装cuDNN</h3><h4 id="下载与复制"><a href="#下载与复制" class="headerlink" title="下载与复制"></a>下载与复制</h4><p>从<a href="https://developer.nvidia.com/cudnn" target="_blank" rel="external">官网</a>下载最新的安装包，解压后将文件复制到对应的位置：</p>
+<h3 id="安装cuDNN"><a href="#安装cuDNN" class="headerlink" title="安装cuDNN"></a>安装cuDNN</h3><h4 id="下载与复制"><a href="#下载与复制" class="headerlink" title="下载与复制"></a>下载与复制</h4><p>从<a href="https://developer.nvidia.com/cudnn" target="_blank" rel="noopener">官网</a>下载最新的安装包，解压后将文件复制到对应的位置：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">tar xvzf cudnn-8.0-linux-x64-v5.1-ga.tgz</div><div class="line">sudo cp cuda/include/cudnn.h /usr/local/cuda/include</div><div class="line">sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64</div><div class="line">sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*</div></pre></td></tr></table></figure>
 <h4 id="配置环境变量："><a href="#配置环境变量：" class="headerlink" title="配置环境变量："></a>配置环境变量：</h4><p>打开<code>~/.bashrc</code>文件，在末尾添加以下内容，注意nvidia-367版本号可能会有不同：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64:/usr/lib/nvidia-367</div><div class="line">export CUDA_HOME=/usr/local/cuda</div><div class="line">export PATH=$PATH:/usr/local/cuda/bin</div></pre></td></tr></table></figure></p>
-<h3 id="安装tensorflow"><a href="#安装tensorflow" class="headerlink" title="安装tensorflow"></a>安装tensorflow</h3><p>目前, tensorflow 0.12已经支持<code>pip</code>安装，可以直接参考官方<a href="https://www.tensorflow.org/versions/r0.12/get_started/os_setup.html#using-pip" target="_blank" rel="external">教程</a>进行。</p>
+<h3 id="安装tensorflow"><a href="#安装tensorflow" class="headerlink" title="安装tensorflow"></a>安装tensorflow</h3><p>目前, tensorflow 0.12已经支持<code>pip</code>安装，可以直接参考官方<a href="https://www.tensorflow.org/versions/r0.12/get_started/os_setup.html#using-pip" target="_blank" rel="noopener">教程</a>进行。</p>
 <hr>
 <p>到这里，整个环境就配置好了，可以运行<code>ipython</code>之后<code>import tensorflow</code>进行测试，也可以通过跑tensorflow源码中的例子进行测试，比如<code>tensorflow/tensorflow/models/image/mnist</code>中的CNN模型，在这里不再详述。</p>
 <hr>
 <p>参考：</p>
 <ol>
-<li>官方文档：<a href="https://www.tensorflow.org/versions/r0.12/get_started/" target="_blank" rel="external">https://www.tensorflow.org/versions/r0.12/get_started/</a></li>
-<li>Install tensorflow with cuda: <a href="http://city.shaform.com/blog/2016/10/31/install-tensorflow-with-cuda.html" target="_blank" rel="external">http://city.shaform.com/blog/2016/10/31/install-tensorflow-with-cuda.html</a></li>
-<li>Ubuntu16.04 英伟达显卡驱动：<a href="https://gist.github.com/dangbiao1991/7825db1d17df9231f4101f034ecd5a2b" target="_blank" rel="external">https://gist.github.com/dangbiao1991/7825db1d17df9231f4101f034ecd5a2b</a></li>
+<li>官方文档：<a href="https://www.tensorflow.org/versions/r0.12/get_started/" target="_blank" rel="noopener">https://www.tensorflow.org/versions/r0.12/get_started/</a></li>
+<li>Install tensorflow with cuda: <a href="http://city.shaform.com/blog/2016/10/31/install-tensorflow-with-cuda.html" target="_blank" rel="noopener">http://city.shaform.com/blog/2016/10/31/install-tensorflow-with-cuda.html</a></li>
+<li>Ubuntu16.04 英伟达显卡驱动：<a href="https://gist.github.com/dangbiao1991/7825db1d17df9231f4101f034ecd5a2b" target="_blank" rel="noopener">https://gist.github.com/dangbiao1991/7825db1d17df9231f4101f034ecd5a2b</a></li>
 </ol>
 
       
