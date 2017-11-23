@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eastonwang.github.io/"/>
-  <updated>2017-03-09T02:22:36.099Z</updated>
+  <updated>2017-03-09T02:22:36.000Z</updated>
   <id>https://eastonwang.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://eastonwang.github.io/2017/03/08/%E4%BD%BF%E7%94%A8t-SNE%E5%8F%AF%E8%A7%86%E5%8C%96%E6%95%B0%E6%8D%AE/"/>
     <id>https://eastonwang.github.io/2017/03/08/使用t-SNE可视化数据/</id>
     <published>2017-03-08T14:45:56.000Z</published>
-    <updated>2017-03-09T02:22:36.099Z</updated>
+    <updated>2017-03-09T02:22:36.000Z</updated>
     
     <content type="html"><![CDATA[<p>在机器学习的问题中，高维变量是非常常见的，他们对于机器来讲很容易计算，但是对于人来说，看起来就非常痛苦了。所以，有很多给数据降维的<a href="https://en.wikipedia.org/wiki/Dimensionality_reduction#Linear_discriminant_analysis_.28LDA.29" target="_blank" rel="external">手段</a>，比如PCA，LDA等。t-SNE也是其中的一种，但它属于非线性降维，所以t-SNE降维的主要作用貌似只能用来数据可视化和分析数据，并不能进一步作为feature来使用。但瑕不掩瑜，它的可视化效果是非常好的，学习起来也并不难。</p>
 <a id="more"></a>
@@ -85,7 +85,7 @@ plt.show()
     <link href="https://eastonwang.github.io/2017/02/20/%E5%9C%A8Python%E4%B8%AD%E4%BD%BF%E7%94%A8Stanford-CoreNLP%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/"/>
     <id>https://eastonwang.github.io/2017/02/20/在Python中使用Stanford-CoreNLP进行数据预处理/</id>
     <published>2017-02-20T09:29:44.000Z</published>
-    <updated>2017-02-20T12:07:55.610Z</updated>
+    <updated>2017-02-20T12:07:54.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Stanford-CoreNLP工具包"><a href="#Stanford-CoreNLP工具包" class="headerlink" title="Stanford CoreNLP工具包"></a>Stanford CoreNLP工具包</h3><p><a href="http://stanfordnlp.github.io/CoreNLP/index.html" target="_blank" rel="external">Stanford CoreNLP</a>是自然语言处理领域非常重要并且好用的工具包, 它集成了tokenization, lemmatization, pos tagging, parsing等基础工具，也包括情感分析、命名实体识别等高级功能。而且，在某些任务上，该工具包包含对于中文在内的多种语言，因此在很多文章中都可以看到使用该工具来进行文本的预处理。</p>
 <a id="more"></a>
@@ -127,7 +127,7 @@ plt.show()
     <link href="https://eastonwang.github.io/2016/11/30/Ubuntu-16-04-%E9%85%8D%E7%BD%AE-Tensorflow-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83/"/>
     <id>https://eastonwang.github.io/2016/11/30/Ubuntu-16-04-配置-Tensorflow-深度学习环境/</id>
     <published>2016-11-30T07:13:50.000Z</published>
-    <updated>2016-11-30T08:37:33.690Z</updated>
+    <updated>2016-11-30T08:37:32.000Z</updated>
     
     <content type="html"><![CDATA[<p>最近，在实验室的主机上装好了深度学习的环境，因为配置步骤比较复杂，所以在这里记录一下，一是为了以后有问题的时候参考，二是可以给大家配置环境的时候提供一个借鉴。</p>
 <p>我们配置的深度学习环境如下：</p>
@@ -214,7 +214,7 @@ plt.show()
     <link href="https://eastonwang.github.io/2016/11/29/%E4%BD%BF%E7%94%A8Makefile%E6%9D%A5%E7%BC%96%E8%AF%91Tex%E6%96%87%E4%BB%B6/"/>
     <id>https://eastonwang.github.io/2016/11/29/使用Makefile来编译Tex文件/</id>
     <published>2016-11-29T13:03:24.000Z</published>
-    <updated>2016-11-29T13:35:57.747Z</updated>
+    <updated>2016-11-29T13:35:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>最近在新配置的Linux机器上面写论文，因为只是小的改动，不想用Texmaker之类的IDE。而且因为IDE会产生很多的依赖和log文件，用dropbox同步的时候比较烦人。所以，转向了命令行来编译tex文件。当然，每次都敲latex，biblatex，pdflatex还是很烦人的，于是自己写了一个Makefile，这样，通过make命令就可以编译和查看文章了。</p>
 <p>首先，需要安装texlive，也就是整个tex包：</p>
@@ -237,9 +237,9 @@ plt.show()
     </summary>
     
     
-      <category term="Latex" scheme="https://eastonwang.github.io/tags/Latex/"/>
-    
       <category term="tools" scheme="https://eastonwang.github.io/tags/tools/"/>
+    
+      <category term="Latex" scheme="https://eastonwang.github.io/tags/Latex/"/>
     
   </entry>
   
@@ -248,7 +248,7 @@ plt.show()
     <link href="https://eastonwang.github.io/2016/11/17/Several-Methods-to-Go-Over-GFW/"/>
     <id>https://eastonwang.github.io/2016/11/17/Several-Methods-to-Go-Over-GFW/</id>
     <published>2016-11-17T01:02:10.000Z</published>
-    <updated>2016-11-30T07:53:53.211Z</updated>
+    <updated>2016-11-30T07:53:52.000Z</updated>
     
     <content type="html"><![CDATA[<p>Years ago, I started to climb over GFW and embrace a brand new Internet world. It’s fantac. Even though there are many unreal rumors about China, I still find large amounts of useful information and Google definitely improved my efficiency.</p>
 <p>There are various of ways to fuck GFW. I used to use shadowsocks but now I turn to hosts and IPV6. So I’d like to make a summary of these methods and I would continally add more methods if I find them really useful.</p>
@@ -293,9 +293,9 @@ plt.show()
     </summary>
     
     
-      <category term="tech" scheme="https://eastonwang.github.io/tags/tech/"/>
-    
       <category term="GFW" scheme="https://eastonwang.github.io/tags/GFW/"/>
+    
+      <category term="tech" scheme="https://eastonwang.github.io/tags/tech/"/>
     
   </entry>
   
@@ -304,7 +304,7 @@ plt.show()
     <link href="https://eastonwang.github.io/2016/11/13/New-Workstation-for-Deep-Learning/"/>
     <id>https://eastonwang.github.io/2016/11/13/New-Workstation-for-Deep-Learning/</id>
     <published>2016-11-13T07:45:50.000Z</published>
-    <updated>2016-11-29T13:33:58.337Z</updated>
+    <updated>2016-11-29T13:33:58.000Z</updated>
     
     <content type="html"><![CDATA[<p>Our lab is equiped with a new workstation recently. I spent some time studying how to assembly such a computer for deep learning and configure the deep learning environment. Finally I made it and here is a picture of the inner architecure.</p>
 <p><img src="/images/workstation.jpg" alt="New workstation"></p>
@@ -325,9 +325,9 @@ plt.show()
     </summary>
     
     
-      <category term="engadget" scheme="https://eastonwang.github.io/tags/engadget/"/>
-    
       <category term="tech" scheme="https://eastonwang.github.io/tags/tech/"/>
+    
+      <category term="engadget" scheme="https://eastonwang.github.io/tags/engadget/"/>
     
       <category term="happy" scheme="https://eastonwang.github.io/tags/happy/"/>
     
@@ -338,7 +338,7 @@ plt.show()
     <link href="https://eastonwang.github.io/2016/11/12/New-start/"/>
     <id>https://eastonwang.github.io/2016/11/12/New-start/</id>
     <published>2016-11-12T12:33:49.000Z</published>
-    <updated>2016-11-13T07:14:32.762Z</updated>
+    <updated>2016-11-13T07:14:32.000Z</updated>
     
     <content type="html"><![CDATA[<p>After the first two headache months of my graduate study, I’m ready to re-launch this blog today. </p>
 <p>I’m going to write some of my technical practices, research strucggles and interesting daily stories here. Hopefully I can continue this good habit to write blogs sometimes.</p>
