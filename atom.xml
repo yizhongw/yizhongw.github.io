@@ -70,13 +70,13 @@ plt.show()
     </summary>
     
     
-      <category term="tools" scheme="https://eastonwang.github.io/tags/tools/"/>
-    
-      <category term="machine learning" scheme="https://eastonwang.github.io/tags/machine-learning/"/>
-    
       <category term="python" scheme="https://eastonwang.github.io/tags/python/"/>
     
+      <category term="tools" scheme="https://eastonwang.github.io/tags/tools/"/>
+    
       <category term="nlp" scheme="https://eastonwang.github.io/tags/nlp/"/>
+    
+      <category term="machine learning" scheme="https://eastonwang.github.io/tags/machine-learning/"/>
     
   </entry>
   
@@ -114,9 +114,9 @@ plt.show()
     </summary>
     
     
-      <category term="tools" scheme="https://eastonwang.github.io/tags/tools/"/>
-    
       <category term="python" scheme="https://eastonwang.github.io/tags/python/"/>
+    
+      <category term="tools" scheme="https://eastonwang.github.io/tags/tools/"/>
     
       <category term="nlp" scheme="https://eastonwang.github.io/tags/nlp/"/>
     
@@ -237,9 +237,9 @@ plt.show()
     </summary>
     
     
-      <category term="Latex" scheme="https://eastonwang.github.io/tags/Latex/"/>
-    
       <category term="tools" scheme="https://eastonwang.github.io/tags/tools/"/>
+    
+      <category term="Latex" scheme="https://eastonwang.github.io/tags/Latex/"/>
     
   </entry>
   
@@ -293,9 +293,9 @@ plt.show()
     </summary>
     
     
-      <category term="tech" scheme="https://eastonwang.github.io/tags/tech/"/>
-    
       <category term="GFW" scheme="https://eastonwang.github.io/tags/GFW/"/>
+    
+      <category term="tech" scheme="https://eastonwang.github.io/tags/tech/"/>
     
   </entry>
   
@@ -325,9 +325,9 @@ plt.show()
     </summary>
     
     
-      <category term="engadget" scheme="https://eastonwang.github.io/tags/engadget/"/>
-    
       <category term="tech" scheme="https://eastonwang.github.io/tags/tech/"/>
+    
+      <category term="engadget" scheme="https://eastonwang.github.io/tags/engadget/"/>
     
       <category term="happy" scheme="https://eastonwang.github.io/tags/happy/"/>
     
