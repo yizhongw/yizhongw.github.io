@@ -72,11 +72,11 @@ plt.show()
     
       <category term="tools" scheme="https://eastonwang.github.io/tags/tools/"/>
     
-      <category term="machine learning" scheme="https://eastonwang.github.io/tags/machine-learning/"/>
-    
       <category term="python" scheme="https://eastonwang.github.io/tags/python/"/>
     
       <category term="nlp" scheme="https://eastonwang.github.io/tags/nlp/"/>
+    
+      <category term="machine learning" scheme="https://eastonwang.github.io/tags/machine-learning/"/>
     
   </entry>
   
@@ -237,9 +237,9 @@ plt.show()
     </summary>
     
     
-      <category term="tools" scheme="https://eastonwang.github.io/tags/tools/"/>
-    
       <category term="Latex" scheme="https://eastonwang.github.io/tags/Latex/"/>
+    
+      <category term="tools" scheme="https://eastonwang.github.io/tags/tools/"/>
     
   </entry>
   
