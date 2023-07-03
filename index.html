@@ -160,17 +160,9 @@
           </button>
         </div>
         <div class="navbar-collapse collapse" id="navbar-main" aria-expanded="false" style="height: 1px;">
-          <ul class="nav navbar-nav navbar-right">
-            <!-- <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="https://bootswatch.com/paper/#" id="themes">Themes <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="themes">
-                <li><a href="https://bootswatch.com/default/">Default</a></li>
-                <li class="divider"></li>
-                <li><a href="https://bootswatch.com/cerulean/">Cerulean</a></li>
-              </ul>
-            </li> -->
+          <ul class="nav navbar-nav navbar-right">  
             <li>
-              <a href="#bio">About Me</a>
+              <a href="#bio">Bio</a>
             </li>
             <li>
               <a href="resume.pdf">CV</a>
@@ -178,21 +170,19 @@
             <li>
               <a href="#publications">Publications</a>
             </li>
-<!--             <li>
-              <a href="http://news.bootswatch.com/">Code & Data</a>
-            </li> -->
-            <!-- <li>
-              <a href="#resources">Resources</a>
-            </li> -->
-            <li>
-              <a href="#">Blog</a>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">Find Me<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="mailto:yizhongw@cs.washington.edu">Email</a>
+                  <a href="https://twitter.com/yizhongwyz" target="_blank">Twitter</a>
+                  <a href="https://github.com/yizhongw" target="_blank">GitHub</a>
+                  <a href="https://scholar.google.com/citations?user=y5zpqdAAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                  <a href="https://www.semanticscholar.org/author/Yizhong-Wang/1705260" target="_blank">Semantic Scholar</a>
+                </li>
+              </ul>
             </li>
           </ul>
-
-          <!-- <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
-            <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
-          </ul> -->
 
         </div>
       </div>
@@ -223,8 +213,6 @@
 
         <!-- <div class="alert alert-dismissible alert-warning">
           <p>
-            I am looking for research internship positions starting from Spring 2018.
-            <button type="button" class="close" data-dismiss="alert">×</button>
           </p>
         </div> -->
       </div>
@@ -236,22 +224,19 @@
         <h3><a><strong>Short Bio</strong></a></h3>
         <div class="bio-content" style="margin-top: 20px;">
           <p>
-          I am a fourth-year PhD student at the University of Washington, where I am very fortunate to be co-advised by <a href="https://homes.cs.washington.edu/~hannaneh/">Hannaneh Hajishirzi</a> and <a href="https://homes.cs.washington.edu/~nasmith/">Noah Smith</a>.
-          Prior to UW, I completed my Master's degree at Peking University and Bachelor's degree at Shanghai Jiao Tong University.
+          I am a fourth-year PhD student at the <a href="https://www.cs.washington.edu/">Paul G. Allen School of Computer Science & Engineering</a>, <a herf="https://www.washington.edu/">University of Washington</a>. I am very fortunate to be co-advised by <a href="https://homes.cs.washington.edu/~hannaneh/">Hannaneh Hajishirzi</a> and <a href="https://homes.cs.washington.edu/~nasmith/">Noah Smith</a>.
+          I am also a part-time researcher at <a href="https://allenai.org/">Allen Institute for Artificial Intelligence</a>. I have previously interned at Meta AI, Microsoft Research, and Baidu NLP. Prior to UW, I obtained my Master's degree from <a href="https://english.pku.edu.cn/">Peking University</a> and Bachelor's degree from <a href="https://en.sjtu.edu.cn/">Shanghai Jiao Tong University</a>.
           </p>
           <p>
-          My research aims to push forward artificial intelligence through the language perspective. 
-          In particular, I am interested in how to make machines understand human language, acquire knowledge from the textual world, and conduct systematic reasoning in various complex scenarios.
-          Recently, I am working on building LMs that can follow instructions to generalize across various tasks.
-          <!-- I am broadly interested in natural language processing and machine learning problems. My research aims to make the machine understand human language, so that it can acquire and reason with the knowledge present in the textual world.  -->
-          <!-- Currently, I evaluate my research goal mainly by various types of question answering tasks. -->
-          <!-- My current research focuses on neural networks' abilities to do more complex reasoning when understanding text, answering questions, and generating human language. -->
+          My primary research interests lie in natural language processing and machine learning.
+          I am excited about the generality of large language models. 
+          In particular, my recent research focuses on building general-purpose instruction-following models and algorithms for adaptating them to many scenarios based on various forms of supervision.
+          This includes <a href="https://arxiv.org/abs/2204.07705">Super-NaturalInstructions</a>, <a href="https://arxiv.org/abs/2212.10560">Self-Instruct</a>, <a href="https://arxiv.org/abs/2306.04751">Tülu</a>.
           </p>
           <p>
           My name is written as 王义中 in Chinese characters.
           </p>
         </div>
-        <!-- <div class="align-right"><a class="btn btn-primary btn-lg">Learn more</a></div> -->
       </div>
 
       <hr id="news" size="2" color="#800000">
@@ -264,6 +249,10 @@
         </div>
 
         <div class="news-table" style="margin-top: 20px;">
+          <div class="row">
+            <div class="col-xs-12 col-sm-3"><li><strong>June 9, 2023</strong></li></div>
+            <div class="col-sm-9">We arxived a <a href="https://arxiv.org/abs/2306.04751">paper</a> that systematically studies instruction tuning resources and released Tülu, a suite of full-parameter instruction-tuned models from 7B to 65B! [<a href="https://twitter.com/yizhongwyz/status/1667171231278219267">Tweets</a>]</div>
+          </div>
           <div class="row">
             <div class="col-xs-12 col-sm-3"><li><strong>May 2, 2023</strong></li></div>
             <div class="col-sm-9">We have three papers accepted by ACL 2023. Looking forward to meeting people at Toronto!</div>
@@ -397,11 +386,26 @@
         <h3><a><strong>Publications</strong></a> <a href="https://scholar.google.com/citations?user=y5zpqdAAAAAJ&hl=en"><small style="color: #476faf">[Google Scholar]</small></a></h3>
         <div class="list-group" style="margin-top: 20px;">
           <div href="#" class="list-group-item active">
+            <h5 class="list-group-item-heading">How Far Can Camels Go? Exploring the State of Instruction Tuning on Open Resources</h5>
+            <p class="list-group-item-text"><strong>Yizhong Wang</strong>*, Hamish Ivison*, Pradeep Dasigi, Jack Hessel, Tushar Khot, Khyathi Raghavi Chandu, David Wadden, Kelsey MacMillan, Noah A. Smith, Iz Beltagy, Hannaneh Hajishirzi</p>
+            <div class="row" style="line-height: 1;">
+                <div class="col-xs-12 col-sm-9">
+                    <div class="conference">arXiv:2306.04751</div>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="paper-button-group">
+                      <a href='https://arxiv.org/abs/2306.04751'><span class="label label-info">Preprint</span></a>
+                      <a href='https://github.com/allenai/open-instruct'><span class="label label-primary">Code</span></a>
+                    </div>
+                </div>
+            </div>   
+          </div>
+          <div href="#" class="list-group-item active">
             <h5 class="list-group-item-heading">TIFA: Accurate and Interpretable Text-to-Image Faithfulness Evaluation with Question Answering</h5>
             <p class="list-group-item-text">Yushi Hu, Benlin Liu, Jungo Kasai, <strong>Yizhong Wang</strong>, Mari Ostendorf, Ranjay Krishna, Noah A Smith</p>
             <div class="row" style="line-height: 1;">
                 <div class="col-xs-12 col-sm-9">
-                    <div class="conference"></div>
+                    <div class="conference">arXiv:2303.11897</div>
                 </div>
                 <div class="col-xs-12 col-sm-3">
                     <div class="paper-button-group">
