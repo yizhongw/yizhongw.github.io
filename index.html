@@ -229,11 +229,20 @@
           </p>
           <p>
           My primary research interests lie in natural language processing and machine learning.
-          I am excited about the generality of large language models. 
-          In particular, my recent research focuses on building general-purpose instruction-following models and algorithms for adaptating them to many scenarios based on various forms of supervision.
-          This includes <a href="https://arxiv.org/abs/2204.07705">Super-NaturalInstructions</a>, <a href="https://arxiv.org/abs/2212.10560">Self-Instruct</a>, <a href="https://arxiv.org/abs/2306.04751">Tülu</a>.
+          I am excited about the generality of large language models (LLMs). 
+          <!-- In particular, my recent research focuses on building general-purpose instruction-following models and algorithms for adaptating them to many scenarios based on various forms of supervision.
+          This includes <a href="https://arxiv.org/abs/2204.07705">Super-NaturalInstructions</a>, <a href="https://arxiv.org/abs/2212.10560">Self-Instruct</a>, <a href="https://arxiv.org/abs/2306.04751">Tülu</a>. -->
+          In particular, I have been thinking over the following topics these days:
           </p>
+          <ul>
+            <li><b>Adaptation of LLMs</b>. How can we build and evaluate instruction-following models? What perpectives do we need to consider during alignment and their effects on the general-purpose models? What types of learning formats are effective and scalable?</li>
+            <li><b>Continual learning of LLMs</b>. What is the boundary between pretraining and finetuning? What architectures and learning methods can enable LLMs to keep evolving after pretraining? How does models' internal knowledge interplay with new knowledge being learned?</li>
+            <li><b>Large-scale synthetic data</b>. How can we generate diverse and high-quality data at a large scale? What are the roles of model-generated data to our model development, or even our Internet and society? We also need to build tools for analyzing data effciently.</li>
+          </ul>
           <p>
+          <p>
+            I believe answering these questions will be critical for the incoming era of generative AI. Feel free to drop me messages if you want to chat about these topics or would like to collaborate!
+          </p>
           My name is written as 王义中 in Chinese characters.
           </p>
         </div>
@@ -252,6 +261,10 @@
           <div class="row">
             <div class="col-xs-12 col-sm-2"><li><strong>Sep. 22, 2023</strong></li></div>
             <div class="col-sm-10">📢 We are organizing a <a href="https://an-instructive-workshop.github.io/">Workshop on Instruction Tuning and Instruction Following</a> at NeurIPS 2023. Please consider submitting your paper or joining us in the conference!</div> 
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-2"><li><strong>Nov. 18, 2023</strong></li></div>
+            <div class="col-sm-10">We released <a href="https://huggingface.co/allenai/tulu-2-dpo-70b">Tülu 2</a>, which tops open models on several benchmarks (e.g. <a href="https://tatsu-lab.github.io/alpaca_eval/">AlpacaEval</a> and <a href="https://lmsys.org/blog/2023-12-07-leaderboard/">Chatbot Arena</a>)!</div>
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-2"><li><strong>Sep. 22, 2023</strong></li></div>
@@ -401,6 +414,22 @@
       <div class="jumbotron" style="padding: 0; background: white;">
         <h3><a><strong>Selected Publications</strong></a> <a href="https://scholar.google.com/citations?user=y5zpqdAAAAAJ&hl=en"><small style="color: #476faf">[Google Scholar]</small></a></h3>
           <div href="#" class="list-group-item active">
+            <h5 class="list-group-item-heading">Camels in a Changing Climate: Enhancing LM Adaptation with Tulu 2</h5>
+            <p class="list-group-item-text">Hamish Ivison, <strong>Yizhong Wang</strong>*, Valentina Pyatkin, Nathan Lambert, Matthew Peters, Pradeep Dasigi, Joel Jang, David Wadden, Noah A. Smith, Iz Beltagy, Hannaneh Hajishirzi</p>
+            <div class="row" style="line-height: 1;">
+                <div class="col-xs-12 col-sm-9">
+                    <div class="conference">Arxiv Preprint</div>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="paper-button-group">
+                      <a href='https://arxiv.org/abs/2311.10702'><span class="label label-info">Paper</span></a>
+                      <a href='https://github.com/allenai/open-instruct'><span class="label label-primary">Code</span></a>
+                      <a href="https://huggingface.co/collections/allenai/tulu-v2-suite-6551b56e743e6349aab45101"><span class="label label-success">Models</span></a>
+                    </div>
+                </div>
+            </div>   
+          </div>
+          <div href="#" class="list-group-item active">
             <h5 class="list-group-item-heading">How Far Can Camels Go? Exploring the State of Instruction Tuning on Open Resources <span style="color: #ca0707">(Spotlight)</h5>
             <p class="list-group-item-text"><strong>Yizhong Wang</strong>*, Hamish Ivison*, Pradeep Dasigi, Jack Hessel, Tushar Khot, Khyathi Raghavi Chandu, David Wadden, Kelsey MacMillan, Noah A. Smith, Iz Beltagy, Hannaneh Hajishirzi</p>
             <div class="row" style="line-height: 1;">
@@ -411,6 +440,7 @@
                     <div class="paper-button-group">
                       <a href='https://arxiv.org/abs/2306.04751'><span class="label label-info">Paper</span></a>
                       <a href='https://github.com/allenai/open-instruct'><span class="label label-primary">Code</span></a>
+                      <a href="https://huggingface.co/collections/hamishivi/tulu-v1-suite-655138c3743e6349aaa07d7d"><span class="label label-success">Models</span></a>
                     </div>
                 </div>
             </div>   
