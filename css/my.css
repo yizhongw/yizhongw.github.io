@@ -1,7 +1,7 @@
 body {
     font-family: "Times New Roman", "Times", Arial, sans-serif;
     font-size: 20px;
-    color: #3a3b40;
+    color: black;
     line-height: 2;
 }
 
@@ -73,7 +73,7 @@ body {
     color: #a29c83;
 }
 .news-table li strong {
-    color: #3a3b40;
+    color: black;
     font-weight: blod;
 }
 
@@ -84,11 +84,11 @@ body {
 }
 .list-group-item.active:hover {
     background: #edf6fe;
-    color: #3a3b40;
+    color: black;
     border-color: gray;
 }
 .list-group-item.active .list-group-item-text, .list-group-item.active:hover .list-group-item-text, .list-group-item.active:focus .list-group-item-text {
-    color: #3a3b40;
+    color: black;
 }
 .list-group-item > p {
     margin-bottom: 5px;
@@ -107,13 +107,13 @@ body {
     background: #6c7879;
 }
 .label-info {
-    background: #64979d;
+    background: #6db0b8;
 }
 .label-primary {
-    background: #a19589;
+    background: #cea67e;
 }
 .label-warning {
-    background: #c78788;
+    background: #dd7c7d;
 }
 
 .btn-primary {
@@ -138,7 +138,7 @@ body {
 }
 
 .paper-button-group a {
-    color: #3a3b40;
+    color: black;
     text-decoration: none;
 }
 
