@@ -7,146 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="canonical" href="https://homes.cs.washington.edu/~yizhongw"/>
     <link rel="stylesheet" href="./css/bootstrap.css"/>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/> -->
     <link rel="stylesheet" href="./css/custom.min.css"/>
-    <style type="text/css">
-      body {
-        font-family: "Times New Roman", "Times", Arial, sans-serif;
-        font-size: 20px;
-        color: black;
-        line-height: 2;
-        font-weight: 200;
-      }
-      .navbar-header {
-        font-weight: bold;
-      }
-      .navbar-collapse {
-        font-weight: bold;
-      }
-      .bs-docs-section {
-        margin-top: 2em;
-      }
-      a {
-        color: #476faf;
-      }
-      strong {
-        font-weight: bold;
-      }
-      h3 {
-        font-size: 32px;
-      }
-      h3 > strong {
-        font-weight: bold;
-      }
-      .jumbotron {
-        margin-top: 40px;
-        margin-bottom: 40px;
-      }
-      .news-table .row {
-        margin-left: 2px;
-        margin-top: 2px;
-      }
-      .news-table li {
-        color: #a29c83;
-      }
-      .news-table li strong {
-        color: black;
-        font-weight: blod;
-      }
-      .list-group-item.active, .list-group-item.active:focus {
-        background: transparent;
-        border-color: gray;
-        color: inherit;
-      }
-      .list-group-item.active:hover {
-        background: #edf6fe;
-        color: black;
-        border-color: gray;
-      }
-      .list-group-item.active .list-group-item-text, .list-group-item.active:hover .list-group-item-text, .list-group-item.active:focus .list-group-item-text {
-        color: black;
-      }
-      .list-group-item > p {
-        margin-bottom: 5px;
-      }
-      .paper-button-group {
-        text-align: right;
-      }
-      footer {
-        background: #e6f2ee;
-        margin-top: 2em;
-        margin-bottom: 0;
-        padding-top: 2em;
-        font-size: 16.25px;
-      }
-      .alert {
-        padding-top: 0;
-        padding-bottom: 0;
-        padding-left: 15px;
-        padding-right: 15px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-weight: bold;
-      }
-      .tab-content {
-        padding: 10px;
-      }
-      .tab-content h5 {
-        margin-bottom: 0;
-      }
-      .list-group-item-heading {
-        font-weight: bold;
-      }
-      /*.conference {*/
-        /*font-weight: bold;*/
-      /*}*/
-      @media (max-width: 500px) {
-        #about h3 {
-          font-size: 28px;
-        }
-        #about h3 span {
-          font-size: 27px;
-        }
-        #selfie, #basic-info {
-          text-align: center;
-        }
-        .paper-button-group {
-          line-height: 2;
-        }
-      }
-    </style>
-    <script type="text/javascript">
-      window.addEventListener("hashchange", function() { scrollBy(0, -50) })
-    </script>
+    <link rel="stylesheet" href="./css/my.css"/>
+    <script src="./js/my.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-87285955-1"></script>
+    
     <script>
-      var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?a941b5eafcb8033ac99174ac2619201c";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-      })();
-    </script>
-    <script>
-    function toggle_old_news() {
-        var x = document.getElementById("old_news");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-87285955-1');
     </script>
   </head>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-87285955-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-87285955-1');
-  </script>
 
   <body>
     <div class="navbar navbar-default navbar-fixed-top">
@@ -159,7 +33,7 @@
             <span class="icon-bar"></span>
           </button>
         </div>
-        <div class="navbar-collapse collapse" id="navbar-main" aria-expanded="false" style="height: 1px;">
+        <div class="navbar-collapse collapse" id="navbar-main" aria-expanded="false" >
           <ul class="nav navbar-nav navbar-right">  
             <li>
               <a href="#bio">Bio</a>
@@ -183,111 +57,99 @@
               </ul>
             </li>
           </ul>
-
         </div>
       </div>
     </div>
 
 
-    <div class="container">
-
-      <!-- About -->
-      <div class="bs-docs-section" id="about">
-        <div class="row">
-
-          <div class="col-xs-12 col-sm-3" id="selfie"><img src="assets/figs/yizhong.jpg" style="width: 82%; max-width: 250px; border-radius: 12px; margin-top: 25px; margin-left: 20px;" class="img-rounded"></div>
-          <div class="col-xs-12 col-sm-8" id="basic-info">
-              <h3>
-                  Yizhong Wang <br>
-              </h3>
-              <p>
-                  PhD student <br>
-                  Paul G. Allen School of Computer Science &amp; Engineering <br>
-                  University of Washington, Seattle, WA
-              </p>
-              Email: <code>yizhongw [at] cs.washington.edu</code>
-              <br>
-          </div>
+    <div class="container content">
+      <div class="row" id="about">
+        <div class="col-xs-12 col-sm-3" id="selfie">
+          <img src="assets/figs/yizhong.jpg" class="img-rounded">
         </div>
-
-        <!-- <div class="alert alert-dismissible alert-warning">
-          <p>
-          </p>
-        </div> -->
+        <div class="col-xs-12 col-sm-8" id="basic-info">
+            <h3 class="name-title">
+                Yizhong Wang <br>
+            </h3>
+            <p>
+                PhD student <br>
+                Paul G. Allen School of Computer Science &amp; Engineering <br>
+                University of Washington, Seattle, WA
+            </p>
+            Email: <code>yizhongw [at] cs.washington.edu</code>
+            <br>
+        </div>
       </div>
 
       <!-- Short Bio -->
-      <!-- <hr id="bio" name="bio" size="2" color="#800000"> -->
+      <div class="jumbotron" id="bio">
+        <p>
+          Hello! 
+          I am a final-year PhD student at the <a href="https://www.cs.washington.edu/">Paul G. Allen School of Computer Science & Engineering</a>, 
+          <a herf="https://www.washington.edu/">University of Washington</a>. 
+          I am fortunate to be co-advised by <a href="https://homes.cs.washington.edu/~hannaneh/">Hannaneh Hajishirzi</a> and <a href="https://homes.cs.washington.edu/~nasmith/">Noah Smith</a>.
+          I am also a student researcher at <a href="https://allenai.org/">AI2</a>. 
+          I have previously interned at Meta AI and Microsoft Research Asia. 
+          Prior to UW, I did a master at <a href="https://english.pku.edu.cn/">Peking University</a> and an undergraduate at <a href="https://en.sjtu.edu.cn/">Shanghai Jiao Tong University</a>.
+        </p>
+        <p>
+          These days, I am excited about <strong>data-centric approaches</strong> for <strong>understanding and advancing 
+          modern artificial intelligence systems</strong>. 
+          I believe that <em>data</em> can serve as an effective, sustainable, auditable, and beneficial ground for future human AI collaboration and dual improvement. 
+          Here are some topics I have been thinking about recently:
+        </p>
+        <ul>
+          <li>
+            <b>Data Curation.</b>
+            Large-scale data curation has powered several AI breakthoughs. 
+            I have led/contributed to several popular datasets, 
+            including <a href="https://arxiv.org/abs/2204.07705">Super-NaturalInstructions</a> for unifying NLP tasks, 
+            <a href="https://arxiv.org/abs/2104.06039">MultiModalQA</a> for multimodal question answering,
+            <a href="https://arxiv.org/abs/1903.00161">DROP</a> for machine reasoning, 
+            and <a href="https://arxiv.org/abs/1711.05073">DuReader</a> for machine reading comprehension.
+            I am looking forward to new paradigms and algorithms for constructing and maintaining high-quality data, particularly for more complex scenarios. 
+          </li>
+          <li>
+            <b>Synthetic Data.</b>
+            Generative models have enabled producing data easily at scale.
+            Our work <a href="https://arxiv.org/abs/2212.10560">Self-Instruct</a> has pioneered the idea of using model-generated data 
+            to improve models. It also raised many interesting questions, such as: Can models really achieve self-improvement? 
+            Can models generate meaningful information that does not exist before? How can we design better data synthesis pipelines and algorithms?
+          </li>
+          <li>
+            <b>Data Attribution.</b>
+            I envision a future where individuals and organizations can collaborately contribute data to AI systems, 
+            and benefit in return when their data takes effect. 
+            This requires a new data attribution framework that is fair, transparent, and efficient.
+            I am interested in the development of such a framework and the required algorithms, as well as the potential impact on society.
+          </li>
+          <li>
+            <b>Open Science of Language Models.</b>
+            I believe that openness is the scientific, trustworthy, and sustainable way to advance language models. 
+            Throughout my PhD, I have been actively constributing to the development of open language models (<a href="https://arxiv.org/abs/2402.00838">OLMo</a>) at AI2. 
+            I also co-led the Tülu series of work, exploring post-training techniques (<a href="https://arxiv.org/abs/2306.04751">1</a>,
+            <a href="https://arxiv.org/abs/2311.10702">2</a>, 
+            and <a href="https://arxiv.org/abs/2406.09279">2.5</a>).
+            We release all our artifacts to facilitate open understanding and research of language models.
+          </li>
+        </ul>
 
-      <div class="jumbotron" style="padding: 0; background: white;">
-        <!-- <h3><a><strong>Short Bio</strong></a></h3> -->
-        <div class="bio-content" style="margin-top: 20px;">
-          <p>
-            Hello! 
-            I am a final-year PhD student at the <a href="https://www.cs.washington.edu/">Paul G. Allen School of Computer Science & Engineering</a>, 
-            <a herf="https://www.washington.edu/">University of Washington</a>. 
-            I am fortunate to be co-advised by <a href="https://homes.cs.washington.edu/~hannaneh/">Hannaneh Hajishirzi</a> and <a href="https://homes.cs.washington.edu/~nasmith/">Noah Smith</a>.
-            I am also a student researcher at <a href="https://allenai.org/">AI2</a>. 
-            I have previously interned at Meta AI and Microsoft Research Asia. 
-            Prior to UW, I did a master at <a href="https://english.pku.edu.cn/">Peking University</a> and an undergraduate at <a href="https://en.sjtu.edu.cn/">Shanghai Jiao Tong University</a>.
-          </p>
-          <p>
-            These days, I am excited about <strong>data-centric approaches</strong> for <strong>understanding and advancing 
-            modern artificial intelligence systems</strong>. 
-            I believe that <strong>data</strong> can serve as an effective, sustainable, auditable, and beneficial ground for future human AI collaboration and dual improvement. 
-            Here are some topics I have been thinking about recently:
-          </p>
-          <ul>
-            <li>
-              <b>Data Curation.</b>
-              Large-scale data curation has powered several AI breakthoughs. 
-              I have led/contributed to several popular datasets, 
-              including <a href="https://arxiv.org/abs/2204.07705">Super-NaturalInstructions</a> for unifying NLP tasks, 
-              <a href="https://arxiv.org/abs/2104.06039">MultiModalQA</a> for multimodal question answering,
-              <a href="https://arxiv.org/abs/1903.00161">DROP</a> for machine reasoning, 
-              and <a href="https://arxiv.org/abs/1711.05073">DuReader</a> for machine reading comprehension.
-              I am looking forward to new paradigms and algorithms for constructing and maintaining high-quality data, particularly for more complex scenarios. 
-            </li>
-            <li>
-              <b>Synthetic Data.</b>
-              Generative models have enabled producing data easily at scale.
-              Our work <a href="https://arxiv.org/abs/2212.10560">Self-Instruct</a> has pioneered the idea of using model-generated data 
-              to improve models. It also raised many interesting questions, such as: Can models really achieve self-improvement? 
-              Can models generate meaningful information that does not exist before? How can we design better data synthesis pipelines and algorithms?
-            </li>
-            <li>
-              <b>Data Attribution.</b>
-              I envision a future where individuals and organizations can collaborately contribute data to AI systems, 
-              and benefit in return when their data takes effect. 
-              This requires a new data attribution framework that is fair, transparent, and efficient.
-              I am interested in the development of such a framework and the required algorithms, as well as the potential impact on society.
-            </li>
-            <li>
-              <b>Open Science of Language Models.</b>
-              I believe that openness is the scientific, trustworthy, and sustainable way to advance language models. 
-              Throughout my PhD, I have been actively constributing to the development of open language models (<a href="https://arxiv.org/abs/2402.00838">OLMo</a>) at AI2. 
-              I also co-led the Tülu series of work, exploring post-training techniques (<a href="https://arxiv.org/abs/2306.04751">1</a>,
-              <a href="https://arxiv.org/abs/2311.10702">2</a>, 
-              and <a href="https://arxiv.org/abs/2406.09279">2.5</a>).
-              We release all our artifacts to facilitate open understanding and research of language models.
-            </li>
-          </ul>
-
-          Feel free to drop me an email if you want to chat about these topics or would like to collaborate :)
-          
-        </div>
+        <em>Feel free to drop me an email if you want to chat about these topics or would like to collaborate :)</em>
+        
       </div>
 
-      <hr id="news" size="2" color="#800000">
-
-      <!-- News -->
-      <div class="jumbotron" style="padding: 0; background: white;">
+      <!-- <hr> -->
+      <div class="jumbotron" id="news">
         <div class="row">
-            <div class="col-xs-6"><h3><a><strong>News</strong></a></h3></div>
-            <div class="col-xs-6"><div style="text-align: right; margin-top: 20px;"><button class="btn btn-primary" onclick="toggle_old_news()">Toggle All</button></div></div>
+            <div class="col-xs-6"><h3 class="section-title">News</h3></div>
+            <div class="col-xs-6">
+              <div style="text-align: right; margin-top: 20px;">
+                <button class="btn btn-primary" onclick="toggle_old_news()">Toggle All</button>
+              </div>
+            </div>
         </div>
 
-        <div class="news-table" style="margin-top: 20px;">
+        <div class="news-table">
           <div class="row">
             <div class="col-xs-12 col-sm-2"><li><strong>July 10, 2024</strong></li></div>
             <div class="col-sm-10">Two papers about <a href="https://arxiv.org/abs/2401.08565">proxy tuning</a> and <a href="https://arxiv.org/abs/2401.06855">hallucination detection</a> were accepted to the first <a href="https://colmweb.org/">COLM</a> conference!</div>
@@ -320,7 +182,7 @@
             <div class="col-xs-12 col-sm-2"><li><strong>Nov. 18, 2023</strong></li></div>
             <div class="col-sm-10">We released <a href="https://huggingface.co/allenai/tulu-2-dpo-70b">Tülu 2</a>, which tops open models on several benchmarks (e.g. <a href="https://tatsu-lab.github.io/alpaca_eval/">AlpacaEval</a> and <a href="https://lmsys.org/blog/2023-12-07-leaderboard/">Chatbot Arena</a>)!</div>
           </div>
-          <div id='old_news' style='display: none'>
+          <div id="old-news" style='display: none'>
             <div class="row">
               <div class="col-xs-12 col-sm-2"><li><strong>Sep. 22, 2023</strong></li></div>
               <div class="col-sm-10"><a href="https://arxiv.org/abs/2306.04751">Tülu</a> got accepted into NeurIPS 2023 Datasets and Benchmarks Track. See people in New Orleans!</div> 
@@ -461,189 +323,197 @@
         
       </div>
 
-      <hr id="publications" size="2" color="#800000">
-
-      <div class="jumbotron" style="padding: 0; background: white;">
-        <h3><a><strong>Selected Publications</strong></a> <small style="color: #476faf">[See all on my <a href="https://scholar.google.com/citations?user=y5zpqdAAAAAJ&hl=en">Google Scholar</a>]</small></h3>
-          <div href="#" class="list-group-item active">
-            <h5 class="list-group-item-heading">Camels in a Changing Climate: Enhancing LM Adaptation with Tulu 2</h5>
-            <p class="list-group-item-text">Hamish Ivison*, <strong>Yizhong Wang</strong>*, Valentina Pyatkin, Nathan Lambert, Matthew Peters, Pradeep Dasigi, Joel Jang, David Wadden, Noah A. Smith, Iz Beltagy, Hannaneh Hajishirzi</p>
-            <div class="row" style="line-height: 1;">
-                <div class="col-xs-12 col-sm-9">
-                    <div class="conference">Arxiv Preprint</div>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <div class="paper-button-group">
-                      <a href='https://arxiv.org/abs/2311.10702'><span class="label label-info">Paper</span></a>
-                      <a href='https://github.com/allenai/open-instruct'><span class="label label-primary">Code</span></a>
-                      <a href="https://huggingface.co/collections/allenai/tulu-v2-suite-6551b56e743e6349aab45101"><span class="label label-success">Models</span></a>
-                    </div>
-                </div>
-            </div>   
+      <!-- <hr> -->
+      <div class="jumbotron" id="publications">
+        <div class="row">
+          <div class="col-xs-12">
+            <h3 class="section-title">
+              Selected Publications
+            </h3>
+            <p>
+              * indicates equal contribution.
+              For a full list of publications, please refer to my <a href="https://scholar.google.com/citations?user=y5zpqdAAAAAJ&hl=en">Google Scholar</a> page.</em>
+            </p>
           </div>
-          <div href="#" class="list-group-item active">
-            <h5 class="list-group-item-heading">How Far Can Camels Go? Exploring the State of Instruction Tuning on Open Resources <span style="color: #ca0707">(Spotlight)</h5>
-            <p class="list-group-item-text"><strong>Yizhong Wang</strong>*, Hamish Ivison*, Pradeep Dasigi, Jack Hessel, Tushar Khot, Khyathi Raghavi Chandu, David Wadden, Kelsey MacMillan, Noah A. Smith, Iz Beltagy, Hannaneh Hajishirzi</p>
-            <div class="row" style="line-height: 1;">
-                <div class="col-xs-12 col-sm-9">
-                    <div class="conference">NeurIPS 2023 (Datasets and Benchmarks Track)</div>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <div class="paper-button-group">
-                      <a href='https://arxiv.org/abs/2306.04751'><span class="label label-info">Paper</span></a>
-                      <a href='https://github.com/allenai/open-instruct'><span class="label label-primary">Code</span></a>
-                      <a href="https://huggingface.co/collections/hamishivi/tulu-v1-suite-655138c3743e6349aaa07d7d"><span class="label label-success">Models</span></a>
-                    </div>
-                </div>
-            </div>   
-          </div>
-          <div href="#" class="list-group-item active">
-            <h5 class="list-group-item-heading">Self-Instruct: Aligning Language Models with Self-Generated Instructions</h5>
-            <p class="list-group-item-text"><strong>Yizhong Wang</strong>, Yeganeh Kordi, Swaroop Mishra, Alisa Liu, Noah A Smith, Daniel Khashabi, Hannaneh Hajishirzi</p>
-            <div class="row" style="line-height: 1;">
-                <div class="col-xs-12 col-sm-9">
-                    <div class="conference">ACL 2023</div>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <div class="paper-button-group">
-                      <a href='https://arxiv.org/abs/2212.10560'><span class="label label-info">Paper</span></a>
-                      <!-- <a href='https://github.com/allenai/natural-instructions'><span class="label label-success">Data</span></a> -->
-                      <a href='https://github.com/yizhongw/self-instruct'><span class="label label-primary">Code</span></a>
-                      <!-- <a href='https://instructions.apps.allenai.org/'><span class="label label-warning" style='background: #e273bf'>Site</span></a>  -->
-                    </div>
-                </div>
-            </div>   
-          </div>
-          <div href="#" class="list-group-item active">
-            <h5 class="list-group-item-heading">Super-NaturalInstructions: Generalization via Declarative Instructions on 1600+ NLP Tasks</h5>
-            <p class="list-group-item-text"><strong>Yizhong Wang</strong>*, Swaroop Mishra*, Pegah Alipoormolabashi, Yeganeh Kordi et al.</p>
-            <div class="row" style="line-height: 1;">
-                <div class="col-xs-12 col-sm-9">
-                    <div class="conference">EMNLP 2022</div>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <div class="paper-button-group">
-                      <a href='https://arxiv.org/abs/2204.07705'><span class="label label-info">Paper</span></a>
-                      <a href='https://github.com/allenai/natural-instructions'><span class="label label-success">Data</span></a>
-                      <a href='https://github.com/yizhongw/Tk-Instruct'><span class="label label-primary">Code</span></a>
-                      <a href='https://instructions.apps.allenai.org/'><span class="label label-warning" style='background: #e273bf'>Site</span></a> 
-                    </div>
-                </div>
-            </div>   
-          </div>
-          <div href="#" class="list-group-item active">
-            <h5 class="list-group-item-heading">Probing Across Time: What Does RoBERTa Know and When?</h5>
-            <p class="list-group-item-text">Leo Z. Liu*, <strong>Yizhong Wang</strong>*, Jungo Kasai, Hannaneh Hajishirzi, Noah A. Smith</p>
-            <div class="row" style="line-height: 1;">
-                <div class="col-xs-12 col-sm-9">
-                    <div class="conference">EMNLP 2021 Findings</div>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <div class="paper-button-group">
-                      <a href='https://arxiv.org/abs/2104.07885'><span class="label label-info">Paper</span></a>
-                      <a href='papers/emnlp2020-probing-across-time.pdf'><span class="label label-success">Slides</span></a>
-                    </div>
-                </div>
-            </div>   
-          </div>
-          <div href="#" class="list-group-item active">
-            <h5 class="list-group-item-heading">Dataset Cartography: Mapping and Diagnosing Datasets with Training Dynamics</h5>
-            <p class="list-group-item-text">Swabha Swayamdipta, Roy Schwartz, Nicholas Lourie, <strong>Yizhong Wang</strong>, Hannaneh Hajishirzi, Noah A. Smith and Yejin Choi</p>
-            <div class="row" style="line-height: 1;">
-                <div class="col-xs-12 col-sm-9">
-                    <div class="conference">2020 Conference on Empirical Methods in Natural Language Processing (EMNLP 2020)</div>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <div class="paper-button-group">
-                      <a href='https://arxiv.org/abs/2009.10795'><span class="label label-info">Paper</span></a>
-                      <a href='https://github.com/allenai/cartography'><span class="label label-primary">Code</span></a>
-                    </div>
-                </div>
-            </div>   
-          </div>
-          <div href="#" class="list-group-item active">
-            <h5 class="list-group-item-heading">Do Neural NLP Models Know Numbers? Probing Numeracy in Embeddings</h5>
-            <p class="list-group-item-text">Eric Wallace*, <strong>Yizhong Wang</strong>*, Sujian Li, Sameer Singh and Matt Gardner</p>
-            <div class="row" style="line-height: 1;">
-                <div class="col-xs-12 col-sm-9">
-                    <div class="conference">2019 Conference on Empirical Methods in Natural Language Processing and 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP 2019)</div>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <div class="paper-button-group">
-                      <a href='https://arxiv.org/abs/1909.07940'><span class="label label-info">Paper</span></a>
-                      <a href='https://github.com/Eric-Wallace/numeracy'><span class="label label-primary">Code</span></a>
-                    </div>
-                </div>
-            </div>   
-          </div>
-          <div href="#" class="list-group-item active">
-            <h5 class="list-group-item-heading">DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs</h5>
-            <p class="list-group-item-text">Dheeru Dua, <strong>Yizhong Wang</strong>, Pradeep Dasigi, Gabriel Stanovsky, Sameer Singh and Matt Gardner</p>
-            <div class="row" style="line-height: 1;">
-                <div class="col-xs-12 col-sm-9">
-                    <div class="conference">2019 Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL 2019)</div>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <div class="paper-button-group">
-                      <a href='https://arxiv.org/abs/1903.00161'><span class="label label-info">Paper</span></a>
-                      <a href='https://github.com/allenai/allennlp/pull/2560/files'><span class="label label-primary">Code</span></a>
-                      <a href='https://demo.allennlp.org/reading-comprehension/NjI4NjM5'><span class="label label-warning" style='background: #ff9800'>Demo</span></a>
-                      <a href='https://allennlp.org/drop'><span class="label label-warning" style='background: #e273bf'>Site</span></a>
-                    </div>
-                </div>
-            </div>   
-          </div>
-          <div href="#" class="list-group-item active">
-            <h5 class="list-group-item-heading">Multi-Passage Machine Reading Comprehension with Cross-Passage Answer Verification</h5>
-            <p class="list-group-item-text"><strong>Yizhong Wang</strong>, Kai Liu, Jing Liu, Wei He, Yajuan Lyu, Hua Wu, Sujian Li and Haifeng Wang.</p>
-            <div class="row" style="line-height: 1;">
-                <div class="col-xs-12 col-sm-9">
-                    <div class="conference">The 56th Annual Meeting of the Association for Computational Linguistics (ACL 2018)</div>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <div class="paper-button-group">
-                      <a href='http://aclweb.org/anthology/P18-1178'><span class="label label-info">Paper</span></a>
-                      <a href='papers/acl2018-reading-slides.pdf'><span class="label label-success">Slides</span></a>
-                      <!-- <a href='https://github.com/baidu/DuReader'><span class="label label-primary">Code</span></a> -->
-                    </div>
-                </div>
-            </div>   
-          </div>
-          <div href="#" class="list-group-item active">
-            <h5 class="list-group-item-heading">DuReader: a Chinese Machine Reading Comprehension Dataset from Real-world Applications</h5>
-            <p class="list-group-item-text">Wei He, Kai Liu, Yajuan Lyu, Shiqi Zhao, Xinyan Xiao, Yuan Liu, <strong>Yizhong Wang</strong>, Hua Wu, Qiaoqiao She, Xuan Liu, Tian Wu, Haifeng Wang</p>
-            <div class="row" style="line-height: 1;">
-                <div class="col-xs-12 col-sm-9">
-                    <div class="conference">ACL Workshop on Machine Reading for Question Answering, 2018</div>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <div class="paper-button-group">
-                      <a href='https://arxiv.org/abs/1711.05073'><span class="label label-info">Paper</span></a>
-                      <a href='http://ai.baidu.com/broad/downloadterms?dataset=dureader'><span class="label label-success">Data</span></a>
-                      <a href='https://github.com/baidu/DuReader'><span class="label label-primary">Code</span></a>
-                      <a href='http://ai.baidu.com/broad/subordinate?dataset=dureader'><span class="label label-warning" style='background: #e273bf'>Site</span></a>
-                    </div>
-                </div>
-            </div>   
-          </div>
-          <div href="#" class="list-group-item active">
-            <h5 class="list-group-item-heading">A Two-Stage Parsing Method for Text-level Discourse Analysis <span style="color: #ca0707">(Outstanding Paper Award)</span></h5>
-            <p class="list-group-item-text"><strong>Yizhong Wang</strong>, Sujian Li and Houfeng Wang</p>
-            <div class="row" style="line-height: 1;">
-                <div class="col-xs-12 col-sm-9">
-                    <div class="conference">The 55th Annual Meeting of the Association for Computational Linguistics (ACL 2017)</div>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <div class="paper-button-group">
-                      <a href="http://aclanthology.coli.uni-saarland.de/pdf/P/P17/P17-2029.pdf"><span class="label label-info">Paper</span></a> 
-                      <!-- <a href="papers/acl2017-discourse-tex.zip"><span class="label label-warning">Tex</span></a>  -->
-                      <a href="https://github.com/EastonWang/StageDP"><span class="label label-primary">Code</span></a>
-                      <a href="papers/acl2017-discourse-slides.pdf"><span class="label label-success">Slides</span></a>
-                    </div>
-                </div>
-            </div>   
-          </div>
-          <p>* indicates equal contribution.</p>
+        </div>
+        
+        <div href="#" class="list-group-item active">
+          <h5 class="list-group-item-heading">Camels in a Changing Climate: Enhancing LM Adaptation with Tulu 2</h5>
+          <p class="list-group-item-text">Hamish Ivison*, <strong>Yizhong Wang</strong>*, Valentina Pyatkin, Nathan Lambert, Matthew Peters, Pradeep Dasigi, Joel Jang, David Wadden, Noah A. Smith, Iz Beltagy, Hannaneh Hajishirzi</p>
+          <div class="row conference-row">
+              <div class="col-xs-12 col-sm-9">
+                  <div class="conference">Arxiv Preprint</div>
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                  <div class="paper-button-group">
+                    <a href='https://arxiv.org/abs/2311.10702'><span class="label label-info">Paper</span></a>
+                    <a href='https://github.com/allenai/open-instruct'><span class="label label-primary">Code</span></a>
+                    <a href="https://huggingface.co/collections/allenai/tulu-v2-suite-6551b56e743e6349aab45101"><span class="label label-success">Models</span></a>
+                  </div>
+              </div>
+          </div>   
+        </div>
+        <div href="#" class="list-group-item active">
+          <h5 class="list-group-item-heading">How Far Can Camels Go? Exploring the State of Instruction Tuning on Open Resources <span class="award-text">(Spotlight)</h5>
+          <p class="list-group-item-text"><strong>Yizhong Wang</strong>*, Hamish Ivison*, Pradeep Dasigi, Jack Hessel, Tushar Khot, Khyathi Raghavi Chandu, David Wadden, Kelsey MacMillan, Noah A. Smith, Iz Beltagy, Hannaneh Hajishirzi</p>
+          <div class="row conference-row">
+              <div class="col-xs-12 col-sm-9">
+                  <div class="conference">NeurIPS 2023 (Datasets and Benchmarks Track)</div>
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                  <div class="paper-button-group">
+                    <a href='https://arxiv.org/abs/2306.04751'><span class="label label-info">Paper</span></a>
+                    <a href='https://github.com/allenai/open-instruct'><span class="label label-primary">Code</span></a>
+                    <a href="https://huggingface.co/collections/hamishivi/tulu-v1-suite-655138c3743e6349aaa07d7d"><span class="label label-success">Models</span></a>
+                  </div>
+              </div>
+          </div>   
+        </div>
+        <div href="#" class="list-group-item active">
+          <h5 class="list-group-item-heading">Self-Instruct: Aligning Language Models with Self-Generated Instructions</h5>
+          <p class="list-group-item-text"><strong>Yizhong Wang</strong>, Yeganeh Kordi, Swaroop Mishra, Alisa Liu, Noah A Smith, Daniel Khashabi, Hannaneh Hajishirzi</p>
+          <div class="row conference-row">
+              <div class="col-xs-12 col-sm-9">
+                  <div class="conference">ACL 2023</div>
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                  <div class="paper-button-group">
+                    <a href='https://arxiv.org/abs/2212.10560'><span class="label label-info">Paper</span></a>
+                    <!-- <a href='https://github.com/allenai/natural-instructions'><span class="label label-success">Data</span></a> -->
+                    <a href='https://github.com/yizhongw/self-instruct'><span class="label label-primary">Code</span></a>
+                    <!-- <a href='https://instructions.apps.allenai.org/'><span class="label label-warning">Site</span></a>  -->
+                  </div>
+              </div>
+          </div>   
+        </div>
+        <div href="#" class="list-group-item active">
+          <h5 class="list-group-item-heading">Super-NaturalInstructions: Generalization via Declarative Instructions on 1600+ NLP Tasks</h5>
+          <p class="list-group-item-text"><strong>Yizhong Wang</strong>*, Swaroop Mishra*, Pegah Alipoormolabashi, Yeganeh Kordi et al.</p>
+          <div class="row conference-row">
+              <div class="col-xs-12 col-sm-9">
+                  <div class="conference">EMNLP 2022</div>
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                  <div class="paper-button-group">
+                    <a href='https://arxiv.org/abs/2204.07705'><span class="label label-info">Paper</span></a>
+                    <a href='https://github.com/allenai/natural-instructions'><span class="label label-success">Data</span></a>
+                    <a href='https://github.com/yizhongw/Tk-Instruct'><span class="label label-primary">Code</span></a>
+                    <a href='https://instructions.apps.allenai.org/'><span class="label label-warning">Site</span></a> 
+                  </div>
+              </div>
+          </div>   
+        </div>
+        <div href="#" class="list-group-item active">
+          <h5 class="list-group-item-heading">Probing Across Time: What Does RoBERTa Know and When?</h5>
+          <p class="list-group-item-text">Leo Z. Liu*, <strong>Yizhong Wang</strong>*, Jungo Kasai, Hannaneh Hajishirzi, Noah A. Smith</p>
+          <div class="row conference-row">
+              <div class="col-xs-12 col-sm-9">
+                  <div class="conference">EMNLP 2021 Findings</div>
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                  <div class="paper-button-group">
+                    <a href='https://arxiv.org/abs/2104.07885'><span class="label label-info">Paper</span></a>
+                    <a href='papers/emnlp2020-probing-across-time.pdf'><span class="label label-success">Slides</span></a>
+                  </div>
+              </div>
+          </div>   
+        </div>
+        <div href="#" class="list-group-item active">
+          <h5 class="list-group-item-heading">Dataset Cartography: Mapping and Diagnosing Datasets with Training Dynamics</h5>
+          <p class="list-group-item-text">Swabha Swayamdipta, Roy Schwartz, Nicholas Lourie, <strong>Yizhong Wang</strong>, Hannaneh Hajishirzi, Noah A. Smith and Yejin Choi</p>
+          <div class="row conference-row">
+              <div class="col-xs-12 col-sm-9">
+                  <div class="conference">2020 Conference on Empirical Methods in Natural Language Processing (EMNLP 2020)</div>
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                  <div class="paper-button-group">
+                    <a href='https://arxiv.org/abs/2009.10795'><span class="label label-info">Paper</span></a>
+                    <a href='https://github.com/allenai/cartography'><span class="label label-primary">Code</span></a>
+                  </div>
+              </div>
+          </div>   
+        </div>
+        <div href="#" class="list-group-item active">
+          <h5 class="list-group-item-heading">Do Neural NLP Models Know Numbers? Probing Numeracy in Embeddings</h5>
+          <p class="list-group-item-text">Eric Wallace*, <strong>Yizhong Wang</strong>*, Sujian Li, Sameer Singh and Matt Gardner</p>
+          <div class="row conference-row">
+              <div class="col-xs-12 col-sm-9">
+                  <div class="conference">2019 Conference on Empirical Methods in Natural Language Processing and 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP 2019)</div>
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                  <div class="paper-button-group">
+                    <a href='https://arxiv.org/abs/1909.07940'><span class="label label-info">Paper</span></a>
+                    <a href='https://github.com/Eric-Wallace/numeracy'><span class="label label-primary">Code</span></a>
+                  </div>
+              </div>
+          </div>   
+        </div>
+        <div href="#" class="list-group-item active">
+          <h5 class="list-group-item-heading">DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs</h5>
+          <p class="list-group-item-text">Dheeru Dua, <strong>Yizhong Wang</strong>, Pradeep Dasigi, Gabriel Stanovsky, Sameer Singh and Matt Gardner</p>
+          <div class="row conference-row">
+              <div class="col-xs-12 col-sm-9">
+                  <div class="conference">2019 Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL 2019)</div>
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                  <div class="paper-button-group">
+                    <a href='https://arxiv.org/abs/1903.00161'><span class="label label-info">Paper</span></a>
+                    <a href='https://github.com/allenai/allennlp/pull/2560/files'><span class="label label-primary">Code</span></a>
+                    <a href='https://demo.allennlp.org/reading-comprehension/NjI4NjM5'><span class="label label-success">Demo</span></a>
+                    <a href='https://allennlp.org/drop'><span class="label label-warning">Site</span></a>
+                  </div>
+              </div>
+          </div>   
+        </div>
+        <div href="#" class="list-group-item active">
+          <h5 class="list-group-item-heading">Multi-Passage Machine Reading Comprehension with Cross-Passage Answer Verification</h5>
+          <p class="list-group-item-text"><strong>Yizhong Wang</strong>, Kai Liu, Jing Liu, Wei He, Yajuan Lyu, Hua Wu, Sujian Li and Haifeng Wang.</p>
+          <div class="row conference-row">
+              <div class="col-xs-12 col-sm-9">
+                  <div class="conference">The 56th Annual Meeting of the Association for Computational Linguistics (ACL 2018)</div>
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                  <div class="paper-button-group">
+                    <a href='http://aclweb.org/anthology/P18-1178'><span class="label label-info">Paper</span></a>
+                    <a href='papers/acl2018-reading-slides.pdf'><span class="label label-success">Slides</span></a>
+                    <!-- <a href='https://github.com/baidu/DuReader'><span class="label label-primary">Code</span></a> -->
+                  </div>
+              </div>
+          </div>   
+        </div>
+        <div href="#" class="list-group-item active">
+          <h5 class="list-group-item-heading">DuReader: a Chinese Machine Reading Comprehension Dataset from Real-world Applications</h5>
+          <p class="list-group-item-text">Wei He, Kai Liu, Yajuan Lyu, Shiqi Zhao, Xinyan Xiao, Yuan Liu, <strong>Yizhong Wang</strong>, Hua Wu, Qiaoqiao She, Xuan Liu, Tian Wu, Haifeng Wang</p>
+          <div class="row conference-row">
+              <div class="col-xs-12 col-sm-9">
+                  <div class="conference">ACL Workshop on Machine Reading for Question Answering, 2018</div>
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                  <div class="paper-button-group">
+                    <a href='https://arxiv.org/abs/1711.05073'><span class="label label-info">Paper</span></a>
+                    <a href='http://ai.baidu.com/broad/downloadterms?dataset=dureader'><span class="label label-success">Data</span></a>
+                    <a href='https://github.com/baidu/DuReader'><span class="label label-primary">Code</span></a>
+                    <a href='http://ai.baidu.com/broad/subordinate?dataset=dureader'><span class="label label-warning">Site</span></a>
+                  </div>
+              </div>
+          </div>   
+        </div>
+        <div href="#" class="list-group-item active">
+          <h5 class="list-group-item-heading">A Two-Stage Parsing Method for Text-level Discourse Analysis <span class="award-text">(Outstanding Paper Award)</span></h5>
+          <p class="list-group-item-text"><strong>Yizhong Wang</strong>, Sujian Li and Houfeng Wang</p>
+          <div class="row conference-row">
+              <div class="col-xs-12 col-sm-9">
+                  <div class="conference">The 55th Annual Meeting of the Association for Computational Linguistics (ACL 2017)</div>
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                  <div class="paper-button-group">
+                    <a href="http://aclanthology.coli.uni-saarland.de/pdf/P/P17/P17-2029.pdf"><span class="label label-info">Paper</span></a> 
+                    <!-- <a href="papers/acl2017-discourse-tex.zip"><span class="label label-warning">Tex</span></a>  -->
+                    <a href="https://github.com/EastonWang/StageDP"><span class="label label-primary">Code</span></a>
+                    <a href="papers/acl2017-discourse-slides.pdf"><span class="label label-success">Slides</span></a>
+                  </div>
+              </div>
+          </div>   
         </div>
       </div>
       
