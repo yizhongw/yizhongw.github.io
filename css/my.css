@@ -1,8 +1,16 @@
 body {
-    font-family: "Times New Roman", "Times", Arial, sans-serif;
+    font-family: Georgia, "Open Sans", "Times New Roman", Times,Arial, sans-serif;
     font-size: 20px;
     color: black;
-    line-height: 2;
+    line-height: 1.8;
+}
+
+.jumbotron p {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 20px;
 }
 
 .navbar-header {
@@ -35,7 +43,7 @@ body {
     color: #800000;
 }
 .jumbotron {
-    padding: 40px 0 0 0 !important;
+    padding: 20px 0 0 0 !important;
     background: white;
 }
 .section-title {
@@ -56,9 +64,17 @@ body {
     font-weight: bold;
     color: black;
 }
+#about {
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
 #about code {
     color: #a52640;
     background-color: #e2d9e842;
+}
+
+#bio li {
+    margin-bottom: 5px;
 }
 
 .news-table {
@@ -70,11 +86,12 @@ body {
     margin-top: 2px;
 }
 .news-table li {
-    color: #a29c83;
+    color: black;
+    margin-left: -10px;
 }
 .news-table li strong {
     color: black;
-    font-weight: blod;
+    font-weight: bold;
 }
 
 .list-group-item.active, .list-group-item.active:focus {
