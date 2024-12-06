@@ -12,8 +12,8 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'UA-87285955-1');
 
-$("div.navbar-fixed-top").autoHidingNavbar({
-    showOnBottom: false,
-    showOnUpscroll: false,
-    animationDuration: 600
-});
+// $("div.navbar-fixed-top").autoHidingNavbar({
+//     showOnBottom: false,
+//     showOnUpscroll: false,
+//     animationDuration: 600
+// });
