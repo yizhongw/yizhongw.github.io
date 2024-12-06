@@ -38,6 +38,16 @@ h5 {
     text-decoration-thickness: 2px;
     text-underline-offset: .15em;
 }
+#basic-info a {
+    text-decoration: none;
+}
+#basic-info a:hover {
+    text-decoration: underline;
+    color: #721a2b;
+    text-underline-offset: .15em;
+    text-decoration-thickness: 2px;
+    text-decoration-style: solid;
+}
 .content hr {
     size: 2;
     color: #800000;
