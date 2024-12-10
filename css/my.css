@@ -129,6 +129,24 @@ h5 {
 }
 .award-text {
     color: #ca0707;
+    font-weight: bold;
+}
+.media-coverage-text {
+    color: #1972d7;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.media-coverage-text a {
+    color: #1972d7;
+    font-weight: bold;
+}
+.media-coverage-text a:hover {
+    color: #1972d7;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 2px;
+    text-underline-offset: .15em;
 }
 
 .label-success {
