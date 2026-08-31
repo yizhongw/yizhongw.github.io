@@ -95,7 +95,7 @@ button:focus-visible {
 }
 
 .profile-info h1 {
-    margin: 0 0 8px;
+    margin: 0 0 10px;
     color: var(--text);
     font-size: clamp(2rem, 6vw, 2.4rem);
     font-weight: normal;
@@ -103,9 +103,9 @@ button:focus-visible {
 }
 
 .email {
-    margin: 0 0 10px;
+    margin: 0 0 12px;
     font-family: "Courier New", monospace;
-    font-size: 1.05rem;
+    font-size: 1.125rem;
 }
 
 .email a,
